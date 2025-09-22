@@ -126,8 +126,10 @@ While this approach contributes to enhancing environmental understanding and red
 direct intervention in robot motion planning and control remains limited.
 
 Second, research focusing on \textbf{intuitive mapping of user operations}.  
-By transforming hand tracking and gesture input into robot motions, these approaches enhance 
-operability and immersion.
+By converting hand tracking and gesture inputs into robot motions, 
+attempts have been made to enhance operability and immersion \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}. 
+Although this approach allows the operator’s intentions to be reflected more naturally, 
+the stability of the operation and the guarantee of robot manipulability are often insufficient.
 
 In this category, the work of Esaki et al. is representative.  
 They proposed the Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO) \cite{Esaki}.  
@@ -139,10 +141,8 @@ This demonstrated the effectiveness of MR in improving the intuitiveness of robo
 However, IRT-MRO also leaves several issues unresolved.  
 First, because the system simply transfers the object manipulation performed by the user in MR space, 
 it does not take into account whether the robot can actually reach the target object or grasp it stably.  
-
 Second, the posture of the robot arm is not always guaranteed to remain safe, 
 and problems such as singularity or joint limit violations can occur.  
-
 Third, when an object is located outside the reachable area of the robot, 
 the system does not provide an appropriate relocation strategy for the robot base, 
 leaving the operation incomplete.  
