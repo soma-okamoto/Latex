@@ -1,0 +1,113 @@
+%subfiles使用時はdocument環境内にサブファイルも記入する
+%サブファイル内のプリアンブルはmain.texのビルド時は無視される
+\documentclass[../../main.tex]{subfiles} %[]内にこのドキュメントからmain.texまでのpathを記入
+
+\graphicspath{{../../fig/}} %このドキュメントから画像ディレクトリまでのpathを記述
+\setcounter{chapter}{0} %チャプター番号の調整
+
+%***************************************** ＜Main body＞ ********************************************%
+\begin{document}
+
+\setcounter{page}{0} %ページ番号をゼロに設定
+\pagenumbering{arabic} %本文用のページ番号付け
+
+\chapter{提案手法}\label{chap:introduction}
+
+
+\section{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
+
+\textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)} 
+addresses several limitations observed in conventional MR-based HRC systems, 
+including insufficient utilization of environmental information, 
+lack of stable posture guarantees, 
+and inadequate autonomy in base relocation strategies.
+
+This system is built upon the foundation of 
+\textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} 
+and improves upon the issues that remained in IRT-MRO.  
+Whereas IRT-MRO employed a Unity-based holographic application on the HoloLens 2, 
+the proposed system adopts a Unity-based passthrough application using the Meta Quest.  
+Although both devices are capable of projecting real-world objects into MR space, 
+they differ significantly in their display methods.  
+
+The HoloLens 2 adopts an optical see-through display, 
+allowing the user to perceive both the real environment and virtual objects through a transparent screen.  
+However, its limited field of view and restricted brightness have been widely noted.  
+In contrast, as illustrated in Figure~1, the Meta Quest employs a passthrough display system, 
+which projects images captured by external cameras onto the display, 
+enabling a wide field of view and high-resolution rendering.  
+This provides the user with a more natural and immersive MR experience, 
+enhancing both environmental understanding and intuitive operation.
+% Insert figure
+
+\subsection{Implementation Platform and System}
+In this study, the experimental platform adopted was the \textbf{KUKA YouBot}.  
+The robot is a mobile manipulator equipped with an omnidirectional base, 
+a 5-DOF manipulator, and a two-finger gripper.  
+Within the proposed system, changes in the position and orientation of target objects 
+detected in MR space, as well as user manipulations, 
+are reflected directly in the robot’s motion.  
+This ensures smooth and seamless interaction between the human and the robot.  
+Furthermore, the robot’s behavior is immediately fed back into MR space, 
+providing the operator with precise visual information in real time.
+
+The graphical architecture of the system is illustrated in Figure~2 
+and is composed of the following three modules:
+% Insert figure
+
+\medskip
+\noindent
+\textbf{Target Bottle Inference (TBI) module}:  
+This module tracks the user’s gaze, head orientation, and hand motion within MR space, 
+extracting geometric relationships with candidate bottles as features.  
+These multimodal features are then processed through an integrated scoring framework 
+to infer the bottle that the user intends to manipulate.  
+By jointly evaluating diverse behavioral cues, 
+the TBI module enables highly accurate and real-time target selection.
+
+\medskip
+\noindent
+\textbf{Base Relocation based on Inverse Reachability Map (BRI) module}:  
+When the target bottle lies outside the robot’s reachable workspace, 
+this module becomes active.  
+First, an Inverse Reachability Map (IRM) is generated based on the Reachability Map (RM), 
+and candidate base positions that make the target reachable are extracted.  
+Next, an optimization problem is solved considering both the IRM score 
+and the movement cost, yielding the optimal base configuration.  
+Additionally, candidate paths are visualized within MR space, 
+allowing users to refine or adjust the proposed routes interactively.
+
+\medskip
+\noindent
+\textbf{Human-Intent Adaptive Grasp Manipulation (HIGM) module}:  
+This module aims to reconcile the differences between the user’s intended manipulation 
+and the robot’s physical and kinematic constraints.  
+Specifically, it integrates reference postures obtained from hand-tracking information 
+with robot-preferred pregrasp postures, 
+and applies nullspace optimization to adjust joint configurations.  
+As a result, the user can achieve stable grasping with natural operational feedback, 
+without needing to be aware of the robot’s inherent kinematic constraints.
+
+\medskip
+Through the integration of these modules, 
+the proposed system achieves adaptive and intuitive motion planning 
+that was not sufficiently addressed in IRT-MRO.  
+The robot is now able to select actions according to the user’s intended target, 
+while providing adaptive grasp correction without requiring the user to 
+account for robot-specific constraints.  
+This significantly reduces dependency on the user’s operational expertise 
+and ensures smooth, stable operation even for novice users.
+
+\subsection{MR System Implementation}
+The MR system is implemented on \textbf{Unity} and \textbf{MRTK3 (Mixed Reality Toolkit)}, 
+in compliance with the OpenXR standard.  
+The user can manipulate MR objects directly through hand gestures, 
+offering an intuitive and natural input interface.  
+Moreover, by presenting the robot’s behavioral intentions through MR objects, 
+the system improves the operator’s understanding of the robot’s decision-making process, 
+thereby enhancing human–robot collaboration.
+
+
+
+
+\end{document}

@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%           Thesis Main File
+%
+%                                   author:Shouta Samejima
+%                                   date:19/01/13
+%
+%                                   edit:Koki Nakamura
+%                                   date:23/12/21
+%
+%                                   edit: Masaki Tanaka
+%                                   date:24/02/09
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4j,11pt,onecolumn,twoside,titlepage,openright,final, openany]{jreport}
+%\documentclass[a4j,11pt,onecolumn,twoside,titlepage,openright,final]{jreport}
+
+%***************************************** ＜Preamble＞ ******************************************%
+\usepackage{graphicx}
+\usepackage[dvipdfmx]{color}
+
+\usepackage{algorithm} %algorithmicやalgorithmicxなどの親パッケージ
+\usepackage{algpseudocode} %疑似コード作成：Functionの使用
+
+\usepackage{amsmath, amssymb} %数式表現の拡張
+\usepackage{type1cm} %実数Rとかをかっこよく
+
+\usepackage{bm} %太文字の使用
+%\usepackage{booktabs} %表中の罫線の種類の追加
+%\usepackage{cases} %場合分けの使用
+\usepackage[strict]{changepage} %奇数・偶数ページのレイアウト変更
+\usepackage{comment} %複数行コメントアウトの仕様
+\usepackage{empheq} %amsmathの拡張
+\usepackage{epsfig} %eps形式の図の使用
+\usepackage{fancyhdr} %ヘッダ・フッターのカスタマイズ：fancyスタイルの使用可になる
+\usepackage[T1]{fontenc} %フォントエンコーディングをT1に変更
+\usepackage{here} %図，表を強制的に配置
+\usepackage{latexsym} %数式で使用可能な記号の拡張
+\usepackage{listings} %ソースコードの記述
+%\usepackage{longtable} %表機能の拡張：ページを跨いだ表の作成
+%\usepackage{makeidx} %索引の作成
+%\usepackage{multirow} %縦方向のセルの結合
+\usepackage{oldgerm} %古いドイツ語フォントの使用
+\usepackage{pgfplots} %高度なグラフの描画
+\usepackage{physics} %物理系の数式の記述
+%\usepackage{slashbox} %表で斜線を含んだラベルセルの使用
+\usepackage{subfiles} %プリアンブルを共有したファイル分割
+%\usepackage{tabularx} %表組の幅指定や書式指定
+\usepackage{textcomp} %テキストシンボルの使用
+%\usepackage{tikz} %関数のグラフの記述
+\usepackage{verbatim} %入力通りにテキストを出力
+
+
+
+%----------------------- <Pass setting> -----------------------%
+\graphicspath{{fig/}} %{}内にmain.texから画像が入っているフォルダまでのpathを記述
+
+\providecommand{\subinclude}[1]{\subfileinclude{chapter/#1}} %サブtexが入っているフォルダまでのpathを記述
+\providecommand{\supinput}[1]{\input{supplement/#1}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\supinclude}[1]{\include{supplement/#1}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\subinclude}[2]{\subfileinclude{chapter/#2}} %サブtexが入っているフォルダまでのpathを記述
+\providecommand{\supinput}[2]{\input{supplement/#2}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\supinclude}[2]{\include{supplement/#2}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\subinclude}[3]{\subfileinclude{chapter/#3}} %サブtexが入っているフォルダまでのpathを記述
+\providecommand{\supinput}[3]{\input{supplement/#3}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\supinclude}[3]{\include{supplement/#3}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\subinclude}[4]{\subfileinclude{chapter/#4}} %サブtexが入っているフォルダまでのpathを記述
+\providecommand{\supinput}[4]{\input{supplement/#4}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\supinclude}[4]{\include{supplement/#4}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\subinclude}[5]{\subfileinclude{chapter/#5}} %サブtexが入っているフォルダまでのpathを記述
+\providecommand{\supinput}[5]{\input{supplement/#5}} %補助texが入っているフォルダまでのpathを記述
+\providecommand{\supinclude}[5]{\include{supplement/#5}} %補助texが入っているフォルダまでのpathを記述
+
+
+
+%------------------------------------------------------------%
+
+
+
+\supinput{preamble}
+
+%***************************************** ＜Main body＞ ********************************************%
+\begin{document}
+
+\supinput{title} %表紙
+
+
+
+%***** <Customizing header and footer> *****%
+\pagestyle{fancy}
+\lhead[]{} %[偶数ページ]{奇数ページ}
+\chead[目 次]{目 次} %\leftmark=デフォルトは節見出し：\rightmark=デフォルトは章見出し
+\rhead[]{}
+
+\cfoot{\thepage} %[ ]を省略すると{ }で指定された内容が偶数ページ・奇数ページの両ページに適用される
+
+\renewcommand{\headrulewidth}{0.4pt} %ヘッダ線(上線)の長さ 0.4ptがデフォルト
+\renewcommand{\footrulewidth}{0pt} %フッタ線(下線)の長さ 0ptがデフォルト
+
+\makeatletter
+\def\chaptermark#1{\markboth {\ifnum \c@secnumdepth>\m@ne\@chapapp\ \thechapter \@chappos\hskip 1zw \fi #1}{}} %chapterコマンドが\markbothに渡す引数のカスタマイズ
+\def\sectionmark#1{\markright {\ifnum \c@secnumdepth >\z@ \thesection \hskip 1zw \fi #1}}%\sectionコマンドが\markrightに渡す引数のカスタマイズ
+\makeatother
+%***************************************%
+
+
+
+%***** <Setting page numter> *****%
+\pagenumbering{roman} %目次用のページ番号付け
+\setcounter{page}{1} %ページ番号をゼロに設定
+%******************************%
+
+
+
+%***** <Making contents> *****%
+\tableofcontents %目次の作成
+\listoffigures %図目次
+%\chead[図 目 次]{図 目 次}
+%\listoftables %表目次
+%\chead[表 目 次]{表 目 次}
+%***************************%
+
+
+
+%ヘッダの再定義
+\chead[\leftmark]{\rightmark}
+
+%***** <Reading each chapters> *******************************************************************%
+\subinclude{chapter1/chapter1.tex}
+% \subinclude{chapter2/chapter2.tex}
+% \subinclude{chapter3/chapter3.tex}
+% \subinclude{chapter4/chapter4.tex}
+
+% \supinclude{thanks}
+%\cleardoublepage %ページ合わせの空白ページ挿入
+
+%\chead[参考文献]{参考文献}
+\supinclude{reference}
+% \supinclude{publications}
+
+%\chead[付録]{付録}
+%\include{Appendix}
+%\cleardoublepage
+%\include{summary}
+%\cleardoublepage
+
+%\bibliographystyle{jplain} %bibtex使用ならコメントアウト解除
+%\bibliography{}    %\bibliography{bibファイル名}
+
+\end{document}

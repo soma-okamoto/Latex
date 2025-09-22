@@ -1,0 +1,53 @@
+%\clearpage
+\chapter*{研究業績}
+\addcontentsline{toc}{chapter}{研究業績} %目次に追加 toc:目次;chapter or section or subsection...
+\label{chap:publications}
+
+%\renewcommand{\topmargin}{-8mm}
+%\renewcommand{\oddsidemargin}{0mm}
+%\renewcommand{\evensidemargin}{0mm}
+%\renewcommand{\textheight}{250mm}
+%\renewcommand{\textwidth}{160mm}
+%\renewcommand{\headheight}{0mm}
+%\renewcommand{\headsep}{0mm}
+%\renewcommand{\footheight}{7mm}
+%\renewcommand{\footskip}{10mm}
+
+%プリアンブルに追加
+\newcounter{enum4} %番号付き箇条書きのカスタマイズ
+\newenvironment{enumerate4}{%
+   \begin{list}%
+   {%
+      [\arabic{enum4}]\ \,%  見出し記号／直後の空白を調節
+   }%
+   {%
+      \usecounter{enum4}
+      \setlength{\itemindent}{0zw}%  ここは 0 に固定
+      \setlength{\leftmargin}{3zw}%  左のインデント
+      \setlength{\rightmargin}{0zw}% 右のインデント
+      \setlength{\labelsep}{0zw}%    黒丸と説明文の間
+      \setlength{\labelwidth}{3zw}%  ラベルの幅
+      \setlength{\itemsep}{.6em}%     項目ごとの改行幅
+      \setlength{\parsep}{0em}%      段落での改行幅
+      \setlength{\listparindent}{0zw}% 段落での一字下り
+   }
+}{%
+   \end{list}%
+}
+
+%\thispagestyle{empty} %ページ番号表示しない
+
+\vspace*{-9mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{国内会議等 (1件)}
+\begin{enumerate4}
+\item  山田太郎，関山浩介 "発表題目", 学会名, 20XX.
+\end{enumerate4}
+
+\subsection*{英文ジャーナル(1件)}
+\begin{enumerate4}
+\item T. Yamada and K. Sekiyama, "Journal Title", Journal Name, Pages, 20XX.
+\end{enumerate4}
+

@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%疑似コードを書くためのパッケージと設定%%%%%%%%%%%%%%%%%%%%%
+%listingsパッケージの設定
+\lstset{%
+  language={Pascal},
+  basicstyle={\small},%
+  identifierstyle={\small},%
+  commentstyle={\small\itshape\color[rgb]{0,0.5,0}},%
+  keywordstyle={\small\bfseries\color[rgb]{0,0,1}},%
+  ndkeywordstyle={\small},%
+  stringstyle={\small\ttfamily\color[rgb]{1,0,1}},
+  frame={tb},
+  breaklines=true,
+  caption= Algorithm ,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex,%
+ escapechar=\@
+}
+\renewcommand{\lstlistingname}{Algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%subcaptionの使用によるcaptionの書式の変更を防止：書き換えないこと%%%%%%%
+\makeatletter %「@」をアルファベットとして認識する
+\let\MYcaption\@makecaption
+\makeatother %「@」のアルファベットとして認識終了
+
+\usepackage{subcaption} %subfigの更新版
+\captionsetup{compatibility=false} %必要に応じて
+
+\makeatletter
+\let\@makecaption\MYcaption
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%********************** <Various setting> **********************%
+\newcommand{\argmax}{\mathop{\rm argmax}\limits}
+\newcommand{\argmin}{\mathop{\rm argmin}\limits}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+\renewcommand{\baselinestretch}{1.1} %行間調節→{1}を調節する
+\renewcommand{\bibname}{参考文献} %参考文献のタイトル変更
+
+\makeatletter
+\def\Hline{
+\noalign{\ifnum0=`}\fi\hrule \@height 1pt \futurelet
+\reserved@a\@xhline}
+\makeatother
+%************************************************************%
+
+
+
+
+
+
+%******************** <Setting about figures> ********************%
+\makeatletter
+\def\fnum@figure{Fig.\thefigure} %図のキャプション文字変更
+\def\fnum@table{Table \thetable} %表のキャプション文字変更
+\makeatother
+
+\setlength\abovecaptionskip{0pt}  %｛｝で表，図とcaptionの間の間隔調整
+%\setlength\belowcaptionskip{0pt}  %{}でcaptionの下の間隔調整
+
+%\renewcommand{\subfigcapskip}{0pt} %キャプションと図の間の間隔調整
+%\renewcommand{\subfigbottomskip}{-2pt}
+
+\providecommand{\fig}[5][H] %画像挿入省略のためのマクロ定義
+{
+\begin{figure}[#1]
+\centering
+\includegraphics[#2]{#3}
+\caption{#4}
+\label{#5}
+\end{figure}
+}
+%************************************************************%
+
+
+
+
+
+%*********************** <Page setting> ***********************%
+\oddsidemargin=10mm %奇数ページの左側の余白
+\evensidemargin=1mm %偶数ページの左側の余白
+\topmargin=-5mm %上部の余白
+\textheight=252mm %本文の高さ
+\headheight=5mm %ヘッダ記述部分の高さ
+\headsep=5mm %ヘッダと本文の間の幅
+%\footskip=10mm %本文からフッタの下部までの幅
+%************************************************************%
+
+
+
+
+
+%****************** <Customizing chapter style> ******************%
+%\newcommand\chapformat[1]{%
+% \parbox[b]{.5\textwidth}{\filleft\bfseries #1}%
+% \quad\rule[-12pt]{2pt}{70pt}\quad
+% {\fontsize{60}{60}\selectfont\thesection}}
+%\titleformat{\chapter}[block]
+% {\filleft\normalfont\sffamily}{}{0pt}{\chapformat}
+
+\setcounter{topnumber}{5}%    ページ上部の図表は 5 個まで
+\def\topfraction{1.00}%       ページの上 1.00 まで図表で占めて可
+\setcounter{bottomnumber}{5}% ページ下部の図表は 5 個まで
+\def\bottomfraction{1.00}%    ページの下 1.00 まで図表で占めて可
+\setcounter{totalnumber}{10}% ページあたりの図表は 10 個まで
+\def\textfraction{0.04}%      ページうち本文が占める割合の下限
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}} %figure環境内で\captionコマンドと同じ効果：恐らくtablarとの判別用
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}} %tblcaption環境内で\captionコマンドと同じ効果：恐らくfigureとの判別用
+\makeatother
+%************************************************************%
+
+
+
+
+
+%*************** <Customizing style of itemization> ***************%
+\newenvironment{itemize2} %箇条書きの書式をカスタマイズ
+{
+   \begin{list}{$\bullet$\ \ } %見出し記号/直後の空白を調節
+   {
+      \setlength{\itemindent}{0pt}
+      \setlength{\leftmargin}{3zw} %左のインデント
+      \setlength{\rightmargin}{0zw} %右のインデント
+      \setlength{\labelsep}{0zw} %黒丸と説明文の間
+      \setlength{\labelwidth}{0.5zw} %ラベルの幅
+      \setlength{\itemsep}{.35em} %項目ごとの改行幅
+      \setlength{\parsep}{0em} %段落での改行幅
+      \setlength{\listparindent}{0zw} %段落での一字下り
+   }
+}
+{
+   \end{list}
+}
+
+\newenvironment{itemize3} %箇条書きの書式をカスタマイズ
+{
+   \begin{list}{$\bullet$\ \ } %見出し記号/直後の空白を調節
+   {
+      \setlength{\itemindent}{0pt}
+      \setlength{\leftmargin}{3zw} %左のインデント
+      \setlength{\rightmargin}{0zw} %右のインデント
+      \setlength{\labelsep}{0zw} %黒丸と説明文の間
+      \setlength{\labelwidth}{0.5zw} %ラベルの幅
+      \setlength{\itemsep}{.4em} %項目ごとの改行幅
+      \setlength{\parsep}{0em} %段落での改行幅
+      \setlength{\listparindent}{0zw} %段落での一字下り
+   }
+}
+{
+   \end{list}
+}
+
+\newcounter{enum2} %番号付き箇条書きのカスタマイズ
+\newenvironment{enumerate2}{
+   \begin{list}
+   {
+      \arabic{enum2})\ \, %見出し記号/直後の空白を調節
+   }
+   {%評価値
+      \usecounter{enum2}
+      \setlength{\itemindent}{0em} %ここは 0 に固定
+      \setlength{\leftmargin}{1.5em} %左のインデント
+      \setlength{\rightmargin}{0em} %右のインデント
+      \setlength{\labelsep}{0em} %黒丸と説明文の間
+      \setlength{\labelwidth}{0.5em} %ラベルの幅
+      \setlength{\itemsep}{.35em} %項目ごとの改行幅
+      \setlength{\parsep}{0em} %段落での改行幅
+      \setlength{\listparindent}{0em} %段落での一字下り
+   }
+}
+{
+   \end{list}
+}
+
+\newcounter{enum3} %番号付き箇条書きのカスタマイズ
+\newenvironment{enumerate3}{
+   \begin{list}
+   {
+      (\arabic{enum3})\ \, %見出し記号/直後の空白を調節
+   }
+   {
+      \usecounter{enum3}
+      \setlength{\itemindent}{0em} %ここは 0 に固定
+      \setlength{\leftmargin}{1.5em} %左のインデント
+      \setlength{\rightmargin}{0em} %右のインデント
+      \setlength{\labelsep}{0em} %黒丸と説明文の間
+      \setlength{\labelwidth}{0.5em} %ラベルの幅
+      \setlength{\itemsep}{.5em} %項目ごとの改行幅
+      \setlength{\parsep}{0em} %段落での改行幅
+      \setlength{\listparindent}{0em} %段落での一字下り
+   }
+}
+{
+   \end{list}
+}
+%************************************************************%

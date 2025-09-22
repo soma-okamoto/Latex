@@ -1,0 +1,682 @@
+%subfiles使用時はdocument環境内にサブファイルも記入する
+%サブファイル内のプリアンブルはmain.texのビルド時は無視される
+\documentclass[../../main.tex]{subfiles} %[]内にこのドキュメントからmain.texまでのpathを記入
+
+\graphicspath{{../../fig/}} %このドキュメントから画像ディレクトリまでのpathを記述
+\setcounter{chapter}{0} %チャプター番号の調整
+
+%***************************************** ＜Main body＞ ********************************************%
+\begin{document}
+
+\setcounter{page}{0} %ページ番号をゼロに設定
+\pagenumbering{arabic} %本文用のページ番号付け
+
+\chapter{序論}\label{chap:introduction}
+\section{Introduction}
+
+In recent years, Human-Robot Collaboration (HRC) has attracted significant
+attention as an important research domainin which humans and robots 
+cooperate to accomplish tasks in diverse working environments. The aim is 
+not only for robots to interpret human intentions more accurately but 
+also to enable smooth and intuitive communication. When working in shared spaces, 
+the synergy between humans and robots can be expected to improve both efficiency and safety.
+
+One of the major challenges in HRC lies in the discrepancy between human 
+intention and robotic perception. Such mismatches often cause reductions 
+in task efficiency and increase the difficulty of operation. In particular, 
+operational mismatches stemming from the differences in embodiment between 
+humans and robots represent a fundamental bottleneck in collaborative work. 
+To address this issue, approaches that leverage Mixed Reality (MR) 
+to intuitively map human operations onto robots have been actively 
+studied. MR enables users to recognize robotic motion 
+as an extension of their own body, thereby fostering more 
+natural and seamless collaboration \cite{refy}.
+
+Frameworks for intuitive operation support in HRC have also been reported 
+not only with MR but also through Augmented Reality (AR) and Virtual Reality (VR). 
+For example, VR-based methods have been proposed for imitation learning and motion data 
+collection, allowing robots to efficiently acquire manipulation skills \cite{refX}. 
+Meanwhile, AR-based approaches have sought to present robot states and task procedures 
+to the user, thereby enhancing task comprehension \cite{refY}. Although these works have shown 
+the effectiveness of bridging recognition gaps between humans and robots, 
+limitations remain in terms of immersion and interaction with the real-world environment. 
+In this context, MR is particularly promising because it allows for the seamless integration 
+of real-world environments with virtual information, 
+thus enabling more intuitive and adaptive HRC.
+
+A representative prior study is the work by Esaki et al., 
+entitled \textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} \cite{ref5}. 
+IRT-MRO demonstrated the effectiveness of HRC using MR by enabling humans to intuitively 
+manipulate virtual objects in MR space, with the robot recognizing and executing corresponding positional 
+and postural changes. However, several challenges remain unresolved, including the integration of environmental 
+perception, the assurance of stable robot posture, and the autonomy of base relocation strategies.
+
+To overcome these limitations, this study proposes a new framework: \textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}.
+
+The proposed system integrates the following three modules:
+\begin{enumerate}
+  \item \textbf{Target Bottle Inference (TBI)}: infers the intended object of manipulation based on user features.
+  \item \textbf{Base Relocation based on Inverse Reachability Map (BRI)}: determines base relocation strategies using IRM.
+  \item \textbf{Human-Intent Adaptive Grasp Manipulation (HIGM)}: compensates for differences 
+  between human intentions and robotic embodiment during grasping tasks.
+\end{enumerate}
+
+By combining these components, the proposed framework enables stable collaborative 
+task execution that does not rely on user expertise, 
+aiming for bidirectional and interactive HRC through MR space.
+
+\subsection*{Contributions}
+
+The main contributions of this study can be summarized as follows:
+
+\begin{itemize}
+  \item \textbf{Proposal of the Target Bottle Inference (TBI) module}  
+  By integrating user operation features such as hand proximity, contact, gaze, and arm motion, 
+  and weighting them according to reachability, the TBI module infers the intended object of manipulation. 
+  This approach suppresses unnecessary information presentation while supporting intuitive target selection.
+
+  \item \textbf{Realization of the Base Relocation strategy based on the Inverse Reachability Map (BRI)}  
+  By utilizing the Inverse Reachability Map, the system computes feasible base positions for grasping and 
+  visualizes candidate paths in MR space. Users can edit these paths interactively, thereby achieving a balance 
+  between autonomy and interactivity in determining whether base relocation is necessary.
+
+  \item \textbf{Implementation of the Human-Intent Adaptive Grasp Manipulation (HIGM) framework}  
+  By combining pregrasp generation, nullspace optimization, and a finite state machine (FSM), 
+  the system continuously harmonizes user operations with robot manipulability. 
+  This enables seamless collaborative manipulation based on mutual correction and suggestion.
+\end{itemize}
+
+Through these contributions, the proposed system allows robots to respect user 
+intentions while providing appropriate correction and suggestions, 
+ensuring stable task execution regardless of user expertise.
+
+Furthermore, the proposed HRI-CAS framework demonstrates applicability 
+to real-world tasks where humans and robots closely collaborate, 
+such as in manufacturing sites, remote maintenance, and medical support. 
+This work is thus expected to contribute to the further development of HRC research.
+
+\section{Related Work}
+
+Robots are expected to support human life and activities in a wide range of 
+fields such as medicine, manufacturing, space exploration, and agriculture.  
+However, many challenges remain for 
+humans and robots to work collaboratively in the same space.  
+One of these is the lack of mutual understanding of intentions and actions.  
+Humans often find it difficult to accurately predict the capabilities and behaviors of robots,
+while robots cannot fully interpret humans’ high-level goals.  
+As a result, “gaps of execution” and “gaps of evaluation” arise, hindering smooth collaboration.  
+Conventional interfaces have mainly relied on joysticks or keyboards, but visualization on 2D displays 
+provides insufficient depth information, 
+limiting the operator’s spatial awareness and sense of immersion.
+
+To address these challenges, research on Human-Robot Collaboration (HRC) using Mixed Reality (MR) 
+has made significant progress in recent years.  
+By overlaying information about robot states and environmental conditions in MR space, 
+users can perform more intuitive operations, 
+and improvements in efficiency for teleoperation and collaborative tasks can be expected \cite{ref1,ref2}.  
+In addition, many studies have explored applications of AR and VR.  
+In VR, methods have been proposed to support skill acquisition by robots through 
+imitation learning and motion data collection \cite{refX},  
+while in AR, attempts have been made to assist workers’ understanding by presenting 
+task procedures and robot states \cite{refY}.  
+Nevertheless, these approaches still face limitations in interaction with the real 
+environment and in providing a sense of immersion.  
+In this context, MR, which can integrate the real world with virtual information, 
+is receiving particular attention as a promising foundation technology for HRC.
+
+Previous MR-based HRC research can largely be classified into two directions.
+
+First, research focusing on \textbf{visualization of robot states}.  
+This direction projects sensor data and robot internal states into MR space, 
+thereby supporting users’ situational awareness and decision-making \cite{ref4}.  
+While this approach contributes to enhancing environmental understanding and reducing cognitive load, 
+direct intervention in robot motion planning and control remains limited.
+
+Second, research focusing on \textbf{intuitive mapping of user operations}.  
+By transforming hand tracking and gesture input into robot motions, these approaches enhance 
+operability and immersion.
+
+In this category, the work of Esaki et al. is representative.  
+They proposed the \textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} \cite{ref5}.  
+In IRT-MRO, objects are placed in MR space, and users directly manipulate their positions and orientations.  
+The manipulated results are transferred to the robot side, enabling the robot to 
+execute the same operations in the physical world.  
+This demonstrated the effectiveness of MR in improving the intuitiveness of robot teleoperation.  
+
+However, IRT-MRO also leaves several issues unresolved.  
+First, because the system simply transfers the object manipulation performed by the user in MR space, 
+it does not take into account whether the robot can actually reach the target object or grasp it stably.  
+
+Second, the posture of the robot arm is not always guaranteed to remain safe, 
+and problems such as singularity or joint limit violations can occur.  
+
+Third, when an object is located outside the reachable area of the robot, 
+the system does not provide an appropriate relocation strategy for the robot base, 
+leaving the operation incomplete.  
+
+In summary, previous studies have clarified the potential of MR as an intuitive interface for HRC.  
+Nevertheless, they still face challenges regarding (1) robust target inference, 
+(2) ensuring robot posture and grasp stability, and (3) achieving autonomous yet 
+interactive base relocation strategies.  
+These issues become bottlenecks in realizing seamless human-robot cooperation in dynamic and complex environments.  
+
+To address these challenges, this paper proposes a new framework called \textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}.  
+Unlike previous MR-based systems, HRI-CAS integrates:  
+\begin{enumerate}
+  \item \textbf{Target Bottle Inference (TBI)}: a module that infers the user’s 
+  intended target based on multimodal features such as gaze, 
+  head direction, and hand motion, with adaptive information-level control.
+  \item \textbf{Base Relocation based on Inverse Reachability Map (BRI)}: 
+  a module that determines optimal robot base positions when the target is unreachable, 
+  by leveraging IRM-based optimization and MR-based user corrections.
+  \item \textbf{Human-Intent Adaptive Grasp Manipulation (HIGM)}: a module that integrates Pregrasp design, nullspace optimization, 
+  and finite state machines to adaptively align user intention with the robot’s kinematic constraints.
+\end{enumerate}
+
+Through these three modules, HRI-CAS enhances the robustness of target selection, 
+guarantees stable robot motion, and provides a cooperative relocation mechanism, 
+thereby advancing MR-based HRC beyond the limitations of IRT-MRO.
+
+
+\section{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
+
+\textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)} 
+addresses several limitations observed in conventional MR-based HRC systems, 
+including insufficient utilization of environmental information, 
+lack of stable posture guarantees, 
+and inadequate autonomy in base relocation strategies.
+
+This system is built upon the foundation of 
+\textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} 
+and improves upon the issues that remained in IRT-MRO.  
+Whereas IRT-MRO employed a Unity-based holographic application on the HoloLens 2, 
+the proposed system adopts a Unity-based passthrough application using the Meta Quest.  
+Although both devices are capable of projecting real-world objects into MR space, 
+they differ significantly in their display methods.  
+
+The HoloLens 2 adopts an optical see-through display, 
+allowing the user to perceive both the real environment and virtual objects through a transparent screen.  
+However, its limited field of view and restricted brightness have been widely noted.  
+In contrast, as illustrated in Figure1, the Meta Quest employs a passthrough display system, 
+which projects images captured by external cameras onto the display, 
+enabling a wide field of view and high-resolution rendering.  
+This provides the user with a more natural and immersive MR experience, 
+enhancing both environmental understanding and intuitive operation.
+% Insert figure
+\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:label}
+
+\subsection{Implementation Platform and System}
+In this study, the experimental platform adopted was the \textbf{KUKA YouBot}.  
+The robot is a mobile manipulator equipped with an omnidirectional base, 
+a 5-DOF manipulator, and a two-finger gripper.  
+Within the proposed system, changes in the position and orientation of target objects 
+detected in MR space, as well as user manipulations, 
+are reflected directly in the robot’s motion.  
+This ensures smooth and seamless interaction between the human and the robot.  
+Furthermore, the robot’s behavior is immediately fed back into MR space, 
+providing the operator with precise visual information in real time.
+
+The graphical architecture of the system is illustrated in Figure~2 
+and is composed of the following three modules:
+% Insert figure
+\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:label1}
+
+\medskip
+\noindent
+\textbf{Target Bottle Inference (TBI) module}:  
+This module tracks the user’s gaze, head orientation, and hand motion within MR space, 
+extracting geometric relationships with candidate bottles as features.  
+These multimodal features are then processed through an integrated scoring framework 
+to infer the bottle that the user intends to manipulate.  
+By jointly evaluating diverse behavioral cues, 
+the TBI module enables highly accurate and real-time target selection.
+
+\medskip
+\noindent
+\textbf{Base Relocation based on Inverse Reachability Map (BRI) module}:  
+When the target bottle lies outside the robot’s reachable workspace, 
+this module becomes active.  
+First, an Inverse Reachability Map (IRM) is generated based on the Reachability Map (RM), 
+and candidate base positions that make the target reachable are extracted.  
+Next, an optimization problem is solved considering both the IRM score 
+and the movement cost, yielding the optimal base configuration.  
+Additionally, candidate paths are visualized within MR space, 
+allowing users to refine or adjust the proposed routes interactively.
+
+\medskip
+\noindent
+\textbf{Human-Intent Adaptive Grasp Manipulation (HIGM) module}:  
+This module aims to reconcile the differences between the user’s intended manipulation 
+and the robot’s physical and kinematic constraints.  
+Specifically, it integrates reference postures obtained from hand-tracking information 
+with robot-preferred pregrasp postures, 
+and applies nullspace optimization to adjust joint configurations.  
+As a result, the user can achieve stable grasping with natural operational feedback, 
+without needing to be aware of the robot’s inherent kinematic constraints.
+
+\medskip
+Through the integration of these modules, 
+the proposed system achieves adaptive and intuitive motion planning 
+that was not sufficiently addressed in IRT-MRO.  
+The robot is now able to select actions according to the user’s intended target, 
+while providing adaptive grasp correction without requiring the user to 
+account for robot-specific constraints.  
+This significantly reduces dependency on the user’s operational expertise 
+and ensures smooth, stable operation even for novice users.
+
+\subsection{MR System Implementation}
+The MR system is implemented on \textbf{Unity} and \textbf{MRTK3 (Mixed Reality Toolkit)}, 
+in compliance with the OpenXR standard.  
+The user can manipulate MR objects directly through hand gestures, 
+offering an intuitive and natural input interface.  
+Moreover, by presenting the robot’s behavioral intentions through MR objects, 
+the system improves the operator’s understanding of the robot’s decision-making process, 
+thereby enhancing human–robot collaboration.
+
+
+\section{Module of Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
+\subsection{Target Bottle Inference (TBI) Module}
+
+\textbf{Definition of Features}:  
+The TBI module aims to estimate the user’s intended target object based on bodily movements.  
+Figure~3 illustrates the distribution of operational features in the information space.  
+% Insert figure
+\fig[H]{width = 0.5\linewidth}{Calib-2.pdf}{Figure3}{fig:label2}
+
+Let the position of a target object $o_i$ be denoted as $\mathbf{p}_i(t)$,  
+and the positions of the user’s eyes, head, 
+and hand be $\mathbf{p}_{eye}(t)$, $\mathbf{p}_{head}(t)$, and $\mathbf{p}_{hand}(t)$, respectively.  
+For each object, the normalized direction vectors from these body parts are defined as:
+\begin{equation}
+\mathbf{d}_i^{eye}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{eye}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{eye}(t)\|}, \quad
+\mathbf{d}_i^{head}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{head}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{head}(t)\|}, \quad
+\mathbf{d}_i^{hand}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{hand}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{hand}(t)\|}.
+\end{equation}
+These vectors geometrically define the directions in which the user is focusing attention or exerting effort.  
+To incorporate dynamics of motion, normalized gaze, head orientation, and hand acceleration vectors are introduced as  
+$\hat{\mathbf{v}}_{gaze}(t)$, $\hat{\mathbf{v}}_{head}(t)$, and $\hat{\mathbf{a}}_{hand}(t)$.
+
+\medskip
+\textbf{Cosine Similarity Scores}:  
+To evaluate whether the user’s body movements align with the direction of candidate objects,  
+cosine similarity between these features and the direction vectors is computed:
+\begin{align}
+s_{\text{gaze}}(i,t) &= \max \left(0, \hat{\mathbf{v}}_{gaze}(t)\cdot \mathbf{d}_i^{eye}(t)\right), \\
+s_{\text{head}}(i,t) &= \max \left(0, \hat{\mathbf{v}}_{head}(t)\cdot \mathbf{d}_i^{head}(t)\right), \\
+s_{\text{accel}}(i,t) &= \max \left(0, \hat{\mathbf{a}}_{hand}(t)\cdot \mathbf{d}_i^{hand}(t)\right).
+\end{align}
+Here, $s_{\text{gaze}}$ represents the degree to which the gaze is directed toward each object,  
+$s_{\text{head}}$ represents the degree to which the head orientation captures each object,  
+and $s_{\text{accel}}$ represents the degree to which the hand acceleration is aligned with the object’s direction.  
+
+In addition, physical graspability is considered by introducing:  
+(i) a proximity score $s_{\text{prox}}$ based on the Euclidean distance between the hand and the object, and  
+(ii) a binary contact variable $c_i(t)$:
+\begin{equation}
+s_{\text{prox}}(i,t) = \operatorname{clip}\left(1 - \frac{\|\mathbf{p}_{hand}(t)-\mathbf{p}_i(t)\|}{R_{\max}},\,0,\,1\right), \quad
+c_i(t) \in \{0,1\}.
+\end{equation}
+Thus, the module integrates both body movement and physical graspability.
+
+\medskip
+\textbf{Score Integration}:  
+The feature vector is defined as
+\begin{equation}
+\mathbf{s}(i,t) = [s_{\text{prox}},\,c_i,\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top,
+\end{equation}
+and the integrated score is calculated with different weightings depending on whether 
+the target belongs to the reachable set $\mathcal{B}_{in}(t)$  
+or the unreachable set $\mathcal{B}_{out}(t)$:
+\begin{equation}
+S(i,t) =
+\begin{cases}
+\mathbf{w}_{in}^\top \mathbf{s}(i,t), & i \in \mathcal{B}_{in}(t), \\[6pt]
+\mathbf{w}_{out}^\top \mathbf{s}(i,t), & i \in \mathcal{B}_{out}(t).
+\end{cases}
+\end{equation}
+Here, $\mathbf{w}_{in}$ and $\mathbf{w}_{out}$ are predefined weight vectors.  
+For reachable objects, emphasis is placed on contact and proximity, 
+ensuring robustness against noisy gaze fluctuations.  
+For unreachable objects, emphasis is placed on gaze and hand motion, capturing the user’s distal intention.  
+This design enables flexible and error-tolerant inference depending on the situation.
+
+\medskip
+\textbf{Temporal Smoothing}:  
+To suppress rapid fluctuations caused by momentary body movements,  
+an exponential moving average is applied:
+\begin{equation}
+\bar{S}(i,t) = \alpha S(i,t) + (1-\alpha)\bar{S}(i,t-1), \quad \alpha \in (0,1].
+\end{equation}
+Here, $\bar{S}(i,t)$ is the smoothed integrated score, and $\alpha$ is the smoothing coefficient.  
+This prevents transient misdetections and allows stable inference of user intention.
+
+\medskip
+\textbf{Final Decision Rule}:  
+The final target object is selected as the one maximizing the smoothed score over the entire candidate set $\mathcal{B}$:
+\begin{equation}
+i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
+\end{equation}
+However, the selected object must satisfy threshold conditions:
+\begin{equation}
+  \bar{S}\!\left(i^{*}(t),\,t\right) \;\geq\;
+  \begin{cases}
+    T_{\text{in}},  & i^{*}(t) \in \mathcal{B}_{\text{in}}(t), \\[6pt]
+    T_{\text{out}}, & i^{*}(t) \in \mathcal{B}_{\text{out}}(t).
+  \end{cases}
+\end{equation}
+Here, $T_{\text{in}}$ and $T_{\text{out}}$ are thresholds for the reachable and unreachable sets, respectively.  
+This two-step decision ensures that only targets with sufficiently strong intentional signals are confirmed.
+
+\medskip
+\textbf{Information Presentation Adjustment}:  
+When presenting inference results to the user,  
+the TBI module adjusts the amount of information to prevent cognitive 
+overload while supporting intuitive understanding.  
+
+First, as shown in Figure~4, each candidate bottle is classified by 
+the \textit{Reachability Map (RM)} as “graspable” or “non-graspable.”  
+Graspable objects are displayed with a base color,  
+while non-graspable ones are rendered semi-transparent with reduced saturation,  
+ensuring they do not unnecessarily attract the user’s attention.  
+% Insert figure
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+
+
+Furthermore, as illustrated in Figure~5,  
+once the target is inferred, all non-selected objects are displayed in semi-transparent form.  
+At this stage, different highlighting schemes are used for graspable and non-graspable objects:  
+graspable targets are emphasized with a color indicating manipulability,  
+while non-graspable targets are highlighted with a different tone to indicate the need for base relocation.  
+% Insert figure
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+
+
+Through this two-step information adjustment,  
+users can clearly distinguish between “objects that can currently be grasped” 
+and “objects that require relocation.”  
+By emphasizing the final inferred target,  
+the system reduces selection errors and alleviates cognitive load,  
+supporting intuitive decision-making.
+
+\paragraph{Summary of TBI}  
+In summary, the TBI module geometrically defines multiple bodily features 
+such as gaze, head orientation, and hand motion,  
+and integrates them through cosine similarity, proximity, and contact indicators 
+to construct a robust scoring framework.  
+Temporal smoothing suppresses transient misdetections, ensuring stable real-time inference.  
+
+Furthermore, the inference results are visually presented in MR space:  
+\begin{enumerate}
+  \item Objects are classified by the Reachability Map (RM) as graspable or non-graspable,  
+        displayed either in base color or semi-transparent with reduced saturation.  
+  \item The inferred target bottle is emphasized,  
+        with different highlight colors used for graspable and non-graspable objects,  
+        providing explicit feedback to the user.  
+\end{enumerate}
+
+By jointly addressing “target inference” and “information presentation,”  
+the TBI module reduces cognitive load, prevents misselection,  
+and establishes accurate recognition of human intention as the foundation of the HRI-CAS framework.
+
+
+
+
+\subsection{Base Relocation based on Inverse Reachability Map (BRI)}
+
+When the target lies outside the robot’s reachable workspace, the robot base 
+itself must be relocated.  
+Naively exploring base candidates leads to prohibitive computational cost and 
+makes it difficult 
+to obtain configurations that respect human–robot collaboration.  
+Therefore, as illustrated in Fig.~6, 
+we introduce two concepts widely used in manipulator research— the \textit{Reachability Map (RM)} and
+the \textit{Inverse Reachability Map (IRM)}—to systematically generate and evaluate candidate base poses \cite{ref6}. 
+% insert paired figures
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
+
+
+\medskip
+\textbf{Basics of reachability and inverse reachability}:  
+Given a robot base pose $\mathbf{b}$, the workspace that the end-effector (EE) can reach from $\mathbf{b}$ is defined as
+\begin{equation}
+RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists\, \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
+\end{equation}
+where $FK(\theta,\mathbf{b})$ denotes forward kinematics.  
+In other words, if there exists a joint configuration $\theta$, the point $\mathbf{p}$ is reachable from the fixed base $\mathbf{b}$.  
+Thus, the RM specifies “how far the arm can reach from a fixed base pose.”
+
+Conversely, for a given task point $\mathbf{p}_t$, the set of base poses that makes $\mathbf{p}_t$ reachable is
+\begin{equation}
+\mathcal{B}(\mathbf{p}_t) = \{ \mathbf{b} \in \mathbb{R}^3 \mid \mathbf{p}_t \in RM(\mathbf{b}) \},
+\end{equation}
+which we call the \textit{Inverse Reachability Map (IRM)}.  
+IRM is the inverse mapping that provides “the set of base poses from which the task point is reachable,” 
+and is essential when base relocation is considered \cite{ref6}.
+
+Beyond a binary reachable/unreachable decision, RM can evaluate stability/redundancy 
+by counting the number 
+of inverse kinematic (IK) solutions available at a point.  
+In this work, the RM score for position $\mathbf{p}$ is defined by
+\begin{equation}
+S_{RM}(\mathbf{p}) = N_{\text{IK}}(\mathbf{p}).
+\end{equation}
+A larger number of solutions implies greater redundancy and flexibility in motion, 
+which typically increases grasp success rates.
+
+Since IRM is the inverse of RM, each candidate base pose $\mathbf{b}\in\mathcal{B}(\mathbf{p}_t)$ 
+for target $\mathbf{p}_t$ inherits the corresponding RM score:
+\begin{equation}
+S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
+\end{equation}
+This allows us to assess candidate base configurations not only by “reachability,” 
+but also by “how redundantly and stably” the target can be reached.
+
+\medskip
+\textbf{Optimization problem}:  
+We now select the optimal base pose from the candidate set $\mathcal{B}(\mathbf{p}_t)$.  
+As shown conceptually in Fig.~7, we formulate two cases depending on the availability of 
+environment/navigation information.
+\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:label3}
+
+\medskip
+\textbf{Case: Known path}  
+If a navigable path to the goal exists, we select the base by jointly considering 
+the IRM score $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ and the movement cost $C(\mathbf{b})$:
+\begin{equation}
+\mathbf{b}^* = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
+\Big[\, S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda\, C(\mathbf{b}) \,\Big].
+\end{equation}
+Here, $C(\mathbf{b})$ denotes the cost to move from the current base $\mathbf{b}_0$ 
+to $\mathbf{b}$ (e.g., Euclidean distance or shortest path length on an occupancy grid).  
+The parameter $\lambda$ balances “reach stability” versus “movement efficiency.”  
+The resulting candidate base poses and waypoint sequences are visualized in MR space; 
+the user can then modify the path by directly manipulating the visualized waypoints.  
+This mechanism realizes the coexistence of autonomous planning and user interaction, as depicted in Fig.~8.
+% insert paired figures
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:label4}
+
+
+\medskip
+\textbf{Case: Unknown path}  
+When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{ref5} scheme:  
+the user directly lays out a base route in MR space.  
+On top of this, we introduce a local autonomous refinement using a cost map.  
+As shown in Fig.~9, each waypoint is adjusted to a safe and feasible pose that accounts 
+for obstacles and environmental changes.  
+The refined route is immediately reflected in MR space so that the user can visually 
+grasp the autonomous corrections made by the robot.
+% (Mathematical details to be added)
+% insert paired figures
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+
+
+\paragraph{Summary of BRI}  
+In summary, our base relocation strategy adopts a two-track structure:  
+(i) when a path is known, we perform autonomous optimization based on the IRM score and movement cost;  
+(ii) when a path is unknown, we combine user-specified routes with cost-map-based refinement.  
+This design satisfies both robot autonomy and user-driven interaction, achieving flexible and robust base relocation.
+
+
+
+\subsection{Human-Intent Adaptive Grasp Manipulation (HIGM)}
+
+Even when the base position is appropriate, discrepancies between human intent and the robot’s 
+kinematic constraints can cause the end-effector (EE) to approach the target in unstable poses.  
+This can lead to grasp failure or excessive joint load.  
+To address this issue, we propose an \textit{adaptive grasp framework} that integrates Pregrasp design, 
+null-space optimization, and a finite state machine (FSM).
+
+\medskip
+\textbf{Pregrasp and EE interpolation}:  
+Human operation alone may command poses that are difficult for the robot to execute.  
+For example, if the user attempts to pinch the top of a bottle, 
+directly mapping the hand-back pose to the EE could result in an unstable grasp configuration.
+
+To address this, as shown in Fig.~10, we generate a robot-friendly 
+reference pose (Pregrasp pose $\mathbf{x}_{pre}$) based on the target position $\mathbf{p}_t$.  
+The actual EE target is defined by interpolating between the user’s palm pose $EE_{palm}$ and 
+the Pregrasp pose $EE_{pre}$, depending on the distance $d$ to the target:
+\begin{equation}
+EE_{target}(d) = (1-\beta(d))\,EE_{palm} + \beta(d)\,EE_{pre},
+\end{equation}
+where $\beta(d)\in[0,1]$ is a distance-dependent interpolation coefficient.
+
+With this scheme, user intent ($EE_{palm}$) dominates when the target is far away, and as the robot approaches, 
+the weight gradually shifts toward the stable Pregrasp pose ($EE_{pre}$).  
+In other words, the user’s motion is “magnetically guided” toward the 
+object—similar to aim assist in video games—preserving 
+intuitive control while ensuring stable and safe grasping for the robot.
+
+Furthermore, Pregrasp interpolation provides the global reference, 
+while null-space optimization ensures local stability and safety.  
+Thus, interpolation defines “which pose should be aimed for,” 
+and null-space optimization ensures “how to safely approach that pose.”  
+Combining them achieves grasping that respects user intent while adapting to the robot’s kinematic limits.  
+% insert figure
+\fig[H]{width = 0.5\linewidth}{Calib-9.pdf}{Figure10}{fig:label5}
+
+
+\medskip
+\textbf{Null-space optimization}:  
+For redundant manipulators, multiple joint configurations can realize the same EE pose.  
+The set of joint motions that do not affect the EE is called the \textit{null space} \cite{}.  
+
+Formally, the task-space velocity $\dot{x}$ and joint velocity $\dot{\theta}$ satisfy
+\begin{equation}
+\dot{x} = J \dot{\theta}.
+\end{equation}
+A velocity $\dot{\theta}_{null}$ belongs to the null space if
+\begin{equation}
+J \dot{\theta}_{null} = 0.
+\end{equation}
+Such motions leave the EE unaffected while adjusting only the joint posture.
+
+We exploit this property to simultaneously achieve the primary task and optimize joint posture.  
+The joint velocity is given by
+\begin{equation}
+\dot{\theta} = J^+ \dot{x}_d + P \nabla_\theta H(\theta),
+\end{equation}
+where the damped least-squares pseudoinverse is
+\begin{equation}
+J^+ = J^\top (JJ^\top + \lambda I)^{-1},
+\end{equation}
+and $P = I - J^+ J$ is the null-space projector.  
+The first term guarantees EE tracking, faithfully reproducing the user’s hand motion.  
+The second term optimizes posture in the null space using the merit function $H(\theta)$ (Fig.~10):
+
+\begin{equation}
+H(\theta) = w_{mani}\log\det(JJ^\top) + w_{limit}\sum_i \log m_i(\theta) - \gamma\|\theta-\theta_{pre}\|^2.
+\end{equation}
+
+The roles of each term are:
+\begin{itemize}
+  \item $w_{mani}\log\det(JJ^\top)$: maximizes Yoshikawa’s manipulability, 
+  avoiding singularities and preventing the arm from losing freedom.  
+  This maintains motion redundancy, providing the user with smooth and continuous operation.
+
+  \item $w_{limit}\sum_i \log m_i(\theta)$: enlarges the margin $m_i(\theta)$ to 
+  joint limits, preventing joints from approaching boundaries.  
+  This ensures mechanical safety and reduces the risk of sudden motion stops, improving user comfort.
+
+  \item $-\gamma\|\theta-\theta_{pre}\|^2$: maintains consistency with the Pregrasp pose, 
+  preventing optimization from drifting too far from user intent.  
+  This balances intuitive operation and kinematic stability.
+\end{itemize}
+
+Thus, null-space optimization ensures  
+(1) stability through singularity avoidance,  
+(2) safety through joint-limit avoidance, and  
+(3) intent preservation through Pregrasp consistency.  
+It functions not only as numerical stabilization, but as a foundation linking 
+“robotic physical constraints” with “the user’s continuous intuitive experience.”  
+% insert figure
+\fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Figure10}{fig:label6}
+
+\medskip
+\textbf{Finite State Machine (FSM)}:  
+To manage grasp execution safely and reliably, we introduce a four-state FSM \cite{}.  
+The FSM ensures both user-intent reflection and robot safety, preventing failures such 
+as entering the target in unstable postures.
+
+The roles and transitions of the states are:
+
+\begin{enumerate}
+  \item \textbf{TRACK}:  
+  The robot follows the target using Palm/Pregrasp interpolation.  
+  Mathematically, the EE target pose $EE_{target}(d)$ is generated 
+  and joint angles are updated via DLS-IK.  
+  User experience: “the robot hand smoothly follows my hand.”
+
+  \item \textbf{BACKOFF}:  
+  If manipulability $M(\theta)<\tau_{mani}$ or margin $m_i(\theta)<\tau_{limit}$, 
+  the robot retreats to avoid instability.  
+  This prevents “robot jamming” and provides the user with a sense of safety.
+
+  \item \textbf{REALIGN}:  
+  After BACKOFF, null-space optimization realigns the joints 
+  until $M(\theta)\geq \tau_{mani}$ and $m_i(\theta)\geq \tau_{limit}$.  
+  User experience: “the robot autonomously reconfigures itself,” revealing its adaptiveness.
+
+  \item \textbf{APPROACH}:  
+  Once stability is secured and the target distance $d<\tau_{dist}$, 
+  the EE approaches to grasp.  
+  This corresponds to “the robot decisively grabs,” improving grasp success.
+\end{enumerate}
+
+The FSM links mathematical criteria (manipulability, joint margin, distance thresholds) with 
+user experience (tracking feel, safety, adaptiveness, visible grasp action).  
+In particular, the BACKOFF $\to$ REALIGN transition guarantees that even if the user makes errors, 
+the robot autonomously corrects them, realizing “collaborative safety” in HRC.
+
+% insert figure
+\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{Figure10}{fig:label7}
+
+
+\subsection{Significance of Module Integration}
+
+The proposed HRI-CAS consists of three modules: Target Bottle Inference (TBI), 
+Base Relocation based on IRM (BRI), 
+and Human-Intent Adaptive Grasp Manipulation (HIGM).  
+Each module functions independently, but more importantly, 
+they complement each other to overcome 
+the limitations faced by conventional MR-based HRC systems.
+
+First, TBI accurately estimates the user’s intent, clarifying “which object should be manipulated.”  
+This object information is then passed to BRI, which determines whether base relocation is necessary 
+depending on the object’s reachability.  
+Subsequently, HIGM leverages the outputs of TBI and BRI to compensate for discrepancies between human 
+intent and robot kinematic constraints, ensuring stable grasping.
+
+Through the integration of TBI, BRI, and HIGM, the system establishes a coherent workflow:  
+(1) recognizing user intent with high precision,  
+(2) ensuring reachability through appropriate base relocation, and  
+(3) guaranteeing grasp stability.  
+As a result, the robot operates intuitively and adaptively without over-relying on the user’s physicality, 
+providing a stable interaction experience for both novice and expert users.
+
+Thus, the significance of this research lies not merely in individual technical improvements, but in the establishment 
+of an integrated framework for HRC in MR environments, encompassing the flow of 
+“intent recognition → reachability assurance → stable grasp.”
+
+
+\end{document}
