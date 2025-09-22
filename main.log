@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 01:05
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 01:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -685,7 +685,7 @@ Overfull \hbox (4.45078pt too wide) in paragraph at lines 7--7
  []
 
 
-Overfull \hbox (4.45078pt too wide) in paragraph at lines 20--20
+Overfull \hbox (4.45078pt too wide) in paragraph at lines 30--30
  [][] []\T1/cmr/m/n/10.95 Module of Hu-man^^URobot In-ter-ac-tion with Cor-rec-tion and Sug-ges-tion (HRI- 
  []
 
@@ -801,7 +801,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [7]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 354.
+(Font)              No change on input line 352.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 
@@ -827,13 +827,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 409.
+(Font)              No change on input line 407.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 410.
+(Font)              No change on input line 408.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 429.
+(Font)              No change on input line 426.
 
 
 
@@ -861,7 +861,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 503.
+(Font)              No change on input line 498.
 
 
 
@@ -875,7 +875,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Calib-9.pdf Graphic file (type pdf)
 <fig/Calib-9.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 539.
+(Font)              No change on input line 534.
 
 
 
@@ -1133,7 +1133,7 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 34.
+(Font)              No change on input line 37.
 
 
 
@@ -1164,12 +1164,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29204 strings out of 469906
- 704618 string characters out of 5484464
+ 29205 strings out of 469906
+ 704623 string characters out of 5484464
  1338361 words of memory out of 5000000
- 57191 multiletter control sequences out of 15000+600000
+ 57192 multiletter control sequences out of 15000+600000
  658332 words of font info for 143 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  99i,12n,105p,778b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (37 pages, 149432 bytes).
+Output written on main.dvi (37 pages, 149952 bytes).

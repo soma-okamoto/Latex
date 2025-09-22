@@ -70,7 +70,7 @@ The main contributions of this study can be summarized as follows:
   and weighting them according to reachability, the TBI module infers the intended object of manipulation. 
   This approach suppresses unnecessary information presentation while supporting intuitive target selection.
   \item \textbf{Realization of the Base Relocation strategy based on the Inverse Reachability Map (BRI)}  
-  By utilizing the Inverse Reachability Map, the system computes feasible base positions for grasping and 
+  By utilizing the Inverse Reachability Map\cite{RM}, the system computes feasible base positions for grasping and 
   visualizes candidate paths in MR space. Users can edit these paths interactively, thereby achieving a balance 
   between autonomy and interactivity in determining whether base relocation is necessary.
   \item \textbf{Implementation of the Human-Intent Adaptive Grasp Manipulation (HIGM) framework}  
@@ -213,7 +213,7 @@ the TBI module enables highly accurate and real-time target selection.
 \textbf{Base Relocation based on Inverse Reachability Map (BRI) module}:  
 When the target bottle lies outside the robot’s reachable workspace, 
 this module becomes active.  
-First, an Inverse Reachability Map (IRM) is generated based on the Reachability Map (RM), 
+First, an Inverse Reachability Map (IRM) is generated based on the Reachability Map (RM)\cite{RM}, 
 and candidate base positions that make the target reachable are extracted.  
 Next, an optimization problem is solved considering both the IRM score 
 and the movement cost, yielding the optimal base configuration.  
@@ -254,7 +254,7 @@ thereby enhancing human–robot collaboration.
 \section{Module of Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
 \subsection{Target Bottle Inference (TBI) Module}
 
-\textbf{Definition of Features}:  
+\paragraph{Definition of Features}:  
 The TBI module aims to estimate the user’s intended target object based on bodily movements.  
 Figure~3 illustrates the distribution of operational features in the information space.  
 % Insert figure
@@ -273,8 +273,7 @@ These vectors geometrically define the directions in which the user is focusing 
 To incorporate dynamics of motion, normalized gaze, head orientation, and hand acceleration vectors are introduced as  
 $\hat{\mathbf{v}}_{gaze}(t)$, $\hat{\mathbf{v}}_{head}(t)$, and $\hat{\mathbf{a}}_{hand}(t)$.
 
-\medskip
-\textbf{Cosine Similarity Scores}:  
+\paragraph{Cosine Similarity Scores}:  
 To evaluate whether the user’s body movements align with the direction of candidate objects,  
 cosine similarity between these features and the direction vectors is computed:
 \begin{align}
@@ -295,8 +294,7 @@ c_i(t) \in \{0,1\}.
 \end{equation}
 Thus, the module integrates both body movement and physical graspability.
 
-\medskip
-\textbf{Score Integration}:  
+\paragraph{Score Integration}:  
 The feature vector is defined as
 \begin{equation}
 \mathbf{s}(i,t) = [s_{\text{prox}},\,c_i,\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top,
@@ -317,18 +315,19 @@ ensuring robustness against noisy gaze fluctuations.
 For unreachable objects, emphasis is placed on gaze and hand motion, capturing the user’s distal intention.  
 This design enables flexible and error-tolerant inference depending on the situation.
 
-\medskip
-\textbf{Temporal Smoothing}:  
-To suppress rapid fluctuations caused by momentary body movements,  
-an exponential moving average is applied:
+\paragraph{Temporal Smoothing}:  
+% To suppress rapid fluctuations caused by momentary body movements,  
+% an exponential moving average is applied\cite{EMA}:
+
+Since the score is expected to fluctuate rapidly due to momentary body 
+movements, an exponential moving average is introduced to temporally smooth the score \cite{EMA}.
 \begin{equation}
 \bar{S}(i,t) = \alpha S(i,t) + (1-\alpha)\bar{S}(i,t-1), \quad \alpha \in (0,1].
 \end{equation}
 Here, $\bar{S}(i,t)$ is the smoothed integrated score, and $\alpha$ is the smoothing coefficient.  
 This prevents transient misdetections and allows stable inference of user intention.
 
-\medskip
-\textbf{Final Decision Rule}:  
+\paragraph{Final Decision Rule}:  
 The final target object is selected as the one maximizing the smoothed score over the entire candidate set $\mathcal{B}$:
 \begin{equation}
 i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
@@ -344,15 +343,14 @@ However, the selected object must satisfy threshold conditions:
 Here, $T_{\text{in}}$ and $T_{\text{out}}$ are thresholds for the reachable and unreachable sets, respectively.  
 This two-step decision ensures that only targets with sufficiently strong intentional signals are confirmed.
 
-\medskip
-\textbf{Information Presentation Adjustment}:  
+\paragraph{Information Presentation Adjustment}:  
 When presenting inference results to the user,  
 the TBI module adjusts the amount of information to prevent cognitive 
 overload while supporting intuitive understanding.  
 
 First, as shown in Figure~4, each candidate bottle is classified by 
 the \textit{Reachability Map (RM)} as “graspable” or “non-graspable.”  
-Graspable objects are displayed with a base color,  
+Graspable objects are displayed with a base color\cite{RM},  
 while non-graspable ones are rendered semi-transparent with reduced saturation,  
 ensuring they do not unnecessarily attract the user’s attention.  
 % Insert figure
@@ -375,7 +373,7 @@ By emphasizing the final inferred target,
 the system reduces selection errors and alleviates cognitive load,  
 supporting intuitive decision-making.
 
-\paragraph{Summary of TBI}  
+\paragraph{Summary of TBI}:  
 In summary, the TBI module geometrically defines multiple bodily features 
 such as gaze, head orientation, and hand motion,  
 and integrates them through cosine similarity, proximity, and contact indicators 
@@ -385,7 +383,7 @@ Temporal smoothing suppresses transient misdetections, ensuring stable real-time
 Furthermore, the inference results are visually presented in MR space:  
 \begin{enumerate}
   \item Objects are classified by the Reachability Map (RM) as graspable or non-graspable,  
-        displayed either in base color or semi-transparent with reduced saturation.  
+        displayed either in base color or semi-transparent with reduced saturation\cite{RM}.  
   \item The inferred target bottle is emphasized,  
         with different highlight colors used for graspable and non-graspable objects,  
         providing explicit feedback to the user.  
@@ -407,13 +405,12 @@ makes it difficult
 to obtain configurations that respect human–robot collaboration.  
 Therefore, as illustrated in Fig.~6, 
 we introduce two concepts widely used in manipulator research— the \textit{Reachability Map (RM)} and
-the \textit{Inverse Reachability Map (IRM)}—to systematically generate and evaluate candidate base poses \cite{RM}. 
+the \textit{Inverse Reachability Map (IRM)}—to generate and evaluate candidate base poses \cite{RM}. 
 % insert paired figures
 \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
 
 
-\medskip
-\textbf{Basics of reachability and inverse reachability}:  
+\paragraph{Basics of reachability and inverse reachability}:  
 Given a robot base pose $\mathbf{b}$, the workspace that the end-effector (EE) can reach from $\mathbf{b}$ is defined as
 \begin{equation}
 RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists\, \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
@@ -448,15 +445,13 @@ S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
 This allows us to assess candidate base configurations not only by “reachability,” 
 but also by “how redundantly and stably” the target can be reached.
 
-\medskip
-\textbf{Optimization problem}:  
+\paragraph{Optimization problem}:  
 We now select the optimal base pose from the candidate set $\mathcal{B}(\mathbf{p}_t)$.  
 As shown conceptually in Fig.~7, we formulate two cases depending on the availability of 
 environment/navigation information.
 \fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:label3}
 
-\medskip
-\textbf{Case: Known path}  
+\paragraph{Case: Known path}:  
 If a navigable path to the goal exists, we select the base by jointly considering 
 the IRM score $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ and the movement cost $C(\mathbf{b})$:
 \begin{equation}
@@ -473,8 +468,8 @@ This mechanism realizes the coexistence of autonomous planning and user interact
 \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:label4}
 
 
-\medskip
-\textbf{Case: Unknown path}  
+
+\paragraph{Case: Unknown path}:  
 When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{Esaki} scheme:  
 the user directly lays out a base route in MR space.  
 On top of this, we introduce a local autonomous refinement using a cost map.  
@@ -487,7 +482,7 @@ grasp the autonomous corrections made by the robot.
 \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
 
 
-\paragraph{Summary of BRI}  
+\paragraph{Summary of BRI}:  
 In summary, our base relocation strategy adopts a two-track structure:  
 (i) when a path is known, we perform autonomous optimization based on the IRM score and movement cost;  
 (ii) when a path is unknown, we combine user-specified routes with cost-map-based refinement.  

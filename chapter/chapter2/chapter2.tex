@@ -186,7 +186,7 @@ Hololens2 は光学シースルー方式を採用しており，ユーザは透�
 \noindent
 \textbf{Base Relocation based on Inverse Reachability Map (BRI) モジュール}: 
 対象ボトルがロボットの可動範囲外に存在する場合に作動する。
-まず Reachability Map (RM) を基に Inverse Reachability Map (IRM) を生成し，
+まず Reachability Map (RM) を基に Inverse Reachability Map (IRM) を生成し\cite{RM}，
 対象位置を到達可能とする候補ベース位置集合を抽出する。
 次に，IRM スコアおよび移動コストを考慮した最適化問題を解き，
 最適なベース配置を決定する。
@@ -287,8 +287,8 @@ S(i,t) =
 
 \medskip
 \textbf{時間平滑化}: 
-瞬間的な身体動作の揺らぎによりスコアが急激に変動することを防ぐため，
-指数移動平均を導入して時間的に平滑化する。
+瞬間的な身体動作の揺らぎによりスコアが急激に変動することが予想されるため、
+指数移動平均を導入してスコアを時間的に平滑化する\cite{EMA}。
 \begin{equation}
 \bar{S}(i,t) = \alpha S(i,t) + (1-\alpha)\bar{S}(i,t-1), \quad \alpha \in (0,1].
 \end{equation}
@@ -318,7 +318,7 @@ i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
 TBI モジュールでは，推定結果をユーザに提示する際に，過剰な情報提示を避けつつ
 直感的な理解を促すために情報量の調整を行う。
 
-まず，図4に示すように各対象ボトルが \textit{Reachability Map (RM)} において
+まず，図4に示すように各対象ボトルが \textit{Reachability Map (RM)} \cite{RM}において
 「把持可能」か「把持不可能」かを判定し，
 把持可能な対象はベースカラーで表示する。
 一方，把持不可能な対象は半透明化し，彩度を低下させることで
@@ -375,7 +375,7 @@ UI 強調の方法を区別し，
 本研究では，図6に示すロボットマニピュレータ研究で広く利用される
 \textit{到達可能マップ (Reachability Map, RM)} と
 \textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入し，
-体系的に候補ベース位置を生成・評価する\cite{RM}。
+候補ベース位置を生成・評価する\cite{RM}。
 % 図を並べて表示
 \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
 
