@@ -11,12 +11,12 @@
 \setcounter{page}{0} %ページ番号をゼロに設定
 \pagenumbering{arabic} %本文用のページ番号付け
 
-\chapter{序論}\label{chap:introduction}
+\chapter{英訳}\label{chap:introduction}
 \section{Introduction}
 
 In recent years, Human-Robot Collaboration (HRC) has attracted significant
 attention as an important research domainin which humans and robots 
-cooperate to accomplish tasks in diverse working environments. The aim is 
+cooperate to accomplish tasks in diverse working environments\cite{HRC1}\cite{HRC2}. The aim is 
 not only for robots to interpret human intentions more accurately but 
 also to enable smooth and intuitive communication. When working in shared spaces, 
 the synergy between humans and robots can be expected to improve both efficiency and safety.
@@ -30,14 +30,14 @@ To address this issue, approaches that leverage Mixed Reality (MR)
 to intuitively map human operations onto robots have been actively 
 studied. MR enables users to recognize robotic motion 
 as an extension of their own body, thereby fostering more 
-natural and seamless collaboration \cite{refy}.
+natural and seamless collaboration \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}.
 
 Frameworks for intuitive operation support in HRC have also been reported 
 not only with MR but also through Augmented Reality (AR) and Virtual Reality (VR). 
 For example, VR-based methods have been proposed for imitation learning and motion data 
-collection, allowing robots to efficiently acquire manipulation skills \cite{refX}. 
+collection, allowing robots to efficiently acquire manipulation skills \cite{VR1} \cite{VR2}\cite{VR3}. 
 Meanwhile, AR-based approaches have sought to present robot states and task procedures 
-to the user, thereby enhancing task comprehension \cite{refY}. Although these works have shown 
+to the user, thereby enhancing task comprehension \cite{AR1} \cite{AR2}\cite{AR3}. Although these works have shown 
 the effectiveness of bridging recognition gaps between humans and robots, 
 limitations remain in terms of immersion and interaction with the real-world environment. 
 In this context, MR is particularly promising because it allows for the seamless integration 
@@ -45,25 +45,20 @@ of real-world environments with virtual information,
 thus enabling more intuitive and adaptive HRC.
 
 A representative prior study is the work by Esaki et al., 
-entitled \textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} \cite{ref5}. 
+entitled Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)\cite{Esaki}. 
 IRT-MRO demonstrated the effectiveness of HRC using MR by enabling humans to intuitively 
 manipulate virtual objects in MR space, with the robot recognizing and executing corresponding positional 
 and postural changes. However, several challenges remain unresolved, including the integration of environmental 
 perception, the assurance of stable robot posture, and the autonomy of base relocation strategies.
 
-To overcome these limitations, this study proposes a new framework: \textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}.
+To address these challenges, this study proposes Human–Robot Interaction with Correction and Suggestion (HRI-CAS). 
+The system integrates three key components: Target Bottle Inference (TBI), 
+which estimates the target object based on user operation features; Base Relocation based on the Inverse Reachability Map (BRI), 
+which provides a base movement strategy utilizing the IRM; and Human-Intent Adaptive Grasp Manipulation (HIGM), 
+a grasping framework that compensates for the embodiment gap between humans and robots. 
 
-The proposed system integrates the following three modules:
-\begin{enumerate}
-  \item \textbf{Target Bottle Inference (TBI)}: infers the intended object of manipulation based on user features.
-  \item \textbf{Base Relocation based on Inverse Reachability Map (BRI)}: determines base relocation strategies using IRM.
-  \item \textbf{Human-Intent Adaptive Grasp Manipulation (HIGM)}: compensates for differences 
-  between human intentions and robotic embodiment during grasping tasks.
-\end{enumerate}
-
-By combining these components, the proposed framework enables stable collaborative 
-task execution that does not rely on user expertise, 
-aiming for bidirectional and interactive HRC through MR space.
+By combining these components, 
+HRI-CAS enables stable collaborative work independent of the user’s skill level and aims to realize bidirectional and interactive HRC through MR space.
 
 \subsection*{Contributions}
 
@@ -74,12 +69,10 @@ The main contributions of this study can be summarized as follows:
   By integrating user operation features such as hand proximity, contact, gaze, and arm motion, 
   and weighting them according to reachability, the TBI module infers the intended object of manipulation. 
   This approach suppresses unnecessary information presentation while supporting intuitive target selection.
-
   \item \textbf{Realization of the Base Relocation strategy based on the Inverse Reachability Map (BRI)}  
   By utilizing the Inverse Reachability Map, the system computes feasible base positions for grasping and 
   visualizes candidate paths in MR space. Users can edit these paths interactively, thereby achieving a balance 
   between autonomy and interactivity in determining whether base relocation is necessary.
-
   \item \textbf{Implementation of the Human-Intent Adaptive Grasp Manipulation (HIGM) framework}  
   By combining pregrasp generation, nullspace optimization, and a finite state machine (FSM), 
   the system continuously harmonizes user operations with robot manipulability. 
@@ -113,12 +106,12 @@ To address these challenges, research on Human-Robot Collaboration (HRC) using M
 has made significant progress in recent years.  
 By overlaying information about robot states and environmental conditions in MR space, 
 users can perform more intuitive operations, 
-and improvements in efficiency for teleoperation and collaborative tasks can be expected \cite{ref1,ref2}.  
+and improvements in efficiency for teleoperation and collaborative tasks can be expected \cite{MR1} \cite{MR2}.  
 In addition, many studies have explored applications of AR and VR.  
 In VR, methods have been proposed to support skill acquisition by robots through 
-imitation learning and motion data collection \cite{refX},  
+imitation learning and motion data collection \cite{VR1} \cite{VR2},  
 while in AR, attempts have been made to assist workers’ understanding by presenting 
-task procedures and robot states \cite{refY}.  
+task procedures and robot states \cite{AR1} \cite{AR2}.  
 Nevertheless, these approaches still face limitations in interaction with the real 
 environment and in providing a sense of immersion.  
 In this context, MR, which can integrate the real world with virtual information, 
@@ -128,7 +121,7 @@ Previous MR-based HRC research can largely be classified into two directions.
 
 First, research focusing on \textbf{visualization of robot states}.  
 This direction projects sensor data and robot internal states into MR space, 
-thereby supporting users’ situational awareness and decision-making \cite{ref4}.  
+thereby supporting users’ situational awareness and decision-making \cite{Awareness}.  
 While this approach contributes to enhancing environmental understanding and reducing cognitive load, 
 direct intervention in robot motion planning and control remains limited.
 
@@ -137,7 +130,7 @@ By transforming hand tracking and gesture input into robot motions, these approa
 operability and immersion.
 
 In this category, the work of Esaki et al. is representative.  
-They proposed the \textit{Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)} \cite{ref5}.  
+They proposed the Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO) \cite{Esaki}.  
 In IRT-MRO, objects are placed in MR space, and users directly manipulate their positions and orientations.  
 The manipulated results are transferred to the robot side, enabling the robot to 
 execute the same operations in the physical world.  
@@ -154,28 +147,12 @@ Third, when an object is located outside the reachable area of the robot,
 the system does not provide an appropriate relocation strategy for the robot base, 
 leaving the operation incomplete.  
 
-In summary, previous studies have clarified the potential of MR as an intuitive interface for HRC.  
-Nevertheless, they still face challenges regarding (1) robust target inference, 
-(2) ensuring robot posture and grasp stability, and (3) achieving autonomous yet 
-interactive base relocation strategies.  
-These issues become bottlenecks in realizing seamless human-robot cooperation in dynamic and complex environments.  
-
-To address these challenges, this paper proposes a new framework called \textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}.  
-Unlike previous MR-based systems, HRI-CAS integrates:  
-\begin{enumerate}
-  \item \textbf{Target Bottle Inference (TBI)}: a module that infers the user’s 
-  intended target based on multimodal features such as gaze, 
-  head direction, and hand motion, with adaptive information-level control.
-  \item \textbf{Base Relocation based on Inverse Reachability Map (BRI)}: 
-  a module that determines optimal robot base positions when the target is unreachable, 
-  by leveraging IRM-based optimization and MR-based user corrections.
-  \item \textbf{Human-Intent Adaptive Grasp Manipulation (HIGM)}: a module that integrates Pregrasp design, nullspace optimization, 
-  and finite state machines to adaptively align user intention with the robot’s kinematic constraints.
-\end{enumerate}
-
-Through these three modules, HRI-CAS enhances the robustness of target selection, 
-guarantees stable robot motion, and provides a cooperative relocation mechanism, 
-thereby advancing MR-based HRC beyond the limitations of IRT-MRO.
+In summary, while existing studies have clearly demonstrated the effectiveness of MR for HRC, 
+they have not yet resolved several key challenges, such as the lack of integration of environmental information, 
+the absence of stable operation considering redundant degrees of freedom, and the insufficient autonomy of base relocation strategies. 
+Moreover, inherent limitations of MR technology itself remain, including the lack of haptics and constraints on real-time processing 
+performance \cite{LimitMR}. Against this background, this study proposes 
+Human–Robot Interaction with Correction and Suggestion (HRI-CAS).  
 
 
 \section{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
@@ -430,7 +407,7 @@ makes it difficult
 to obtain configurations that respect human–robot collaboration.  
 Therefore, as illustrated in Fig.~6, 
 we introduce two concepts widely used in manipulator research— the \textit{Reachability Map (RM)} and
-the \textit{Inverse Reachability Map (IRM)}—to systematically generate and evaluate candidate base poses \cite{ref6}. 
+the \textit{Inverse Reachability Map (IRM)}—to systematically generate and evaluate candidate base poses \cite{RM}. 
 % insert paired figures
 \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
 
@@ -451,7 +428,7 @@ Conversely, for a given task point $\mathbf{p}_t$, the set of base poses that ma
 \end{equation}
 which we call the \textit{Inverse Reachability Map (IRM)}.  
 IRM is the inverse mapping that provides “the set of base poses from which the task point is reachable,” 
-and is essential when base relocation is considered \cite{ref6}.
+and is essential when base relocation is considered \cite{RM}.
 
 Beyond a binary reachable/unreachable decision, RM can evaluate stability/redundancy 
 by counting the number 
@@ -498,7 +475,7 @@ This mechanism realizes the coexistence of autonomous planning and user interact
 
 \medskip
 \textbf{Case: Unknown path}  
-When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{ref5} scheme:  
+When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{Esaki} scheme:  
 the user directly lays out a base route in MR space.  
 On top of this, we introduce a local autonomous refinement using a cost map.  
 As shown in Fig.~9, each waypoint is adjusted to a safe and feasible pose that accounts 
@@ -521,7 +498,7 @@ This design satisfies both robot autonomy and user-driven interaction, achieving
 \subsection{Human-Intent Adaptive Grasp Manipulation (HIGM)}
 
 Even when the base position is appropriate, discrepancies between human intent and the robot’s 
-kinematic constraints can cause the end-effector (EE) to approach the target in unstable poses.  
+kinematic constraints can cause the End-Effector (EE) to approach the target in unstable poses.  
 This can lead to grasp failure or excessive joint load.  
 To address this issue, we propose an \textit{adaptive grasp framework} that integrates Pregrasp design, 
 null-space optimization, and a finite state machine (FSM).
@@ -557,9 +534,9 @@ Combining them achieves grasping that respects user intent while adapting to the
 
 
 \medskip
-\textbf{Null-space optimization}:  
+\textbf{Joint refinement through null-space optimization}:  
 For redundant manipulators, multiple joint configurations can realize the same EE pose.  
-The set of joint motions that do not affect the EE is called the \textit{null space} \cite{}.  
+The set of joint motions that do not affect the EE is called the \textit{null space} \cite{Null1}\cite{Null2}.  
 
 Formally, the task-space velocity $\dot{x}$ and joint velocity $\dot{\theta}$ satisfy
 \begin{equation}
@@ -590,12 +567,12 @@ H(\theta) = w_{mani}\log\det(JJ^\top) + w_{limit}\sum_i \log m_i(\theta) - \gamm
 
 The roles of each term are:
 \begin{itemize}
-  \item $w_{mani}\log\det(JJ^\top)$: maximizes Yoshikawa’s manipulability, 
+  \item $w_{mani}\log\det(JJ^\top)$: maximizes Yoshikawa’s manipulability\cite{Yoshikawa}, 
   avoiding singularities and preventing the arm from losing freedom.  
   This maintains motion redundancy, providing the user with smooth and continuous operation.
 
   \item $w_{limit}\sum_i \log m_i(\theta)$: enlarges the margin $m_i(\theta)$ to 
-  joint limits, preventing joints from approaching boundaries.  
+  joint limits\cite{JointLimit}, preventing joints from approaching boundaries.  
   This ensures mechanical safety and reduces the risk of sudden motion stops, improving user comfort.
 
   \item $-\gamma\|\theta-\theta_{pre}\|^2$: maintains consistency with the Pregrasp pose, 
@@ -613,10 +590,13 @@ It functions not only as numerical stabilization, but as a foundation linking
 \fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Figure10}{fig:label6}
 
 \medskip
-\textbf{Finite State Machine (FSM)}:  
-To manage grasp execution safely and reliably, we introduce a four-state FSM \cite{}.  
-The FSM ensures both user-intent reflection and robot safety, preventing failures such 
-as entering the target in unstable postures.
+\textbf{Grasp Readiness Finite State Machine}:  
+To ensure that the entire grasping operation proceeds safely and stably, this study introduces a Finite State Machine (FSM) consisting of four states.
+A Finite State Machine (FSM) is a classical modeling approach that defines system behavior as a combination of states and state transitions \cite{FSM1} \cite{FSM2}.
+Each state specifies the system’s behavior, and transitions to other states occur in response to external inputs or internal conditions.
+This simple yet explicit framework makes it possible to manage complex actions step by step, thereby facilitating safety and stability assurance.
+Through the FSM, both the reflection of user intent and the accommodation of the robot’s 
+kinematic constraints are guaranteed, preventing failures such as the robot “approaching the target in an unstable posture.”
 
 The roles and transitions of the states are:
 
