@@ -240,6 +240,7 @@ TBI モジュールは，ユーザの身体運動に基づいて操作対象を�
 視線ベクトル，頭部方向ベクトル，および手先加速度ベクトルをそれぞれ正規化し，
 $\hat{\mathbf{v}}_{gaze}(t)$，$\hat{\mathbf{v}}_{head}(t)$，$\hat{\mathbf{a}}_{hand}(t)$ と定義する。
 
+
 \medskip
 \textbf{コサイン類似度スコア}: 
 ユーザの身体運動と対象オブジェクトの方向が一致するかどうかを評価するため，
@@ -261,12 +262,14 @@ s_{\text{prox}}(i,t) = \operatorname{clip}\left(1 - \frac{\|\mathbf{p}_{hand}(t)
 c_i(t) \in \{0,1\}.
 \end{equation}
 これにより，身体運動だけでなく「物理的把持可能性」も同時に考慮する。
+ここで $c_i(t)$ は最終決定における強制的なフラグとして用い，
+特徴ベクトルには含めない。
 
 \medskip
 \textbf{スコア統合}: 
 以上の特徴量をまとめた特徴ベクトルを
 \begin{equation}
-\mathbf{s}(i,t) = [s_{\text{prox}},\,c_i,\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top
+\mathbf{s}(i,t) = [s_{\text{prox}},\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top
 \end{equation}
 とし，対象が到達可能集合 $\mathcal{B}_{in}(t)$ に属するか，
 到達不可能集合 $\mathcal{B}_{out}(t)$ に属するかによって，
@@ -279,9 +282,9 @@ S(i,t) =
 \end{cases}
 \end{equation}
 ここで $\mathbf{w}_{in}, \mathbf{w}_{out}$ は事前に設定された重みベクトルである。
-到達可能な対象に対しては「接触度」や「近接度」を重視することで，
+到達可能な対象に対しては「近接度」や「手先の動き」を重視することで，
 ノイズ的な視線の揺れに惑わされず堅牢に推定できる。
-一方，到達不可能な対象に対しては「視線」や「手先の動き」を重視することで，
+一方，到達不可能な対象に対しては「視線」や「頭の向き」を重視することで，
 ユーザの遠隔意図を正しく反映する。
 これにより，状況に応じた柔軟かつ誤検出耐性の高い推定が可能となる。
 
@@ -297,7 +300,17 @@ S(i,t) =
 
 \medskip
 \textbf{最終決定ルール}: 
-最終的な操作対象は，全候補集合 $\mathcal{B}$ に対して平滑化スコアを最大化する対象として選択される：
+最終的な操作対象は，まず「接触有無」を優先基準として決定される。
+すなわち，
+\begin{equation}
+  i^*(t) \in \{\, i \in \mathcal{B} \mid c_i(t) = 1 \,\}.
+\end{equation}
+
+
+すなわち，どの候補に対しても接触フラグが立った場合，
+その対象が即座に最終決定対象となる。
+
+それ以外は全候補集合 $\mathcal{B}$ に対して平滑化スコアを最大化する対象として選択される：
 \begin{equation}
 i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
 \end{equation}

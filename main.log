@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 01:43
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 02:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -801,7 +801,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [7]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 352.
+(Font)              No change on input line 361.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 
@@ -827,13 +827,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 407.
+(Font)              No change on input line 416.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 408.
+(Font)              No change on input line 417.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 426.
+(Font)              No change on input line 435.
 
 
 
@@ -861,7 +861,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 498.
+(Font)              No change on input line 507.
 
 
 
@@ -875,7 +875,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Calib-9.pdf Graphic file (type pdf)
 <fig/Calib-9.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 534.
+(Font)              No change on input line 543.
 
 
 
@@ -992,11 +992,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [6]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 321.
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1006,6 +1001,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [7]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 334.
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 
@@ -1019,13 +1018,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [8]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 376.
+(Font)              No change on input line 389.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 377.
+(Font)              No change on input line 390.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 398.
+(Font)              No change on input line 411.
 
 
 
@@ -1053,7 +1052,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 480.
+(Font)              No change on input line 493.
 
 
 
@@ -1067,7 +1066,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Calib-9.pdf Graphic file (type pdf)
 <fig/Calib-9.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 518.
+(Font)              No change on input line 531.
 
 
 
@@ -1133,7 +1132,7 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 37.
+(Font)              No change on input line 40.
 
 
 
@@ -1170,6 +1169,6 @@ Here is how much of TeX's memory you used:
  57192 multiletter control sequences out of 15000+600000
  658332 words of font info for 143 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 99i,12n,105p,778b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,105p,778b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (37 pages, 150288 bytes).
+Output written on main.dvi (37 pages, 151336 bytes).

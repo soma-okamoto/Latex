@@ -292,12 +292,13 @@ In addition, physical graspability is considered by introducing:
 s_{\text{prox}}(i,t) = \operatorname{clip}\left(1 - \frac{\|\mathbf{p}_{hand}(t)-\mathbf{p}_i(t)\|}{R_{\max}},\,0,\,1\right), \quad
 c_i(t) \in \{0,1\}.
 \end{equation}
-Thus, the module integrates both body movement and physical graspability.
+Thus, the module integrates both body movement and physical graspability.  
+Here, $c_i(t)$ is treated as a mandatory flag for the final decision and is not included in the feature vector.
 
 \paragraph{Score Integration}:  
 The feature vector is defined as
 \begin{equation}
-\mathbf{s}(i,t) = [s_{\text{prox}},\,c_i,\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top,
+\mathbf{s}(i,t) = [s_{\text{prox}},\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top,
 \end{equation}
 and the integrated score is calculated with different weightings depending on whether 
 the target belongs to the reachable set $\mathcal{B}_{in}(t)$  
@@ -328,7 +329,15 @@ Here, $\bar{S}(i,t)$ is the smoothed integrated score, and $\alpha$ is the smoot
 This prevents transient misdetections and allows stable inference of user intention.
 
 \paragraph{Final Decision Rule}:  
-The final target object is selected as the one maximizing the smoothed score over the entire candidate set $\mathcal{B}$:
+The final target is determined with priority given to contact.  
+If there exists any candidate $i$ such that $c_i(t)=1$, 
+that object is immediately selected:  
+\begin{equation}
+i^*(t) \in \{\, i \in \mathcal{B} \mid c_i(t) = 1 \,\}.
+\end{equation}
+
+Otherwise, the target is selected as the one maximizing 
+the smoothed score over the entire candidate set $\mathcal{B}$:
 \begin{equation}
 i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
 \end{equation}
@@ -363,7 +372,7 @@ At this stage, different highlighting schemes are used for graspable and non-gra
 graspable targets are emphasized with a color indicating manipulability,  
 while non-graspable targets are highlighted with a different tone to indicate the need for base relocation.  
 % Insert figure
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure5}{fig:1}
 
 
 Through this two-step information adjustment,  
