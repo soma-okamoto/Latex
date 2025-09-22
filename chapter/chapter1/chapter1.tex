@@ -389,19 +389,19 @@ and integrates them through cosine similarity, proximity, and contact indicators
 to construct a robust scoring framework.  
 Temporal smoothing suppresses transient misdetections, ensuring stable real-time inference.  
 
-Furthermore, the inference results are visually presented in MR space:  
-\begin{enumerate}
-  \item Objects are classified by the Reachability Map (RM) as graspable or non-graspable,  
-        displayed either in base color or semi-transparent with reduced saturation\cite{RM}.  
-  \item The inferred target bottle is emphasized,  
-        with different highlight colors used for graspable and non-graspable objects,  
-        providing explicit feedback to the user.  
-\end{enumerate}
+Furthermore, the inference results are visually presented in the MR space. 
+Specifically, depending on the Reachability Map (RM) judgment of whether 
+an object is graspable or not, graspable objects are displayed in their base color, 
+whereas ungraspable ones are shown with reduced information through transparency 
+or lowered saturation. In addition, the bottle inferred as the operation 
+target is highlighted, and different highlight colors are used for graspable 
+and ungraspable objects, thereby providing clear feedback to the user.
 
-By jointly addressing “target inference” and “information presentation,”  
-the TBI module reduces cognitive load, prevents misselection,  
-and establishes accurate recognition of human intention as the foundation of the HRI-CAS framework.
-
+In this way, the TBI module integrates both “target inference” and 
+“information presentation,” reducing the user’s cognitive load while 
+preventing misselection of operation targets. As a result, it enables 
+the accurate understanding of human intention, which serves as the 
+oundation of the entire HRI-CAS framework.
 
 
 
