@@ -4,14 +4,14 @@
 \contentsline {section}{\numberline {1.3}Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{4}{}%
 \contentsline {subsection}{\numberline {1.3.1}Implementation Platform and System}{5}{}%
 \contentsline {subsection}{\numberline {1.3.2}MR System Implementation}{6}{}%
-\contentsline {section}{\numberline {1.4}Module of Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{6}{}%
-\contentsline {subsection}{\numberline {1.4.1}Target Bottle Inference (TBI) Module}{6}{}%
-\contentsline {paragraph}{Definition of Features}{6}{}%
+\contentsline {section}{\numberline {1.4}Module of Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{7}{}%
+\contentsline {subsection}{\numberline {1.4.1}Target Bottle Inference (TBI) Module}{7}{}%
+\contentsline {paragraph}{Definition of Features}{7}{}%
 \contentsline {paragraph}{Cosine Similarity Scores}{7}{}%
-\contentsline {paragraph}{Score Integration}{7}{}%
+\contentsline {paragraph}{Score Integration}{8}{}%
 \contentsline {paragraph}{Temporal Smoothing}{8}{}%
 \contentsline {paragraph}{Final Decision Rule}{8}{}%
-\contentsline {paragraph}{Information Presentation Adjustment}{8}{}%
+\contentsline {paragraph}{Information Presentation Adjustment}{9}{}%
 \contentsline {paragraph}{Summary of TBI}{9}{}%
 \contentsline {subsection}{\numberline {1.4.2}Base Relocation based on Inverse Reachability Map (BRI)}{10}{}%
 \contentsline {paragraph}{Basics of reachability and inverse reachability}{10}{}%
@@ -20,11 +20,11 @@
 \contentsline {subsubsection}{Case: Unknown path}{12}{}%
 \contentsline {paragraph}{Cost map (OccupancyGrid $\rightarrow $ safety-aware grid)}{12}{}%
 \contentsline {paragraph}{Route proposal (MR reference $\rightarrow $ safe A* refinement)}{13}{}%
-\contentsline {subsubsection}{Summary of BRI}{13}{}%
+\contentsline {subsubsection}{Summary of BRI}{14}{}%
 \contentsline {subsection}{\numberline {1.4.3}Human-Intent Adaptive Grasp Manipulation (HIGM)}{14}{}%
 \contentsline {subsection}{\numberline {1.4.4}Significance of Module Integration}{17}{}%
-\contentsline {section}{\numberline {1.5}Experiment on BRI}{17}{}%
-\contentsline {subsection}{\numberline {1.5.1}Experimental Setup}{17}{}%
+\contentsline {section}{\numberline {1.5}Experiment on BRI}{18}{}%
+\contentsline {subsection}{\numberline {1.5.1}Experimental Setup}{18}{}%
 \contentsline {subsection}{\numberline {1.5.2}Experimental Results}{19}{}%
 \contentsline {section}{\numberline {1.6}Experiment on HIGM}{19}{}%
 \contentsline {subsection}{\numberline {1.6.1}Experimental Setup}{19}{}%
