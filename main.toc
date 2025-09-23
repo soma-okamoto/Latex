@@ -28,8 +28,8 @@
 \contentsline {subsection}{\numberline {1.5.2}Experimental Results}{19}{}%
 \contentsline {section}{\numberline {1.6}Experiment on HIGM}{19}{}%
 \contentsline {subsection}{\numberline {1.6.1}Experimental Setup}{19}{}%
-\contentsline {subsection}{\numberline {1.6.2}Experimental Results}{20}{}%
-\contentsline {section}{\numberline {1.7}Conclusions}{20}{}%
+\contentsline {subsection}{\numberline {1.6.2}Experimental Results}{21}{}%
+\contentsline {section}{\numberline {1.7}Conclusions}{21}{}%
 \contentsline {chapter}{\numberline {第2章}和訳}{1}{}%
 \contentsline {section}{\numberline {2.1}序論 (Introduction)}{1}{}%
 \contentsline {section}{\numberline {2.2}関連研究 (Related Work)}{2}{}%

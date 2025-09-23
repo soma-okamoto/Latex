@@ -56,7 +56,6 @@ The system integrates three key components: Target Bottle Inference (TBI),
 which estimates the target object based on user operation features; Base Relocation based on the Inverse Reachability Map (BRI), 
 which provides a base movement strategy utilizing the IRM; and Human-Intent Adaptive Grasp Manipulation (HIGM), 
 a grasping framework that compensates for the embodiment gap between humans and robots. 
-
 By combining these components, 
 HRI-CAS enables stable collaborative work independent of the user’s skill level and aims to realize bidirectional and interactive HRC through MR space.
 
@@ -82,7 +81,6 @@ The main contributions of this study can be summarized as follows:
 Through these contributions, the proposed system allows robots to respect user 
 intentions while providing appropriate correction and suggestions, 
 ensuring stable task execution regardless of user expertise.
-
 Furthermore, the proposed HRI-CAS framework demonstrates applicability 
 to real-world tasks where humans and robots closely collaborate, 
 such as in manufacturing sites, remote maintenance, and medical support. 
@@ -564,8 +562,8 @@ In practice, we also compute a variant without penalties $\Pi_k^{\text{nop}}$ an
 segment, the path with the lower total cost; the final route is
 $\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$.
 For execution, we resample $\Gamma$ every $\delta$ meters to produce a concise waypoint list
-and follow it under velocity saturation in the robot frame (current pose from the
-$\texttt{map}\!\to\!\texttt{base\_link}$ TF).
+and follow it under velocity saturation in the robot frame. 
+% (current pose from the$\texttt{map}\!\to\!\texttt{base\_link}$ TF).
 
 \fig[H]{width = 0.75\linewidth}{Base_suggest.pdf}{Figure4}{fig:9}
 
@@ -744,6 +742,11 @@ of an integrated framework for HRC in MR environments, encompassing the flow of
 \section{Experiment on BRI}
 \subsection{Experimental Setup}
 
+
+We fixed the BRI evaluation to the \emph{known-path} case (navigation available from
+the occupancy grid and A*). The user-edited route (unknown-path) variant is reported
+as an ablation in the appendix.
+
 To verify the effectiveness of the proposed base relocation strategy 
 based on the Inverse Reachability Map (BRI), 
 a stepwise pick-and-place experiment was designed. 
@@ -770,11 +773,6 @@ through multiple relocations.
 Each task was repeated approximately ten times.
 
 
-% \twoimgs[H]
-%   {.48\linewidth}{BRI_ex2.pdf}{Phase1}{fig:Phase1}
-%   {.48\linewidth}{BRI_ex3.pdf}{Phase2}{fig:Phase2}
-% \figcaption{Sequential pick-and-place Phase1/Phase2}\label{fig:seqs}
-
 \threeimgs[H]
   {.32\linewidth}{BRI_ex1.pdf}{Setup}
   {BRI_ex2.pdf}{Phase1}
@@ -791,11 +789,32 @@ computed by BRI corresponded to physically feasible grasping positions;
 and (iii) time required for base relocation as well as the overall task 
 completion time.
 
+
+We define the ``optimal-base hit rate'' as the proportion of trials in which
+the final executed base pose $\mathbf{b}^{*}$yields at least one feasible IK
+solution at the task point:
+\[
+\mathrm{Hit}\;\Leftrightarrow\; N_{\mathrm{IK}}\bigl(\mathbf{p}_t \mid \mathbf{b}^{\ast}\bigr) > 0
+\]
+
+
+
+OccupancyGrid values were mapped to the cost map with
+obstacle$=100$, unknown$=30$, free$=0$, and a safety dilation penalty $P_{\text{pen}}=50$.
+Robot radius for obstacle expansion was fixed to $0.4\,\mathrm{m}$.
+Waypoint resampling interval was $0.5\,\mathrm{m}$.
+Path search used 4-neighbor A* with Manhattan heuristic and per-step cost
+$1$ (free) or $1+P_{\text{pen}}$ (penalized cells).
+When both penalized and non-penalized routes existed, the lower-cost path was selected.
+All parameters were fixed across participants.
+
 Through this experimental design, the aim was to demonstrate 
 that BRI can autonomously 
 and efficiently relocate the robot base to enhance both grasp success 
 rate and task stability, 
 not only for single-object manipulation but also for tasks involving multiple objects.
+
+
 \subsection{Experimental Results}
 
 
@@ -852,8 +871,29 @@ The evaluation was conducted in terms of task execution time measured
 from initiation to completion, workload assessed using the NASA-TLX, 
 the degree of convergence toward the pregrasp posture (adhesion), 
 the frequency of singularities and joint-limit violations, and the 
-number of regrasp attempts. Under these conditions, a comparative 
+number of regrasp attempts. 
+We fixed all thresholds and weights as follows.
+\[
+\beta(d)=\mathrm{hyst\text{-}sigmoid}(d;\ d_{\mathrm{in}}{=}0.18\ \mathrm{m},\ d_{\mathrm{out}}{=}0.22\ \mathrm{m},\ k{=}40,\ \alpha{=}0.2),
+\]
+DLS damping $\lambda=10^{-2}$ (adaptive around $e+0.002$ in implementation),
+FSM thresholds $\tau_{\text{mani}}\ (\text{min.\ singular value})=0.03$,
+$\tau_{\text{cond}}\ (\text{condition number})=60$,
+$\tau_{\text{limit}}\ (\text{min.\ joint margin})=0.08\ \mathrm{rad}$.
+Backoff distance $0.07\ \mathrm{m}$, REALIGN timeout $0.6\ \mathrm{s}$,
+and null-space step $k_{\text{null}}=0.02$.
+The merit weights are $w_{\text{mani}}=1.0$, $w_{\text{limit}}=0.3$, and a weak pull to pregrasp.
+These values are held constant across participants and trials.
+
+
+Under these conditions, a comparative 
 xperiment was carried out to verify the performance of both systems.
+
+
+
+
+
+
 \subsection{Experimental Results}
 
 \section{Conclusions}
