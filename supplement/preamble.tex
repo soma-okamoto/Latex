@@ -88,6 +88,43 @@
 }
 %************************************************************%
 
+% --- 2枚横並び（個別サブキャプション＋個別ラベル、全体キャプションは外で \figcaption を使用）---
+\newcommand{\twoimgs}[9][H]{%
+  \begin{figure}[#1]
+    \centering
+    \begin{subfigure}[t]{#2}
+      \centering
+      \includegraphics[width=\linewidth]{#3}
+      \subcaption{#4}\label{#5}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{#6}
+      \centering
+      \includegraphics[width=\linewidth]{#7}
+      \subcaption{#8}\label{#9}
+    \end{subfigure}
+  \end{figure}
+}
+% --- 3枚横並び（幅は統一、個別サブキャプション。必要なら \label は \subcaption 内に記述）---
+\newcommand{\threeimgs}[8][H]{%
+  \begin{figure}[#1]
+    \centering
+    \begin{subfigure}[t]{#2}
+      \centering
+      \includegraphics[width=\linewidth]{#3}
+      \subcaption{#4}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{#2}
+      \centering
+      \includegraphics[width=\linewidth]{#5}
+      \subcaption{#6}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{#2}
+      \centering
+      \includegraphics[width=\linewidth]{#7}
+      \subcaption{#8}
+    \end{subfigure}
+  \end{figure}
+}
 
 
 
@@ -172,7 +209,7 @@
 \newenvironment{enumerate2}{
    \begin{list}
    {
-      \arabic{enum2})\ \, %見出し記号/直後の空白を調節
+      (\arabic{enum2})\ \, %見出し記号/直後の空白を調節
    }
    {%評価値
       \usecounter{enum2}

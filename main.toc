@@ -21,6 +21,13 @@
 \contentsline {paragraph}{Summary of BRI}{12}{}%
 \contentsline {subsection}{\numberline {1.4.3}Human-Intent Adaptive Grasp Manipulation (HIGM)}{12}{}%
 \contentsline {subsection}{\numberline {1.4.4}Significance of Module Integration}{16}{}%
+\contentsline {section}{\numberline {1.5}Experiment on BRI}{16}{}%
+\contentsline {subsection}{\numberline {1.5.1}Experimental Setup}{16}{}%
+\contentsline {subsection}{\numberline {1.5.2}Experimental Results}{18}{}%
+\contentsline {section}{\numberline {1.6}Experiment on HIGM}{18}{}%
+\contentsline {subsection}{\numberline {1.6.1}Experimental Setup}{18}{}%
+\contentsline {subsection}{\numberline {1.6.2}Experimental Results}{19}{}%
+\contentsline {section}{\numberline {1.7}Conclusions}{19}{}%
 \contentsline {chapter}{\numberline {第2章}和訳}{1}{}%
 \contentsline {section}{\numberline {2.1}序論 (Introduction)}{1}{}%
 \contentsline {section}{\numberline {2.2}関連研究 (Related Work)}{2}{}%
@@ -34,4 +41,11 @@
 \contentsline {paragraph}{BRIまとめ}{11}{}%
 \contentsline {subsection}{\numberline {2.4.3}人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}{11}{}%
 \contentsline {subsection}{\numberline {2.4.4}モジュール統合の意義}{15}{}%
-\contentsline {chapter}{参考文献}{16}{}%
+\contentsline {section}{\numberline {2.5}BRIの実験}{15}{}%
+\contentsline {subsection}{\numberline {2.5.1}実験設定}{15}{}%
+\contentsline {subsection}{\numberline {2.5.2}実験結果}{17}{}%
+\contentsline {section}{\numberline {2.6}HGIMの実験}{17}{}%
+\contentsline {subsection}{\numberline {2.6.1}実験設定}{17}{}%
+\contentsline {subsection}{\numberline {2.6.2}実験結果}{18}{}%
+\contentsline {section}{\numberline {2.7}結論}{18}{}%
+\contentsline {chapter}{参考文献}{19}{}%

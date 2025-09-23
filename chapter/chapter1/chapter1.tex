@@ -174,13 +174,13 @@ they differ significantly in their display methods.
 The HoloLens 2 adopts an optical see-through display, 
 allowing the user to perceive both the real environment and virtual objects through a transparent screen.  
 However, its limited field of view and restricted brightness have been widely noted.  
-In contrast, as illustrated in Figure1, the Meta Quest employs a passthrough display system, 
+In contrast, as illustrated in Figure\ref{fig:1}, the Meta Quest employs a passthrough display system, 
 which projects images captured by external cameras onto the display, 
 enabling a wide field of view and high-resolution rendering.  
 This provides the user with a more natural and immersive MR experience, 
 enhancing both environmental understanding and intuitive operation.
 % Insert figure
-\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:label}
+\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:1}
 
 \subsection{Implementation Platform and System}
 In this study, the experimental platform adopted was the \textbf{KUKA YouBot}.  
@@ -193,10 +193,10 @@ This ensures smooth and seamless interaction between the human and the robot.
 Furthermore, the robot’s behavior is immediately fed back into MR space, 
 providing the operator with precise visual information in real time.
 
-The graphical architecture of the system is illustrated in Figure~2 
+The graphical architecture of the system is illustrated in Figure\ref{gif:2}
 and is composed of the following three modules:
 % Insert figure
-\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:label1}
+\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:2}
 
 \medskip
 \noindent
@@ -256,9 +256,9 @@ thereby enhancing human–robot collaboration.
 
 \paragraph{Definition of Features}:  
 The TBI module aims to estimate the user’s intended target object based on bodily movements.  
-Figure~3 illustrates the distribution of operational features in the information space.  
+Figure\ref{fig:3} illustrates the distribution of operational features in the information space.  
 % Insert figure
-\fig[H]{width = 0.5\linewidth}{Calib-2.pdf}{Figure3}{fig:label2}
+\fig[H]{width = 0.5\linewidth}{Calib-2.pdf}{Figure3}{fig:3}
 
 Let the position of a target object $o_i$ be denoted as $\mathbf{p}_i(t)$,  
 and the positions of the user’s eyes, head, 
@@ -357,22 +357,22 @@ When presenting inference results to the user,
 the TBI module adjusts the amount of information to prevent cognitive 
 overload while supporting intuitive understanding.  
 
-First, as shown in Figure~4, each candidate bottle is classified by 
+First, as shown in Figure\ref{fig:4}, each candidate bottle is classified by 
 the \textit{Reachability Map (RM)} as “graspable” or “non-graspable.”  
 Graspable objects are displayed with a base color\cite{RM},  
 while non-graspable ones are rendered semi-transparent with reduced saturation,  
 ensuring they do not unnecessarily attract the user’s attention.  
 % Insert figure
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:4}
 
 
-Furthermore, as illustrated in Figure~5,  
+Furthermore, as illustrated in Figure\ref{fig5},  
 once the target is inferred, all non-selected objects are displayed in semi-transparent form.  
 At this stage, different highlighting schemes are used for graspable and non-graspable objects:  
 graspable targets are emphasized with a color indicating manipulability,  
 while non-graspable targets are highlighted with a different tone to indicate the need for base relocation.  
 % Insert figure
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure5}{fig:1}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure5}{fig5}
 
 
 Through this two-step information adjustment,  
@@ -412,11 +412,11 @@ itself must be relocated.
 Naively exploring base candidates leads to prohibitive computational cost and 
 makes it difficult 
 to obtain configurations that respect human–robot collaboration.  
-Therefore, as illustrated in Fig.~6, 
+Therefore, as illustrated in Figure\ref{fig:6}, 
 we introduce two concepts widely used in manipulator research— the \textit{Reachability Map (RM)} and
 the \textit{Inverse Reachability Map (IRM)}—to generate and evaluate candidate base poses \cite{RM}. 
 % insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:6}
 
 
 \paragraph{Basics of reachability and inverse reachability}:  
@@ -456,9 +456,9 @@ but also by “how redundantly and stably” the target can be reached.
 
 \paragraph{Optimization problem}:  
 We now select the optimal base pose from the candidate set $\mathcal{B}(\mathbf{p}_t)$.  
-As shown conceptually in Fig.~7, we formulate two cases depending on the availability of 
+As shown conceptually in Figure\ref{fig:7}, we formulate two cases depending on the availability of 
 environment/navigation information.
-\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:label3}
+\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:7}
 
 \paragraph{Case: Known path}:  
 If a navigable path to the goal exists, we select the base by jointly considering 
@@ -472,9 +472,9 @@ to $\mathbf{b}$ (e.g., Euclidean distance or shortest path length on an occupanc
 The parameter $\lambda$ balances “reach stability” versus “movement efficiency.”  
 The resulting candidate base poses and waypoint sequences are visualized in MR space; 
 the user can then modify the path by directly manipulating the visualized waypoints.  
-This mechanism realizes the coexistence of autonomous planning and user interaction, as depicted in Fig.~8.
+This mechanism realizes the coexistence of autonomous planning and user interaction, as depicted in Figure\ref{fig:8}.
 % insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:label4}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:8}
 
 
 
@@ -482,13 +482,13 @@ This mechanism realizes the coexistence of autonomous planning and user interact
 When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{Esaki} scheme:  
 the user directly lays out a base route in MR space.  
 On top of this, we introduce a local autonomous refinement using a cost map.  
-As shown in Fig.~9, each waypoint is adjusted to a safe and feasible pose that accounts 
+As shown in Figure\ref{fig:9}, each waypoint is adjusted to a safe and feasible pose that accounts 
 for obstacles and environmental changes.  
 The refined route is immediately reflected in MR space so that the user can visually 
 grasp the autonomous corrections made by the robot.
 % (Mathematical details to be added)
 % insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:9}
 
 
 \paragraph{Summary of BRI}:  
@@ -513,7 +513,7 @@ Human operation alone may command poses that are difficult for the robot to exec
 For example, if the user attempts to pinch the top of a bottle, 
 directly mapping the hand-back pose to the EE could result in an unstable grasp configuration.
 
-To address this, as shown in Fig.~10, we generate a robot-friendly 
+To address this, as shown in Figure\ref{fig:10}, we generate a robot-friendly 
 reference pose (Pregrasp pose $\mathbf{x}_{pre}$) based on the target position $\mathbf{p}_t$.  
 The actual EE target is defined by interpolating between the user’s palm pose $EE_{palm}$ and 
 the Pregrasp pose $EE_{pre}$, depending on the distance $d$ to the target:
@@ -534,7 +534,7 @@ Thus, interpolation defines “which pose should be aimed for,”
 and null-space optimization ensures “how to safely approach that pose.”  
 Combining them achieves grasping that respects user intent while adapting to the robot’s kinematic limits.  
 % insert figure
-\fig[H]{width = 0.5\linewidth}{Calib-9.pdf}{Figure10}{fig:label5}
+\fig[H]{width = 0.5\linewidth}{Calib-9.pdf}{Figure10}{fig:10}
 
 
 \medskip
@@ -563,7 +563,7 @@ J^+ = J^\top (JJ^\top + \lambda I)^{-1},
 \end{equation}
 and $P = I - J^+ J$ is the null-space projector.  
 The first term guarantees EE tracking, faithfully reproducing the user’s hand motion.  
-The second term optimizes posture in the null space using the merit function $H(\theta)$ (Fig.~10):
+The second term optimizes posture in the null space using the merit function $H(\theta)$ (Figure\ref{fig:10}):
 
 \begin{equation}
 H(\theta) = w_{mani}\log\det(JJ^\top) + w_{limit}\sum_i \log m_i(\theta) - \gamma\|\theta-\theta_{pre}\|^2.
@@ -591,7 +591,7 @@ Thus, null-space optimization ensures
 It functions not only as numerical stabilization, but as a foundation linking 
 “robotic physical constraints” with “the user’s continuous intuitive experience.”  
 % insert figure
-\fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Figure10}{fig:label6}
+\fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Figure11}{fig:11}
 
 \medskip
 \textbf{Grasp Readiness Finite State Machine}:  
@@ -633,7 +633,7 @@ In particular, the BACKOFF $\to$ REALIGN transition guarantees that even if the 
 the robot autonomously corrects them, realizing “collaborative safety” in HRC.
 
 % insert figure
-\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{Figure10}{fig:label7}
+\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{Figure12}{fig:12}
 
 
 \subsection{Significance of Module Integration}
@@ -661,6 +661,124 @@ providing a stable interaction experience for both novice and expert users.
 Thus, the significance of this research lies not merely in individual technical improvements, but in the establishment 
 of an integrated framework for HRC in MR environments, encompassing the flow of 
 “intent recognition → reachability assurance → stable grasp.”
+
+\section{Experiment on BRI}
+\subsection{Experimental Setup}
+
+To verify the effectiveness of the proposed base relocation strategy 
+based on the Inverse Reachability Map (BRI), 
+a stepwise pick-and-place experiment was designed. 
+The experiments were conducted using the KUKA YouBot platform, 
+which integrates omnidirectional base mobility with a 5-DOF manipulator. 
+Plastic bottles were used as target objects, and they were 
+deliberately placed at positions that were unreachable from the 
+robot’s initial base position.
+
+The user was positioned approximately 1.0 m away from the robot 
+and monitored and assisted the task through an MR device.
+
+The experiments were divided into two phases. 
+In \textbf{Phase 1}, the robot base was relocated once using the BRI strategy, 
+followed by a single pick-and-place operation of one bottle. 
+The objective of this phase was to confirm whether the robot could move to a position 
+where grasping was physically feasible, in accordance with the 
+optimal solution computed from the IRM score and relocation cost. 
+In \textbf{Phase 2}, an additional base relocation was performed, 
+after which the robot was tasked with sequentially executing 
+pick-and-place operations for two bottles. 
+This phase aimed to examine whether BRI could maintain task stability 
+through multiple relocations. 
+Each task was repeated approximately ten times.
+
+
+% \twoimgs[H]
+%   {.48\linewidth}{BRI_ex2.pdf}{Phase1}{fig:Phase1}
+%   {.48\linewidth}{BRI_ex3.pdf}{Phase2}{fig:Phase2}
+% \figcaption{Sequential pick-and-place Phase1/Phase2}\label{fig:seqs}
+
+\threeimgs[H]
+  {.32\linewidth}{BRI_ex1.pdf}{Setup}
+  {BRI_ex2.pdf}{Phase1}
+  {BRI_ex3.pdf}{Phase2}
+\figcaption{Overview of BRI pipeline}\label{fig:bri_overview}
+
+\fig[H]{width = 0.5\linewidth}{Calib-6.pdf}{Figure4}{fig:IRM}
+
+
+The evaluation metrics were as follows: 
+(i) grasp success rate, defined as the percentage of trials in which 
+the target object was correctly picked up and placed at the designated position; 
+(ii) accuracy of the relocation decision, i.e., whether the base positions 
+computed by BRI corresponded to physically feasible grasping positions; 
+and (iii) time required for base relocation as well as the overall task 
+completion time.
+
+Through this experimental design, the aim was to demonstrate 
+that BRI can autonomously 
+and efficiently relocate the robot base to enhance both grasp success 
+rate and task stability, 
+not only for single-object manipulation but also for tasks involving multiple objects.
+\subsection{Experimental Results}
+
+
+
+
+\section{Experiment on HIGM}
+\subsection{Experimental Setup}
+To clarify the advantages of the proposed Human-Intent Adaptive Grasp Manipulation 
+(HIGM), we conducted a comparative evaluation against the existing MR-based 
+manipulation framework, Immersive Robot Teleoperation Based on User Gestures 
+in Mixed Reality Space (IRT-MRO) \cite{Esaki}. 
+The conventional system places emphasis on directly transferring user operations 
+in MR space to the robot side, without sufficiently considering kinematic feasibility 
+or grasp stability.
+% Figure_abcd
+
+\twoimgs[H]
+  {.48\linewidth}{HIGMI_ex1.pdf}{Before}{fig:before}
+  {.48\linewidth}{HIGMI_ex2.pdf}{After}{fig:after}
+\figcaption{Sequential pick-and-place before/after}\label{HGIM_ex}
+
+
+The experimental setup was designed to evaluate both the baseline performance of 
+IRT-MRO and the improvements introduced by HIGM. Figure \ref{HIGM_ex} 
+illustrates an example 
+of a pick-and-place experiment using the proposed system. Using the KUKA YouBot 
+platform, the user was positioned 1.0 m away from the robot, 
+and the robot was 
+assigned the task of placing two bottles, located within its 
+graspable range, 
+into a designated box. The task was considered successful if both bottles were 
+correctly placed inside the box. In this study, it was assumed that the user 
+was able to perceive the task environment.
+
+As shown in Figures\ref{MRpick} a and b, when the user grasped the MR object, 
+the robot simultaneously grasped the corresponding real object. 
+Similarly, when the user released the MR object, 
+the robot released the real object as well (Figures \ref{MRpick2}c and d). 
+Through this sequence of procedures, the pick-and-place task was executed.
+% Figure_abcd
+% \fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+
+\twoimgs[H]
+  {.48\linewidth}{Calib-12.pdf}{before}{fig:before1}
+  {.48\linewidth}{Calib-11.pdf}{after}{fig:after1}
+\figcaption{Sequential pick-and-place }\label{MRpick}
+
+\twoimgs[H]
+  {.48\linewidth}{Sample.pdf}{before}{fig:before1}
+  {.48\linewidth}{Sample.pdf}{after}{fig:after1}
+\figcaption{Sequential pick-and-place }\label{MRpick2}
+
+The evaluation was conducted in terms of task execution time measured 
+from initiation to completion, workload assessed using the NASA-TLX, 
+the degree of convergence toward the pregrasp posture (adhesion), 
+the frequency of singularities and joint-limit violations, and the 
+number of regrasp attempts. Under these conditions, a comparative 
+xperiment was carried out to verify the performance of both systems.
+\subsection{Experimental Results}
+
+\section{Conclusions}
 
 
 \end{document}
