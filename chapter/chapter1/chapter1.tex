@@ -68,11 +68,11 @@ The main contributions of this study can be summarized as follows:
   By integrating user operation features such as hand proximity, contact, gaze, and arm motion, 
   and weighting them according to reachability, the TBI module infers the intended object of manipulation. 
   This approach suppresses unnecessary information presentation while supporting intuitive target selection.
-  \item \textbf{Realization of the Base Relocation strategy based on the Inverse Reachability Map (BRI)}  
+  \item \textbf{Design and realization of based on the Inverse Reachability Map (BRI)}  
   By utilizing the Inverse Reachability Map\cite{RM}, the system computes feasible base positions for grasping and 
   visualizes candidate paths in MR space. Users can edit these paths interactively, thereby achieving a balance 
   between autonomy and interactivity in determining whether base relocation is necessary.
-  \item \textbf{Implementation of the Human-Intent Adaptive Grasp Manipulation (HIGM) framework}  
+  \item \textbf{Development of the Human-Intent Adaptive Grasp Manipulation (HIGM)} 
   By combining pregrasp generation, nullspace optimization, and a finite state machine (FSM), 
   the system continuously harmonizes user operations with robot manipulability. 
   This enables seamless collaborative manipulation based on mutual correction and suggestion.
@@ -105,6 +105,7 @@ has made significant progress in recent years.
 By overlaying information about robot states and environmental conditions in MR space, 
 users can perform more intuitive operations, 
 and improvements in efficiency for teleoperation and collaborative tasks can be expected \cite{MR1} \cite{MR2}.  
+
 In addition, many studies have explored applications of AR and VR.  
 In VR, methods have been proposed to support skill acquisition by robots through 
 imitation learning and motion data collection \cite{VR1} \cite{VR2},  
@@ -112,9 +113,9 @@ while in AR, attempts have been made to assist workers’ understanding by prese
 task procedures and robot states \cite{AR1} \cite{AR2}.  
 Nevertheless, these approaches still face limitations in interaction with the real 
 environment and in providing a sense of immersion.  
+
 In this context, MR, which can integrate the real world with virtual information, 
 is receiving particular attention as a promising foundation technology for HRC.
-
 Previous MR-based HRC research can largely be classified into two directions.
 
 First, research focusing on \textbf{visualization of robot states}.  
@@ -770,7 +771,7 @@ after which the robot was tasked with sequentially executing
 pick-and-place operations for two bottles. 
 This phase aimed to examine whether BRI could maintain task stability 
 through multiple relocations. 
-Each task was repeated approximately ten times.
+Each task was repeated 10 times for each participant.
 
 
 \threeimgs[H]
@@ -791,10 +792,10 @@ completion time.
 
 
 We define the ``optimal-base hit rate'' as the proportion of trials in which
-the final executed base pose $\mathbf{b}^{*}$yields at least one feasible IK
+the final executed base pose $\mathbf{b}^{\ast}$yields at least one feasible IK
 solution at the task point:
 \[
-\mathrm{Hit}\;\Leftrightarrow\; N_{\mathrm{IK}}\bigl(\mathbf{p}_t \mid \mathbf{b}^{\ast}\bigr) > 0
+\mathrm{Hit} \;\Leftrightarrow\; N_{\mathrm{IK}}\!\left(\mathbf{p}_t \mid \mathbf{b}^{\ast}\right) > 0
 \]
 
 
