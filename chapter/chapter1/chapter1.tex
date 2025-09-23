@@ -15,7 +15,7 @@
 \section{Introduction}
 
 In recent years, Human-Robot Collaboration (HRC) has attracted significant
-attention as an important research domainin which humans and robots 
+attention as an important research domain in which humans and robots 
 cooperate to accomplish tasks in diverse working environments\cite{HRC1}\cite{HRC2}. The aim is 
 not only for robots to interpret human intentions more accurately but 
 also to enable smooth and intuitive communication. When working in shared spaces, 
@@ -68,11 +68,11 @@ The main contributions of this study can be summarized as follows:
   By integrating user operation features such as hand proximity, contact, gaze, and arm motion, 
   and weighting them according to reachability, the TBI module infers the intended object of manipulation. 
   This approach suppresses unnecessary information presentation while supporting intuitive target selection.
-  \item \textbf{Design and realization of based on the Inverse Reachability Map (BRI)}  
+  \item \textbf{Design and realization of the Base Relocation module based on the Inverse Reachability Map (BRI)}  
   By utilizing the Inverse Reachability Map\cite{RM}, the system computes feasible base positions for grasping and 
   visualizes candidate paths in MR space. Users can edit these paths interactively, thereby achieving a balance 
   between autonomy and interactivity in determining whether base relocation is necessary.
-  \item \textbf{Development of the Human-Intent Adaptive Grasp Manipulation (HIGM)} 
+  \item \textbf{Development of the Human-Intent Adaptive Grasp Manipulation (HIGM) framework} 
   By combining pregrasp generation, nullspace optimization, and a finite state machine (FSM), 
   the system continuously harmonizes user operations with robot manipulability. 
   This enables seamless collaborative manipulation based on mutual correction and suggestion.
@@ -416,7 +416,7 @@ In this way, the TBI module integrates both “target inference” and
 “information presentation,” reducing the user’s cognitive load while 
 preventing misselection of operation targets. As a result, it enables 
 the accurate understanding of human intention, which serves as the 
-oundation of the entire HRI-CAS framework.
+foundation of the entire HRI-CAS framework.
 
 
 
@@ -484,7 +484,7 @@ When a navigable path to the target is available, the base pose is selected by
 jointly considering the IRM score $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ and the
 movement cost $C(\mathbf{b})$:
 \begin{equation}
-\mathbf{b}^* = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
+\mathbf{b}^{\ast} = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
 \Big[ S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda \, C(\mathbf{b}) \Big].
 \label{eq:bri_known}
 \end{equation}
@@ -787,7 +787,7 @@ after which the robot was tasked with sequentially executing
 pick-and-place operations for two bottles. 
 This phase aimed to examine whether BRI could maintain task stability 
 through multiple relocations. 
-Each task was repeated 10 times for each participant.
+For the BRI evaluation, a single participant (n=1) performed 10 repeated trials.
 
 
 \threeimgs[H]
@@ -808,7 +808,7 @@ completion time.
 
 
 We define the ``optimal-base hit rate'' as the proportion of trials in which
-the final executed base pose $\mathbf{b}^{\ast}$yields at least one feasible IK
+the final executed base pose $\mathbf{b}^{\ast}$ yields at least one feasible IK
 solution at the task point:
 \[
 \mathrm{Hit} \;\Leftrightarrow\; N_{\mathrm{IK}}\!\left(\mathbf{p}_t \mid \mathbf{b}^{\ast}\right) > 0
@@ -830,6 +830,8 @@ that BRI can autonomously
 and efficiently relocate the robot base to enhance both grasp success 
 rate and task stability, 
 not only for single-object manipulation but also for tasks involving multiple objects.
+
+This single-subject setup was adopted as a pilot evaluation to verify feasibility and repeatability of the BRI pipeline.
 
 
 \subsection{Experimental Results}
@@ -885,7 +887,7 @@ Through this sequence of procedures, the pick-and-place task was executed.
 \figcaption{Sequential pick-and-place }\label{MRpick2}
 
 The evaluation was conducted in terms of task execution time measured 
-from initiation to completion, workload assessed using the NASA-TLX, 
+from initiation to completion, workload assessed using the NASA-TLX\cite{Nasa}, 
 the degree of convergence toward the pregrasp posture (adhesion), 
 the frequency of singularities and joint-limit violations, and the 
 number of regrasp attempts. 
@@ -902,10 +904,16 @@ and null-space step $k_{\text{null}}=0.02$.
 The merit weights are $w_{\text{mani}}=1.0$, $w_{\text{limit}}=0.3$, and a weak pull to pregrasp.
 These values are held constant across participants and trials.
 
+Each participant performed the tasks under both systems:
+the baseline system (IRT-MRO) and the proposed system (HIGM).
+The order of conditions was counterbalanced across participants to avoid ordering bias.
+Each task was repeated 10 times per condition, resulting in 20 trials per participant.
+A total of 6 participants were recruited (n=6).
 
 Under these conditions, a comparative 
-xperiment was carried out to verify the performance of both systems.
+experiment was carried out to verify the performance of both systems.
 
+All participants provided informed consent prior to the experiment, and the study protocol was approved in accordance with institutional guidelines.
 
 
 
