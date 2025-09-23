@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 16:12
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,7 +767,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [3]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 166.
+(Font)              No change on input line 174.
 File: fig/Calib-1.pdf Graphic file (type pdf)
 <fig/Calib-1.pdf>
 
@@ -781,7 +781,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [4]
 
-LaTeX Warning: Reference `gif:2' on page 5 undefined on input line 195.
+LaTeX Warning: Reference `gif:2' on page 5 undefined on input line 203.
 
 File: fig/Calib-5.pdf Graphic file (type pdf)
 <fig/Calib-5.pdf>
@@ -807,7 +807,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [6]
-Overfull \hbox (27.02963pt too wide) detected at line 270
+Overfull \hbox (27.02963pt too wide) detected at line 278
 []\OT1/cmr/bx/n/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  \OT1/cmr/bx/n/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  \OT1/cmr/bx/n/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 :
  []
 
@@ -822,7 +822,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [7]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 360.
+(Font)              No change on input line 368.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 
@@ -848,15 +848,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 415.
+(Font)              No change on input line 423.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 416.
+(Font)              No change on input line 424.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 438.
+(Font)              No change on input line 446.
 
 
 
@@ -893,7 +893,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Base_suggest.pdf Graphic file (type pdf)
 <fig/Base_suggest.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 585.
+(Font)              No change on input line 593.
 
 
 
@@ -907,7 +907,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Calib-9.pdf Graphic file (type pdf)
 <fig/Calib-9.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 621.
+(Font)              No change on input line 629.
 
 
 
@@ -943,7 +943,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [16]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 747.
+(Font)              No change on input line 755.
 
 
 
@@ -976,7 +976,7 @@ File: fig/HIGMI_ex2.pdf Graphic file (type pdf)
 <fig/HIGMI_ex2.pdf>
 
 
-LaTeX Warning: Reference `HIGM_ex' on page 19 undefined on input line 842.
+LaTeX Warning: Reference `HIGM_ex' on page 19 undefined on input line 850.
 
 
 
@@ -997,7 +997,7 @@ File: fig/Sample.pdf Graphic file (type pdf)
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 
-Overfull \hbox (24.33492pt too wide) in paragraph at lines 879--888
+Overfull \hbox (24.33492pt too wide) in paragraph at lines 887--896
 \OML/cmm/m/it/10.95 ^^\[] \OT1/cmr/m/n/10.95 ([]) = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 03$\T1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 ^^\[] \OT1/cmr/m/n/10.95 ([]) = 60$\T1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 ^^\[] \OT1/cmr/m/n/10.95 ([]) =
  []
 
@@ -1339,4 +1339,4 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  99i,12n,105p,778b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (47 pages, 192972 bytes).
+Output written on main.dvi (47 pages, 193008 bytes).
