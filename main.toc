@@ -18,7 +18,7 @@
 \contentsline {subsubsection}{Case: Known path}{11}{}%
 \contentsline {paragraph}{User interaction (mathematical incorporation of path edits)}{12}{}%
 \contentsline {subsubsection}{Case: Unknown path}{12}{}%
-\contentsline {paragraph}{Cost map (OccupancyGrid $\rightarrow $ safety-aware grid)}{12}{}%
+\contentsline {paragraph}{Cost map (OccupancyGrid $\rightarrow $ safety-aware grid)}{13}{}%
 \contentsline {paragraph}{Route proposal (MR reference $\rightarrow $ safe A* refinement)}{13}{}%
 \contentsline {subsubsection}{Summary of BRI}{14}{}%
 \contentsline {subsection}{\numberline {1.4.3}Human-Intent Adaptive Grasp Manipulation (HIGM)}{14}{}%
