@@ -412,14 +412,18 @@ itself must be relocated.
 Naively exploring base candidates leads to prohibitive computational cost and 
 makes it difficult 
 to obtain configurations that respect human–robot collaboration.  
-Therefore, as illustrated in Figure\ref{fig:6}, 
+Therefore, as illustrated in Figure\ref{fig:RM_IRM}, 
 we introduce two concepts widely used in manipulator research— the \textit{Reachability Map (RM)} and
 the \textit{Inverse Reachability Map (IRM)}—to generate and evaluate candidate base poses \cite{RM}. 
 % insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:6}
+\twoimgs[H]
+{.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
+{.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
+\figcaption{RM/IRM}\label{fig:RM_IRM}
 
 
-\paragraph{Basics of reachability and inverse reachability}:  
+\paragraph{Basics of reachability and inverse reachability}:
+
 Given a robot base pose $\mathbf{b}$, the workspace that the end-effector (EE) can reach from $\mathbf{b}$ is defined as
 \begin{equation}
 RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists\, \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
@@ -454,31 +458,63 @@ S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
 This allows us to assess candidate base configurations not only by “reachability,” 
 but also by “how redundantly and stably” the target can be reached.
 
-\paragraph{Optimization problem}:  
+
 We now select the optimal base pose from the candidate set $\mathcal{B}(\mathbf{p}_t)$.  
 As shown conceptually in Figure\ref{fig:7}, we formulate two cases depending on the availability of 
 environment/navigation information.
 \fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:7}
 
-\paragraph{Case: Known path}:  
-If a navigable path to the goal exists, we select the base by jointly considering 
-the IRM score $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ and the movement cost $C(\mathbf{b})$:
+\subsubsection{Case: Known path}
+When a navigable path to the target is available, the base pose is selected by
+jointly considering the IRM score $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ and the
+movement cost $C(\mathbf{b})$:
 \begin{equation}
 \mathbf{b}^* = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
-\Big[\, S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda\, C(\mathbf{b}) \,\Big].
+\Big[ S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda \, C(\mathbf{b}) \Big].
+\label{eq:bri_known}
 \end{equation}
-Here, $C(\mathbf{b})$ denotes the cost to move from the current base $\mathbf{b}_0$ 
-to $\mathbf{b}$ (e.g., Euclidean distance or shortest path length on an occupancy grid).  
-The parameter $\lambda$ balances “reach stability” versus “movement efficiency.”  
-The resulting candidate base poses and waypoint sequences are visualized in MR space; 
-the user can then modify the path by directly manipulating the visualized waypoints.  
-This mechanism realizes the coexistence of autonomous planning and user interaction, as depicted in Figure\ref{fig:8}.
+
+Here, $C(\mathbf{b})$ is defined as the navigation path length from the current
+base $\mathbf{b}_0$ to $\mathbf{b}$:
+\[
+C(\mathbf{b})=L(\Gamma(\mathbf{b}))=\int_{0}^{1}\!\bigl\|\dot{\mathbf{x}}(s)\bigr\|\,ds
+\;\approx\;\sum_{k=1}^{N}\bigl\|\mathbf{x}_k-\mathbf{x}_{k-1}\bigr\|.
+\]
+
+The resulting candidate base poses and the waypoint sequence are visualized in MR space,
+and the user can modify the route by directly manipulating the waypoints.
+
 % insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:8}
+
+\fig[H]{width = 0.75\linewidth}{Calib-6.pdf}{Figure4}{fig:IRM}
+
+\paragraph{User interaction (mathematical incorporation of path edits)}
+Let the reference route edited by the user in MR space be
+$\bar{\Gamma}_{u}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$, and let
+$\mathcal{K}_{\mathrm{lock}}$ denote the set of pinned (fixed) indices.
+For each candidate base $\mathbf{b}$, the navigation module recomputes a path
+$\Gamma(\mathbf{b})$ by minimizing
+\[
+C(\mathbf{b}\mid \bar{\Gamma}_{u})
+= C(\mathbf{b})
++ w_{\mathrm{trk}}^{\mathrm{nav}}\!\!\sum_{k\notin \mathcal{K}_{\mathrm{lock}}}\!\!\|\mathbf{x}_k-\bar{\mathbf{x}}_k\|^2,
+\qquad
+\text{s.t.}\ \ \Gamma(\mathbf{b})\in\mathcal{F}_{\mathrm{nav}},\ \ \mathbf{x}_k=\bar{\mathbf{x}}_k\ (k\in\mathcal{K}_{\mathrm{lock}}).
+\]
+Then \eqref{eq:bri_known} is re-evaluated using the updated $\Gamma(\mathbf{b})$.
+The final base is chosen as
+\[
+\mathbf{b}^\star
+=\arg\max_{\mathbf{b}\in\mathcal{B}(\mathbf{p}_t)\cap\mathcal{F}_{\mathrm{nav}}}
+\Big[
+S_{\mathrm{IRM}}(\mathbf{b};\mathbf{p}_t) - \lambda\,C(\mathbf{b}\mid\bar{\Gamma}_{u}) - \xi\,\Delta\psi(\mathbf{b})^2
+\Big],
+\]
+and the updated waypoint sequence $\Gamma(\mathbf{b}^\star)$ is immediately re-rendered in MR space.
 
 
 
-\paragraph{Case: Unknown path}:  
+\subsubsection{Case: Unknown path} 
 When environment information is incomplete and path generation fails, we adopt the IRT-MRO \cite{Esaki} scheme:  
 the user directly lays out a base route in MR space.  
 On top of this, we introduce a local autonomous refinement using a cost map.  
@@ -486,12 +522,55 @@ As shown in Figure\ref{fig:9}, each waypoint is adjusted to a safe and feasible 
 for obstacles and environmental changes.  
 The refined route is immediately reflected in MR space so that the user can visually 
 grasp the autonomous corrections made by the robot.
-% (Mathematical details to be added)
-% insert paired figures
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:9}
 
 
-\paragraph{Summary of BRI}:  
+\paragraph{Cost map (OccupancyGrid $\rightarrow$ safety-aware grid)}:
+
+From an occupancy grid $G\in\{-1,0,100\}^{H\times W}$ (unknown $=-1$, free $=0$, obstacle $=100$),
+we construct a cost map $C\in\mathbb{R}^{H\times W}$.
+The per-cell base cost is
+\[
+C_{ij}=
+\begin{cases}
+100 & (G_{ij}=100)\quad \text{[blocked]}\\
+P_{\text{unk}} & (G_{ij}=-1)\quad \text{[mild penalty for unknown]}\\
+0 & (G_{ij}=0)\,,
+\end{cases}
+\]
+followed by two dilations for safety margins.
+(i) Obstacle-proximity dilation by Manhattan distance $d_1\le d_{\text{avoid}}$ sets
+$C_{ij}\leftarrow P_{\text{pen}}$ (morphological expansion).
+(ii) Robot-radius expansion: with resolution $h$ and safety radius $r_{\text{safe}}$,
+we set $r_c=\lceil r_{\text{safe}}/h\rceil$ and also assign
+$C_{ij}\leftarrow P_{\text{pen}}$ for all cells within Euclidean distance $\le r_c$ of any obstacle.
+Here $P_{\text{pen}}\!\gg\!1$ encodes “traversable but expensive,” thus naturally favoring
+paths that keep distance from obstacles (cf. Fig.~\ref{fig:9}).
+
+\paragraph{Route proposal (MR reference $\rightarrow$ safe A* refinement)}:
+
+Let the user-provided MR reference route be
+$\bar{\Gamma}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$, treated as a sequence of waypoints.
+For each segment $(\bar{\mathbf{x}}_{k-1}\!\to\!\bar{\mathbf{x}}_{k})$,
+we run A* on the safety-aware cost map to obtain a safe path $\Pi_k$.
+We use 4-neighbor moves with per-step transition cost
+\[
+\ell(i\!\to\!j)=1+\mathbb{1}\{C_j=P_{\text{pen}}\}\,P_{\text{pen}},
+\qquad
+h(n)=|x_n-x_g|+|y_n-y_g| \ \ (\text{Manhattan heuristic}),
+\]
+and forbid transitions through blocked cells ($C=100$).
+The heuristic $h$ is admissible and consistent, so A* returns an optimal path under $\ell$.
+In practice, we also compute a variant without penalties $\Pi_k^{\text{nop}}$ and pick, for each
+segment, the path with the lower total cost; the final route is
+$\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$.
+For execution, we resample $\Gamma$ every $\delta$ meters to produce a concise waypoint list
+and follow it under velocity saturation in the robot frame (current pose from the
+$\texttt{map}\!\to\!\texttt{base\_link}$ TF).
+
+\fig[H]{width = 0.75\linewidth}{Base_suggest.pdf}{Figure4}{fig:9}
+
+
+\subsubsection{Summary of BRI}
 In summary, our base relocation strategy adopts a two-track structure:  
 (i) when a path is known, we perform autonomous optimization based on the IRM score and movement cost;  
 (ii) when a path is unknown, we combine user-specified routes with cost-map-based refinement.  
@@ -702,7 +781,6 @@ Each task was repeated approximately ten times.
   {BRI_ex3.pdf}{Phase2}
 \figcaption{Overview of BRI pipeline}\label{fig:bri_overview}
 
-\fig[H]{width = 0.5\linewidth}{Calib-6.pdf}{Figure4}{fig:IRM}
 
 
 The evaluation metrics were as follows: 

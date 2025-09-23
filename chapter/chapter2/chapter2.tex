@@ -383,13 +383,15 @@ UI 強調の方法を区別し，
 対象がロボットの可動範囲外にある場合には，ロボットベースそのものを移動させる必要がある。
 しかし，無秩序に移動候補を探索すると計算コストが膨大となり，
 また人間との協調を考慮した適切な配置を得ることが困難となる。
-本研究では，図6に示すロボットマニピュレータ研究で広く利用される
+本研究では，\ref{fig:RM_IRM}に示すロボットマニピュレータ研究で広く利用される
 \textit{到達可能マップ (Reachability Map, RM)} と
 \textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入し，
 候補ベース位置を生成・評価する\cite{RM}。
 % 図を並べて表示
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure6}{fig:1}
-
+\twoimgs[H]
+{.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
+{.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
+\figcaption{RM/IRM}\label{fig:RM_IRM}
 
 \medskip
 \textbf{到達可能性と逆到達可能性の基礎}:
@@ -430,35 +432,56 @@ S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
 これにより，候補ベース配置の良否を，単に「到達できるか否か」ではなく，
 「どれだけ冗長で安定した姿勢で到達できるか」に基づいて評価できる。
 
-\medskip
-\textbf{最適化問題}:
 次に，候補集合 $\mathcal{B}(\mathbf{p}_t)$ の中から最適なベース位置を選択する。
-ここでは，図7のような環境情報の有無に応じて二つの場合に分けて定式化する。
+ここでは，\ref{fig:mapping}のような環境情報の有無に応じて二つの場合に分けて定式化する。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:label3}
+\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:mapping}
 
-
-\medskip
-\textbf{経路既知の場合} 
+\subsubsection{経路既知の場合}
 目標位置までの移動経路が既知（ナビゲーション可能）である場合，
-IRM スコア $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ と
-移動コスト $C(\mathbf{b})$ の両者を考慮し，次式で最適ベースを選択する：
+IRM スコア $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ と移動コスト $C(\mathbf{b})$ の両者を考慮し，
 \begin{equation}
 \mathbf{b}^* = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
-\left[ \, S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda \, C(\mathbf{b}) \, \right].
+\Big[ S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda \, C(\mathbf{b}) \Big].
+\label{eq:bri_known}
 \end{equation}
-ここで $C(\mathbf{b})$ は現在位置 $\mathbf{b}_0$ から $\mathbf{b}$ までの移動コスト
-（ユークリッド距離や占有格子地図に基づく経路長など）を表す。
-パラメータ $\lambda$ は「到達安定性を優先するか」「移動効率を優先するか」を調整する重みである。
-結果として得られる候補ベース位置や経路（Waypoint列）は MR 空間に提示され，
-ユーザは可視化された Waypoint を操作することで経路修正を行うことができる。
-この仕組みにより，図8のような自律経路計画とユーザインタラクションの両立が実現される。
-% 図を並べて表示
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure8}{fig:label4}
 
 
-\medskip
-\textbf{経路未知の場合} 
+ここで $C(\mathbf{b})$ はナビゲーションで得られた
+$\mathbf{b}_0\!\to\!\mathbf{b}$ の経路長とする：
+\[
+C(\mathbf{b})=L(\Gamma(\mathbf{b}))=\int_{0}^{1}\!\bigl\|\dot{\mathbf{x}}(s)\bigr\|\,ds
+\;\approx\;\sum_{k=1}^{N}\bigl\|\mathbf{x}_k-\mathbf{x}_{k-1}\bigr\|.
+\]
+
+得られた候補ベース位置や経路（Waypoint列）は MR 空間に提示され，ユーザは Waypoint を操作して経路修正できる。
+
+\paragraph{ユーザインタラクション（経路編集の数理反映）}
+MR空間でユーザが編集した参照経路を $\bar{\Gamma}_{u}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$，
+ピン留め集合を $\mathcal{K}_{\mathrm{lock}}$ とする。
+各候補ベース $\mathbf{b}$ に対し，ナビゲーションは
+\[
+C(\mathbf{b}\mid \bar{\Gamma}_{u})
+= C(\mathbf{b})
++ w_{\mathrm{trk}}^{\mathrm{nav}}\!\!\sum_{k\notin \mathcal{K}_{\mathrm{lock}}}\!\!\|\mathbf{x}_k-\bar{\mathbf{x}}_k\|^2,
+\quad
+\text{s.t.}\ \ \Gamma(\mathbf{b})\in\mathcal{F}_{\mathrm{nav}},\ \ \mathbf{x}_k=\bar{\mathbf{x}}_k\ (k\in\mathcal{K}_{\mathrm{lock}})
+\]
+を最小化する経路 $\Gamma(\mathbf{b})$ を再計算し，その結果で \eqref{eq:bri_known} を再評価する。
+最終的なベースは
+\[
+\mathbf{b}^\star
+=\arg\max_{\mathbf{b}\in\mathcal{B}(\mathbf{p}_t)\cap\mathcal{F}_{\mathrm{nav}}}
+\Big[
+S_{\mathrm{IRM}}(\mathbf{b};\mathbf{p}_t) - \lambda\,C(\mathbf{b}\mid\bar{\Gamma}_{u}) - \xi\,\Delta\psi(\mathbf{b})^2
+\Big]
+\]
+として選択され，更新後の Waypoint 列 $\Gamma(\mathbf{b}^\star)$ は即時に MR 空間へ再描画される。
+
+\fig[H]{width = 0.75\linewidth}{Calib-6.pdf}{Figure4}{fig:IRM}
+
+
+\subsubsection{経路未知の場合}
 一方，環境情報が不完全で経路生成が不可能な場合には，
 先行研究 IRT-MRO \cite{Esaki} の方式に基づき，
 ユーザが MR 空間上でベース配置経路を直接提示する。
@@ -467,12 +490,57 @@ IRM スコア $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ と
 障害物回避や環境変化に適応できる。
 修正結果は MR 空間にも反映されるため，
 ユーザはロボットによる自律補正を視覚的に理解できる。
-% 数理的説明を追加予定
+
 % 図を並べて表示
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\fig[H]{width = 0.75\linewidth}{Base_suggest.pdf}{Figure4}{fig:9}
+% 数理的説明を追加予定
+\paragraph{コストマップ（OccupancyGrid $\rightarrow$ 安全余裕付きグリッド）}:
+占有格子 $G\in\{-1,0,100\}^{H\times W}$（未知$=-1$, 自由$=0$, 障害物$=100$）から
+コストマップ $C\in\mathbb{R}^{H\times W}$ を構成する。
+まずセル毎の基礎コスト
+\[
+C_{ij}=
+\begin{cases}
+100 & (G_{ij}=100)\quad \text{[通行不可]}\\
+P_{\text{unk}} & (G_{ij}=-1)\quad \text{[未知セルの弱ペナルティ]}\\
+0 & (G_{ij}=0)
+\end{cases}
+\]
+を与え，次に障害物近傍へマンハッタン距離 $d_1$ による膨張（$d_1\le d_{\text{avoid}}$）を行い
+$C_{ij}\leftarrow P_{\text{pen}}$ とする（形態学的膨張；安全マージン付与）。
+さらにロボット半径 $r_{\text{safe}}$ と地図解像度 $h$ から
+セル半径 $r_c=\lceil r_{\text{safe}}/h\rceil$ を求め，
+ユークリッド距離 $\le r_c$ の円盤近傍でも $C_{ij}\leftarrow P_{\text{pen}}$ として
+ミンコフスキー和に基づく実機幅の拡張を付加する。
+ここで $P_{\text{pen}}\gg 1$ は「通れるが高コスト」を意味し，
+障害物から離れた経路を自然に選好させる（図\ref{fig:9} 参照）。:contentReference[oaicite:0]{index=0}
+
+\paragraph{経路提案（MR 参照 $\rightarrow$ 安全 A* 補正）}:
+MR 空間でユーザが提示した参照経路 $\bar{\Gamma}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$ を
+逐次的な \emph{経由点} とみなし，
+各区間 $(\bar{\mathbf{x}}_{k-1}\!\to\!\bar{\mathbf{x}}_{k})$ について
+拡張コストマップ上で A* 探索を実行して安全経路 $\Pi_k$ を得る。
+A* の1ステップ移動コストは
+\[
+\ell(i\!\to\!j)=1+\mathbb{1}\{C_j=P_{\text{pen}}\}\,P_{\text{pen}},
+\qquad
+h(n)=|x_n-x_g|+|y_n-y_g| \ \ (\text{マンハッタン}),
+\]
+とし，通行不可セル ($C=100$) は遷移禁止とする。
+このとき $h$ は許容的かつ一貫的であり，A* は $\ell$ に対して最適経路を返す。
+実装では，(a) ペナルティを有効にした経路 $\Pi_k^{\text{pen}}$ と
+(b) ペナルティを無効化した経路 $\Pi_k^{\text{nop}}$ を両方計算し，
+合計コストが小さい方を区間経路として採択，
+$\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$ を構成する。
+さらに実行上は一定間隔 $\delta$ 毎にサンプリングして Waypoint 列に圧縮し，
+機体座標への変換と速度飽和の下で逐次追従する
+（現在姿勢は $\texttt{map}\!\to\!\texttt{base\_link}$ の TF から取得）。:contentReference[oaicite:1]{index=1}
 
 
-\paragraph{BRIまとめ} 
+
+
+
+\subsubsection{BRIまとめ}
 以上により，本研究のベース移動戦略は，
 (i) 経路が既知の場合には「IRM スコアと移動コストに基づく自律最適化」，
 (ii) 経路が未知の場合には「ユーザ提示とコストマップ補正の組合せ」

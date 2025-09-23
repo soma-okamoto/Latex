@@ -15,19 +15,21 @@
 \contentsline {paragraph}{Summary of TBI}{9}{}%
 \contentsline {subsection}{\numberline {1.4.2}Base Relocation based on Inverse Reachability Map (BRI)}{10}{}%
 \contentsline {paragraph}{Basics of reachability and inverse reachability}{10}{}%
-\contentsline {paragraph}{Optimization problem}{11}{}%
-\contentsline {paragraph}{Case: Known path}{11}{}%
-\contentsline {paragraph}{Case: Unknown path}{12}{}%
-\contentsline {paragraph}{Summary of BRI}{12}{}%
-\contentsline {subsection}{\numberline {1.4.3}Human-Intent Adaptive Grasp Manipulation (HIGM)}{12}{}%
-\contentsline {subsection}{\numberline {1.4.4}Significance of Module Integration}{16}{}%
-\contentsline {section}{\numberline {1.5}Experiment on BRI}{16}{}%
-\contentsline {subsection}{\numberline {1.5.1}Experimental Setup}{16}{}%
-\contentsline {subsection}{\numberline {1.5.2}Experimental Results}{18}{}%
-\contentsline {section}{\numberline {1.6}Experiment on HIGM}{18}{}%
-\contentsline {subsection}{\numberline {1.6.1}Experimental Setup}{18}{}%
-\contentsline {subsection}{\numberline {1.6.2}Experimental Results}{19}{}%
-\contentsline {section}{\numberline {1.7}Conclusions}{19}{}%
+\contentsline {subsubsection}{Case: Known path}{11}{}%
+\contentsline {paragraph}{User interaction (mathematical incorporation of path edits)}{12}{}%
+\contentsline {subsubsection}{Case: Unknown path}{12}{}%
+\contentsline {paragraph}{Cost map (OccupancyGrid $\rightarrow $ safety-aware grid)}{12}{}%
+\contentsline {paragraph}{Route proposal (MR reference $\rightarrow $ safe A* refinement)}{13}{}%
+\contentsline {subsubsection}{Summary of BRI}{13}{}%
+\contentsline {subsection}{\numberline {1.4.3}Human-Intent Adaptive Grasp Manipulation (HIGM)}{14}{}%
+\contentsline {subsection}{\numberline {1.4.4}Significance of Module Integration}{17}{}%
+\contentsline {section}{\numberline {1.5}Experiment on BRI}{17}{}%
+\contentsline {subsection}{\numberline {1.5.1}Experimental Setup}{17}{}%
+\contentsline {subsection}{\numberline {1.5.2}Experimental Results}{19}{}%
+\contentsline {section}{\numberline {1.6}Experiment on HIGM}{19}{}%
+\contentsline {subsection}{\numberline {1.6.1}Experimental Setup}{19}{}%
+\contentsline {subsection}{\numberline {1.6.2}Experimental Results}{20}{}%
+\contentsline {section}{\numberline {1.7}Conclusions}{20}{}%
 \contentsline {chapter}{\numberline {第2章}和訳}{1}{}%
 \contentsline {section}{\numberline {2.1}序論 (Introduction)}{1}{}%
 \contentsline {section}{\numberline {2.2}関連研究 (Related Work)}{2}{}%
@@ -38,14 +40,19 @@
 \contentsline {subsection}{\numberline {2.4.1}操作対象推定モジュール (Target Bottle Inference, TBI)}{6}{}%
 \contentsline {paragraph}{TBIまとめ}{8}{}%
 \contentsline {subsection}{\numberline {2.4.2}逆到達可能マップに基づくベース移動 (Base Relocation based on Inverse Reachability Map, BRI)}{9}{}%
-\contentsline {paragraph}{BRIまとめ}{11}{}%
-\contentsline {subsection}{\numberline {2.4.3}人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}{11}{}%
-\contentsline {subsection}{\numberline {2.4.4}モジュール統合の意義}{15}{}%
-\contentsline {section}{\numberline {2.5}BRIの実験}{15}{}%
-\contentsline {subsection}{\numberline {2.5.1}実験設定}{15}{}%
-\contentsline {subsection}{\numberline {2.5.2}実験結果}{17}{}%
-\contentsline {section}{\numberline {2.6}HGIMの実験}{17}{}%
-\contentsline {subsection}{\numberline {2.6.1}実験設定}{17}{}%
-\contentsline {subsection}{\numberline {2.6.2}実験結果}{18}{}%
-\contentsline {section}{\numberline {2.7}結論}{18}{}%
-\contentsline {chapter}{参考文献}{19}{}%
+\contentsline {subsubsection}{経路既知の場合}{10}{}%
+\contentsline {paragraph}{ユーザインタラクション（経路編集の数理反映）}{11}{}%
+\contentsline {subsubsection}{経路未知の場合}{11}{}%
+\contentsline {paragraph}{コストマップ（OccupancyGrid $\rightarrow $ 安全余裕付きグリッド）}{12}{}%
+\contentsline {paragraph}{経路提案（MR 参照 $\rightarrow $ 安全 A* 補正）}{12}{}%
+\contentsline {subsubsection}{BRIまとめ}{13}{}%
+\contentsline {subsection}{\numberline {2.4.3}人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}{13}{}%
+\contentsline {subsection}{\numberline {2.4.4}モジュール統合の意義}{16}{}%
+\contentsline {section}{\numberline {2.5}BRIの実験}{17}{}%
+\contentsline {subsection}{\numberline {2.5.1}実験設定}{17}{}%
+\contentsline {subsection}{\numberline {2.5.2}実験結果}{18}{}%
+\contentsline {section}{\numberline {2.6}HGIMの実験}{18}{}%
+\contentsline {subsection}{\numberline {2.6.1}実験設定}{18}{}%
+\contentsline {subsection}{\numberline {2.6.2}実験結果}{19}{}%
+\contentsline {section}{\numberline {2.7}結論}{19}{}%
+\contentsline {chapter}{参考文献}{20}{}%

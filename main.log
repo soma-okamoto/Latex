@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 12:16
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.22)  23 SEP 2025 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -609,10 +609,28 @@ LaTeX Warning: Label `fig:1' multiply defined.
 LaTeX Warning: Label `fig:1' multiply defined.
 
 
-LaTeX Warning: Label `fig:1' multiply defined.
+LaTeX Warning: Label `fig:RM_S' multiply defined.
 
 
-LaTeX Warning: Label `fig:1' multiply defined.
+LaTeX Warning: Label `sub@fig:RM_S' multiply defined.
+
+
+LaTeX Warning: Label `fig:IRM_s' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:IRM_s' multiply defined.
+
+
+LaTeX Warning: Label `fig:RM_IRM' multiply defined.
+
+
+LaTeX Warning: Label `eq:bri_known' multiply defined.
+
+
+LaTeX Warning: Label `fig:IRM' multiply defined.
+
+
+LaTeX Warning: Label `fig:9' multiply defined.
 
 
 LaTeX Warning: Label `fig:1' multiply defined.
@@ -676,7 +694,7 @@ Overfull \hbox (4.45078pt too wide) in paragraph at lines 7--7
  []
 
 
-Overfull \hbox (4.45078pt too wide) in paragraph at lines 37--37
+Overfull \hbox (4.45078pt too wide) in paragraph at lines 39--39
  [][] []\T1/cmr/m/n/10.95 Module of Hu-man^^URobot In-ter-ac-tion with Cor-rec-tion and Sug-ges-tion (HRI- 
  []
 
@@ -835,8 +853,10 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 417.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 435.
+(Font)              No change on input line 439.
 
 
 
@@ -849,85 +869,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [10]
 File: fig/Calib-7.pdf Graphic file (type pdf)
 <fig/Calib-7.pdf>
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[11]
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 507.
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[12]
-File: fig/Calib-9.pdf Graphic file (type pdf)
-<fig/Calib-9.pdf>
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 543.
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[13]
-File: fig/Calib-8.pdf Graphic file (type pdf)
-<fig/Calib-8.pdf>
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[14]
-File: fig/Calib-4.pdf Graphic file (type pdf)
-<fig/Calib-4.pdf>
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[15]
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[16]
-File: fig/BRI_ex1.pdf Graphic file (type pdf)
-<fig/BRI_ex1.pdf>
-File: fig/BRI_ex2.pdf Graphic file (type pdf)
-<fig/BRI_ex2.pdf>
-File: fig/BRI_ex3.pdf Graphic file (type pdf)
-<fig/BRI_ex3.pdf>
 File: fig/Calib-6.pdf Graphic file (type pdf)
 <fig/Calib-6.pdf>
 
@@ -939,15 +880,83 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
+[11]
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[12]
+File: fig/Base_suggest.pdf Graphic file (type pdf)
+<fig/Base_suggest.pdf>
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 586.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[13]
+File: fig/Calib-9.pdf Graphic file (type pdf)
+<fig/Calib-9.pdf>
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 622.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[14]
+File: fig/Calib-8.pdf Graphic file (type pdf)
+<fig/Calib-8.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[15]
+File: fig/Calib-4.pdf Graphic file (type pdf)
+<fig/Calib-4.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[16]
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
 [17]
-File: fig/HIGMI_ex1.pdf Graphic file (type pdf)
-<fig/HIGMI_ex1.pdf>
-File: fig/HIGMI_ex2.pdf Graphic file (type pdf)
-<fig/HIGMI_ex2.pdf>
-
-
-LaTeX Warning: Reference `HIGM_ex' on page 18 undefined on input line 744.
-
+File: fig/BRI_ex1.pdf Graphic file (type pdf)
+<fig/BRI_ex1.pdf>
+File: fig/BRI_ex2.pdf Graphic file (type pdf)
+<fig/BRI_ex2.pdf>
+File: fig/BRI_ex3.pdf Graphic file (type pdf)
+<fig/BRI_ex3.pdf>
 
 
 
@@ -958,10 +967,28 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [18]
+File: fig/HIGMI_ex1.pdf Graphic file (type pdf)
+<fig/HIGMI_ex1.pdf>
+File: fig/HIGMI_ex2.pdf Graphic file (type pdf)
+<fig/HIGMI_ex2.pdf>
+
+
+LaTeX Warning: Reference `HIGM_ex' on page 19 undefined on input line 822.
+
 File: fig/Calib-12.pdf Graphic file (type pdf)
 <fig/Calib-12.pdf>
 File: fig/Calib-11.pdf Graphic file (type pdf)
 <fig/Calib-11.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[19]
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 File: fig/Sample.pdf Graphic file (type pdf)
@@ -975,7 +1002,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[19]
+[20]
 \openout2 = `chapter/chapter2/chapter2.aux'.
 
  (./chapter/chapter2/chapter2.tex
@@ -1080,8 +1107,10 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 388.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 409.
+(Font)              No change on input line 411.
 
 
 
@@ -1094,8 +1123,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [9]
 File: fig/Calib-7.pdf Graphic file (type pdf)
 <fig/Calib-7.pdf>
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
+
+Overfull \hbox (11.58421pt too wide) in paragraph at lines 441--443
+[]\JY1/mc/m/n/10.95 目標位置までの移動経路が既知 （ ナビゲ ーシ ョ ン可能 ） である場合 ， \T1/cmr/m/n/10.95 IRM \JY1/mc/m/n/10.95 スコア $\OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 b\OT1/cmr/m/n/10.95 ; \OT1/cmr/bx/n/10.95 p[]\OT1/cmr/m/n/10.95 )$
+ []
+
 
 
 
@@ -1106,10 +1138,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [10]
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 491.
+File: fig/Calib-6.pdf Graphic file (type pdf)
+<fig/Calib-6.pdf>
+File: fig/Base_suggest.pdf Graphic file (type pdf)
+<fig/Base_suggest.pdf>
 
 
 
@@ -1120,10 +1152,12 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [11]
-File: fig/Calib-9.pdf Graphic file (type pdf)
-<fig/Calib-9.pdf>
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 529.
+Overfull \hbox (21.62387pt too wide) in paragraph at lines 497--501
+ \JY1/gt/m/n/10.95 コストマ ッ プ （\T1/cmr/bx/n/10.95 Oc-cu-pan-cy-Grid $\OMS/cmsy/m/n/10.95 !$ \JY1/gt/m/n/10.95 安全余裕付きグリ ッ ド ） [] \T1/cmr/m/n/10.95 : \JY1/mc/m/n/10.95 占有格子 $\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/10.95 2 f^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OMS/cmsy/m/n/10.95 g[]$
+ []
+
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 520.
 
 
 
@@ -1134,6 +1168,32 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [12]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 559.
+File: fig/Calib-9.pdf Graphic file (type pdf)
+<fig/Calib-9.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[13]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 597.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[14]
 File: fig/Calib-8.pdf Graphic file (type pdf)
 <fig/Calib-8.pdf>
 
@@ -1145,34 +1205,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[13]
+[15]
 File: fig/Calib-4.pdf Graphic file (type pdf)
 <fig/Calib-4.pdf>
-
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[14]
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
-
-[15]
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
 
 
 
@@ -1185,6 +1220,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [16]
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
 
 
 
@@ -1194,7 +1231,12 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[17])
+[17]
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1203,7 +1245,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[18]
+[18])
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[19]
 \openout2 = `supplement/reference.aux'.
 
  (./supplement/reference.tex
@@ -1219,7 +1270,7 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 22.
 
 
-[19
+[20
 
 
 
@@ -1236,7 +1287,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[20])
+[21])
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1245,7 +1296,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
-[21] (./main.aux (./chapter/chapter1/chapter1.aux) (./chapter/chapter2/chapter2.aux) (./supplement/reference.aux))
+[22] (./main.aux (./chapter/chapter1/chapter1.aux) (./chapter/chapter2/chapter2.aux) (./supplement/reference.aux))
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2025-06-01> patch level 1
@@ -1260,12 +1311,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29310 strings out of 469906
- 706455 string characters out of 5484464
+ 29329 strings out of 469906
+ 706834 string characters out of 5484464
  1338362 words of memory out of 5000000
- 57288 multiletter control sequences out of 15000+600000
- 659095 words of font info for 144 fonts, out of 8000000 for 9000
+ 57304 multiletter control sequences out of 15000+600000
+ 660035 words of font info for 147 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 99i,12n,105p,778b,774s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,105p,778b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (44 pages, 176664 bytes).
+Output written on main.dvi (46 pages, 187036 bytes).
