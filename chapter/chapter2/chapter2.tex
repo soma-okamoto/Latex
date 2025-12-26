@@ -59,31 +59,36 @@ Human–Robot Interaction with Correction and Suggestion (HRI-CAS)を提案す�
 本システムは、ユーザーの操作特徴量に基づく操作対象推定（Target Bottle Inference, TBI）、
 Inverse Reachability Map (IRM) を利用したベース移動戦略（Base Relocation based on Inverse Reachability Map, BRI）、
 さらに人間とロボットの身体性の違いを補正する把持操作フレームワーク（Human-Intent Adaptive Grasp Manipulation, HIGM）を統合することで構成される。
-これにより、ユーザーの熟練度に依存しない安定した協調作業を実現し、MR空間を介した双方向的かつインタラクティブなHRCを目指す。
-
+これらのモジュールを有機的に統合することで、
+人間の直感的な操作意図と
+ロボットの物理的な動作制約をシステム内部で調和させ、
+MR空間を介した双方向的かつインタラクティブなHRC
+システムを実現する。
 
 
 \subsection*{本研究の貢献 (Contributions)}
 
-本研究の主な貢献は以下の3点にまとめられる。
+本研究の目的は、システム側が人間の操作を適切に「補正 (Correction)」および「提案 (Suggestion)」することで、
+操作者の熟練度に依存しない安定した協調作業を実現することにある。
+主な貢献は以下の3点にまとめられる。
+
 \begin{itemize}
-  \item \textbf{操作対象推定モジュール (TBI) の提案}  
-  ユーザーの操作特徴量（手先近接度、接触度、視線、腕振り）を統合し、到達可能性に応じた重み付けにより操作対象を推定することで
-  、不要な情報提示を抑えつつ直感的な対象選択を支援した。
-  \item \textbf{IRMに基づくベース移動戦略 (BRI) の実現}  
-  Inverse Reachability Map を利用して把持可能位置を算出し、MR空間上で経路を可視化・編集可能とすることで、
-  移動の必要性を判定しつつ自律性とインタラクティブ性を両立させた。
-  \item \textbf{人間とロボットの身体性を調和させる把持操作補正フレームワーク(HIGM)の実現}  
-  Pregrasp生成、ヌル空間最適化、有限状態機械 (Finite State Machine,FSM) を組み合わせ、
-  ユーザー操作とロボットの可操作性を常に調和させることで、相互補正と提案に基づくシームレスな協調操作を実現した。
+  \item \textbf{操作対象推定 (TBI) による意図の明確化}  
+  ユーザーの身体動作から「何をしたいか」という意図を汲み取ることで、
+  システムが介入すべき対象とタイミングを特定し、適切な支援の基盤を構築した。
+
+  \item \textbf{身体性を調和させる把持操作補正 (HIGM) の実現}  
+  人間にとっての操作しやすさと、ロボットにとっての安定性（可操作性・特異点回避）を
+  動的にブレンドする制御フレームワークを構築した。
+  これにより、ユーザーはロボットの都合を意識することなく、直感的な操作のみで安全な把持が可能となる。
+
+  \item \textbf{到達可能性を保証するベース配置提案 (BRI) の導入}  
+  対象物が遠くにある場合でも、ユーザーがロボットの可動範囲を考慮して位置調整を行う負担を取り除いた。
+  ロボット側から最適なベース位置を提案・誘導することで、空間的な制約によるタスク失敗を未然に防ぐ。
 \end{itemize}
-本システムは、ユーザーの操作意図を尊重しつつ、ロボットが適切な補正・提案を行うことで、
-熟練度に依存しない安定した作業遂行を可能にする。
 
-さらに、本研究で提案するHRI-CASの枠組みは、製造現場や遠隔保守、医療支援といった
-人間とロボットが密接に協調する実環境タスクにおける応用可能性を示すものであり、
-今後のHRC研究の発展に寄与することが期待される。
-
+これらの統合により、本システムは「人間がロボットに合わせる」のではなく、
+「ロボットが人間に合わせて補正・提案する」新しいHRCの形を提示する。
 
 \section{関連研究 (Related Work)}
 ロボットは、医療、製造、宇宙探査、農業などの幅広い分野において人間の生活や活動を支援する存在として期待されている。
@@ -132,89 +137,103 @@ IRT-MROは、(i) ロボット視点の情報提示を行う可視化システム
 
 
 総じて、既存研究はMRを用いたHRCの有効性を明確に示してきた一方で、
-環境情報の統合不足、冗長自由度を考慮した安定操作の欠如、ベース移動戦略の自律性の不足といった課題を解決できていない。
-また、ハプティクスの欠如やリアルタイム処理性能の制約といったMR技術自体の限界も残されている \cite{LimitMR}。
+本質的な課題として\textbf{「人間とロボットの身体的・空間的制約の不一致」}を解決できていない。
+既存の手法は、人間の操作をロボットに直結させることに主眼を置いており、
+「ロボットがその姿勢で把持できるか（運動学的制約）」や
+「その位置から対象に届くか（到達可能性）」といった判断を、すべて操作者の技量に委ねている。
+その結果、操作者はロボット特有の動きや限界を熟知している必要があり、
+タスクの成功率や品質が\textbf{操作者の熟練度に著しく依存する}という問題がある。
+
 このような背景の下で、本研究では
+人間の操作意図とロボットの物理的都合を自然に調和させるシステム、
 \textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)} を提案する。
 
 
 \section{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
 
-\textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)} は
-従来の MR ベースの HRC システムが抱える、環境情報の活用不足、安定した姿勢保証の欠如、
-ベース移動戦略の自律性不足といった制約を克服する。
+\textbf{Human–Robot Interaction with Correction and Suggestion (HRI-CAS)} は、
+従来の MR ベースの HRC システムにおける最大の課題である
+\textbf{「操作者の熟練度への高い依存性」}を克服するものである。
 
-本システムはImmersive Robot Teleoperation Based on User Gestures in Mixed Reality Space（IRT-MRO）
-をもとに構成されており、IRT-MROに存在していた課題を改善している形になっている。
-IRT-MROではHololens2を用いたUnityベースのホログラフィックアプリケーションを活用していたが、
-本システムでは、MetaQuestを用いたUnityベースのパススルーアプリケーションを活用する。
-両者はいずれも現実世界のオブジェクトを MR 空間に反映できるデバイスであるが，
+既存システムでは、環境情報の活用不足や姿勢保証の欠如といった技術的制約により、
+ユーザ自身がロボットの可動範囲や安定性を考慮しながら操作を行う必要があった。
+これに対し本システムは、これまで操作者の技量に委ねられていた
+「環境に適応したベース移動」や「運動学的制約を考慮した姿勢制御」を
+システム側が自律的に補正・提案することで、
+ユーザの経験を問わず、安定かつ直感的な協調作業を可能にする。
+
+本システムは先行研究である Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space（IRT-MRO）
+を基盤として構成されており、IRT-MRO に存在していた課題を解決するために拡張・改良されたものである。
+IRT-MRO では HoloLens 2 を用いた Unity ベースのホログラフィックアプリケーションを実装していたのに対し、
+本システムでは、Meta Quest 3 を用いた Unity ベースのパススルーアプリケーションを採用する。
+両者はいずれも現実世界のオブジェクトを MR 空間に反映できるデバイスであるが、
 表示方式に大きな違いがある。
-Hololens2 は光学シースルー方式を採用しており，ユーザは透過ディスプレイ越しに
-現実環境と仮想オブジェクトを同時に視認できる。一方で，視野角の狭さや表示輝度の制約が指摘されている。
-これに対して 図1に示すように、Meta Quest はパススルー方式を採用し，
-外部カメラで取得した映像をディスプレイに投影することで，
-広い視野角と高解像度の表示を実現する。これにより，ユーザはより自然で没入感のある MR 体験を得られ，
+HoloLens 2 は光学シースルー方式を採用しており、ユーザは透過ディスプレイ越しに
+現実環境と仮想オブジェクトを同時に視認できる。一方で、視野角の狭さや表示輝度の制約が指摘されている。
+これに対して図\ref{fig:device_comparison}に示すように、Meta Quest 3 はパススルー方式を採用し、
+外部カメラで取得した映像をディスプレイに投影することで、
+広い視野角と高解像度の表示を実現する。これにより、ユーザはより自然で没入感のある MR 体験を得られ、
 環境理解や操作の直感性が向上する。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:label}
+\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:device_comparison}
 
 
-\subsection{実装プラットフォームとシステム}
+\subsection{実装プラットフォームとシステム構成}
 本研究においては KUKA YouBot を実験プラットフォームとして採用した。
-当該ロボットは全方向移動を可能とする台車に加え，
+当該ロボットは全方向移動を可能とする台車に加え、
 5自由度のマニピュレータおよび二指グリッパを搭載したモバイルマニピュレータである。
-本システムでは，MR空間上で検出される対象オブジェクトの位置および姿勢の変化,ユーザー操作を
-ロボット動作へと反映させることで，
+
+MR システムの実装には Unity および MRTK3（Mixed Reality Toolkit）を用い、OpenXR 標準に準拠した開発を行った。
+ユーザは手指運動を介して MR オブジェクトを操作することが可能であり、
+直感的かつ自然な入力インタフェースを提供する。
+さらに、MR オブジェクトを通じてロボットの行動意図を提示することにより、
+操作者はロボットの意思決定過程を理解しやすくなり、人間とロボットの協調性が向上する。
+
+本システムでは、MR 空間上で検出される対象オブジェクトの位置および姿勢の変化、およびユーザ操作を
+ロボット動作へと反映させることで、
 人間とロボットとの間に円滑な相互作用を実現する。
-さらに，ロボットの挙動はMR空間へ即時にフィードバックされ，
+さらに、ロボットの挙動は MR 空間へ即時にフィードバックされ、
 操作者に対して高精度な視覚的情報提示を行う。
 
-グラフィカルアーキテクチャは図2に示され、以下の3つのモジュールで構成されている。
+システム構成図は図\ref{fig:system_architecture}に示され、以下の3つのモジュールで構成されている。
 % 図を表示
-\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:label1}
+\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:system_architecture}
 
 \noindent
 \textbf{Target Bottle Inference (TBI) モジュール}: 
-ユーザの視線，頭部方向，および手先運動を MR 空間内で追跡し，
+ユーザの頭部方向、および手先運動を MR 空間内で追跡し、
 候補ボトルとの幾何的関係を特徴量として抽出する。
-これらの情報は統合スコアに基づいて処理され，ユーザが操作対象として意図しているボトルを推定する。
-本モジュールは，ユーザ行動の多様な特徴を統合的に評価することで，
+これらの情報は統合スコアに基づいて処理され、ユーザが操作対象として意図しているボトルを推定する。
+本モジュールは、ユーザ行動の多様な特徴を統合的に評価することで、
 高精度かつリアルタイムな対象選択を可能にする。
 
 \medskip
 \noindent
 \textbf{Base Relocation based on Inverse Reachability Map (BRI) モジュール}: 
 対象ボトルがロボットの可動範囲外に存在する場合に作動する。
-まず Reachability Map (RM) を基に Inverse Reachability Map (IRM) を生成し\cite{RM}，
+まず Reachability Map (RM) を基に Inverse Reachability Map (IRM) を生成し\cite{RM}、
 対象位置を到達可能とする候補ベース位置集合を抽出する。
-次に，IRM スコアおよび移動コストを考慮した最適化問題を解き，
+次に、IRM スコアおよび移動コストを考慮した最適化問題を解き、
 最適なベース配置を決定する。
-さらに，候補経路は MR 空間上に可視化され，ユーザによる修正操作も可能となる。
+さらに、候補経路は MR 空間上に可視化され、ユーザによる修正操作も可能となる。
 
 \medskip
 \noindent
 \textbf{Human-Intent Adaptive Grasp Manipulation (HIGM) モジュール}: 
 ユーザの操作とロボットの身体的制約の差異を補正することを目的とする。
-具体的には，ユーザのハンドトラッキング情報から得られる参照姿勢と，
-ロボットにとって把持可能性の高いプレグラスプ姿勢を統合し，
+具体的には、ユーザのハンドトラッキング情報から得られる参照姿勢と、
+ロボットにとって把持可能性の高いプレグラスプ姿勢を統合し、
 ヌル空間最適化を利用して関節姿勢を調整する。
-これにより，ユーザはロボットの運動学的制約を意識することなく，
+これにより、ユーザはロボットの運動学的制約を意識することなく、
 自然な操作感覚で安定した把持を実現できる。
 
 
-これらのモジュールの統合により，従来の IRT-MRO では十分に対応できなかった
+これらのモジュールの統合により、従来の IRT-MRO では十分に対応できなかった
 ユーザの操作対象に応じた動作選択が可能となり，より直感的かつ適応的な経路計画が実現される。
 さらに，ユーザがロボット固有の身体的制約を意識することなく操作できるようになった結果，
-適応的な把持動作が可能となり，操作習熟度への依存度が大幅に低減された。
+適応的な把持動作が可能となり，操作熟練度への依存度が大幅に低減された。
 これにより，経験の浅いユーザにおいても円滑かつ安定した操作が実現される。
 
-\subsection{MRシステム実装}
-Unity および MRTK3（Mixed Reality Toolkit）を基盤とし，OpenXR 標準に準拠して実装された。
-ユーザは手指運動を介して MR オブジェクトを操作することが可能であり，
-直感的かつ自然な入力インタフェースを提供する。
-さらに，MRオブジェクトを通じてロボットの行動意図を提示することにより，
-操作者はロボットの意思決定過程を理解しやすくなり，人間とロボットの協調性が向上する。
 
 
 \section{Module of Human–Robot Interaction with Correction and Suggestion (HRI-CAS)}
@@ -222,54 +241,75 @@ Unity および MRTK3（Mixed Reality Toolkit）を基盤とし，OpenXR 標準�
 
 \textbf{特徴量の定義}: 
 TBI モジュールは，ユーザの身体運動に基づいて操作対象を推定することを目的とする。
-図3は情報空間にある操作特徴量の様子である
+本手法では，推定のために以下の\textbf{4つの特徴量}を利用する。
+\begin{itemize}
+  \item \textbf{位置 (Position)}: 手先と対象との距離に基づく近接度
+  \item \textbf{頭部方向 (Head Orientation)}: ユーザの顔が向いている方向
+  \item \textbf{手先加速度 (Hand Acceleration)}: 手先が動いている方向と勢い
+  \item \textbf{接触 (Contact)}: 物理的な接触の有無（即時決定要因）
+\end{itemize}
+
+図\ref{fig:tbi_features}に，情報空間におけるこれらの幾何学的関係を示す。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-2.pdf}{Figure3}{fig:label2}
+\fig[H]{width = 0.5\linewidth}{Calib-2.pdf}{Geometric relationship of operational features}{fig:tbi_features}
 
-
+まず，幾何的な方向ベクトルを定義する。
 対象オブジェクト $o_i$ の位置を $\mathbf{p}_i(t)$ とし，
-ユーザの眼・頭・手の位置をそれぞれ $\mathbf{p}_{eye}(t)$，$\mathbf{p}_{head}(t)$，$\mathbf{p}_{hand}(t)$ とする。
+ユーザの頭・手の位置をそれぞれ $\mathbf{p}_{head}(t)$，$\mathbf{p}_{hand}(t)$ とする。
 各オブジェクトに対して，ユーザ身体部位からの相対位置方向を示す正規化ベクトルは次式で表される：
 \begin{equation}
-\mathbf{d}_i^{eye}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{eye}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{eye}(t)\|}, \quad
 \mathbf{d}_i^{head}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{head}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{head}(t)\|}, \quad
 \mathbf{d}_i^{hand}(t) = \frac{\mathbf{p}_i(t)-\mathbf{p}_{hand}(t)}{\|\mathbf{p}_i(t)-\mathbf{p}_{hand}(t)\|}.
 \end{equation}
-これらは「ユーザがどの方向に注視／注力しているか」を幾何的に定義する基礎ベクトルである。
+
+
 また，動作のダイナミクスを取り入れるために，
-視線ベクトル，頭部方向ベクトル，および手先加速度ベクトルをそれぞれ正規化し，
-$\hat{\mathbf{v}}_{gaze}(t)$，$\hat{\mathbf{v}}_{head}(t)$，$\hat{\mathbf{a}}_{hand}(t)$ と定義する。
+ユーザの頭部正面方向を表すベクトルを $\mathbf{v}_{head}(t)$，
+手先の加速度ベクトルを $\mathbf{a}_{hand}(t)$ とし，
+これらを正規化して方向成分のみを抽出した単位ベクトルを次式で定義する：
+\begin{equation}
+\hat{\mathbf{v}}_{head}(t) = \frac{\mathbf{v}_{head}(t)}{\|\mathbf{v}_{head}(t)\|}, \quad
+\hat{\mathbf{a}}_{hand}(t) = \frac{\mathbf{a}_{hand}(t)}{\|\mathbf{a}_{hand}(t)\|}.
+\end{equation}
+ただし、$\|\mathbf{a}_{hand}(t)\| \approx 0$ の場合、$\hat{\mathbf{a}}_{hand}(t) = \mathbf{0}$ とする。
 
 
 \medskip
-\textbf{コサイン類似度スコア}: 
-ユーザの身体運動と対象オブジェクトの方向が一致するかどうかを評価するため，
-各特徴量と方向ベクトルの内積に基づくコサイン類似度を計算する。
+\noindent
+\textbf{各スコアの算出}: 
+上記ベクトルを用い，以下の3つの連続値スコアと1つのバイナリフラグを算出する。
+
+1. \textbf{頭部方向スコア} $s_{\text{head}}$ および \textbf{加速度スコア} $s_{\text{accel}}$:
+方向の一致度を評価するため，コサイン類似度を計算する。
 \begin{align}
-s_{\text{gaze}}(i,t) &= \max \left(0, \hat{\mathbf{v}}_{gaze}(t)\cdot \mathbf{d}_i^{eye}(t)\right), \\
 s_{\text{head}}(i,t) &= \max \left(0, \hat{\mathbf{v}}_{head}(t)\cdot \mathbf{d}_i^{head}(t)\right), \\
 s_{\text{accel}}(i,t) &= \max \left(0, \hat{\mathbf{a}}_{hand}(t)\cdot \mathbf{d}_i^{hand}(t)\right).
 \end{align}
-ここで $s_{\text{gaze}}$ は「視線が各対象に向いている度合い」，
-$s_{\text{head}}$ は「頭部の指向が各対象を捉えている度合い」，
-$s_{\text{accel}}$ は「手先の加速度が各対象方向に向いている度合い」を表す。
 
-さらに，物理的接触可能性を表す指標として，
-手先位置とのユークリッド距離に基づく近接スコア $s_{\text{prox}}$，
-および実際の接触有無を示すバイナリ変数 $c_i(t)$ を導入する：
+2. \textbf{位置スコア} $s_{\text{pos}}$:
+手先位置とのユークリッド距離に基づき，近いほど高い値となるよう定義する。
 \begin{equation}
-s_{\text{prox}}(i,t) = \operatorname{clip}\left(1 - \frac{\|\mathbf{p}_{hand}(t)-\mathbf{p}_i(t)\|}{R_{\max}},\,0,\,1\right), \quad
+s_{\text{pos}}(i,t) = \operatorname{clip}\left(1 - \frac{\|\mathbf{p}_{hand}(t)-\mathbf{p}_i(t)\|}{R_{\max}},\,0,\,1\right).
+\end{equation}
+ここで $R_{\max}$ は近接判定の最大有効距離であり，これ以上離れた場合はスコアが 0 となる。
+本実験では $R_{\max}=1 \mathrm{m}$ に設定した。
+
+
+3. \textbf{接触フラグ} $c_i(t)$:
+物理的な接触有無を示すバイナリ変数である。
+\begin{equation}
 c_i(t) \in \{0,1\}.
 \end{equation}
-これにより，身体運動だけでなく「物理的把持可能性」も同時に考慮する。
-ここで $c_i(t)$ は最終決定における強制的なフラグとして用い，
-特徴ベクトルには含めない。
+この $c_i(t)$ は後述する最終決定において最も優先される指標であり，
+重み付けスコア計算用の特徴ベクトルには含めない。
+
 
 \medskip
+\noindent
 \textbf{スコア統合}: 
-以上の特徴量をまとめた特徴ベクトルを
+接触フラグを除く3つの特徴量をまとめた特徴ベクトルを
 \begin{equation}
-\mathbf{s}(i,t) = [s_{\text{prox}},\,s_{\text{gaze}},\,s_{\text{head}},\,s_{\text{accel}}]^\top
+\mathbf{s}(i,t) = [s_{\text{pos}},\,s_{\text{head}},\,s_{\text{accel}}]^\top
 \end{equation}
 とし，対象が到達可能集合 $\mathcal{B}_{in}(t)$ に属するか，
 到達不可能集合 $\mathcal{B}_{out}(t)$ に属するかによって，
@@ -282,13 +322,14 @@ S(i,t) =
 \end{cases}
 \end{equation}
 ここで $\mathbf{w}_{in}, \mathbf{w}_{out}$ は事前に設定された重みベクトルである。
-到達可能な対象に対しては「近接度」や「手先の動き」を重視することで，
-ノイズ的な視線の揺れに惑わされず堅牢に推定できる。
-一方，到達不可能な対象に対しては「視線」や「頭の向き」を重視することで，
+到達可能な対象に対しては「位置」や「加速度」を重視することで，
+ノイズ的な頭部の揺れに惑わされず堅牢に推定できる。
+一方，到達不可能な対象に対しては「頭の向き」を重視することで，
 ユーザの遠隔意図を正しく反映する。
 これにより，状況に応じた柔軟かつ誤検出耐性の高い推定が可能となる。
 
 \medskip
+\noindent
 \textbf{時間平滑化}: 
 瞬間的な身体動作の揺らぎによりスコアが急激に変動することが予想されるため、
 指数移動平均を導入してスコアを時間的に平滑化する\cite{EMA}。
@@ -299,16 +340,14 @@ S(i,t) =
 これにより，一時的な誤検出を抑制し，ユーザ意図を安定的に捉えることが可能となる。
 
 \medskip
+\noindent
 \textbf{最終決定ルール}: 
 最終的な操作対象は，まず「接触有無」を優先基準として決定される。
 すなわち，
 \begin{equation}
   i^*(t) \in \{\, i \in \mathcal{B} \mid c_i(t) = 1 \,\}.
 \end{equation}
-
-
-すなわち，どの候補に対しても接触フラグが立った場合，
-その対象が即座に最終決定対象となる。
+どの候補に対しても接触フラグが立った場合，その対象が即座に最終決定対象となる。
 
 それ以外は全候補集合 $\mathcal{B}$ に対して平滑化スコアを最大化する対象として選択される：
 \begin{equation}
@@ -327,27 +366,28 @@ i^*(t) = \arg\max_{i \in \mathcal{B}} \bar{S}(i,t).
 「操作対象として十分に意図が強い場合のみ」確定する仕組みとなっている。
 
 \medskip
+\noindent
 \textbf{情報提示の調整}:
 TBI モジュールでは，推定結果をユーザに提示する際に，過剰な情報提示を避けつつ
 直感的な理解を促すために情報量の調整を行う。
 
-まず，図4に示すように各対象ボトルが \textit{Reachability Map (RM)} \cite{RM}において
+まず，図\ref{fig:tbi_rm}に示すように各対象ボトルが \textit{Reachability Map (RM)} \cite{RM}において
 「把持可能」か「把持不可能」かを判定し，
 把持可能な対象はベースカラーで表示する。
 一方，把持不可能な対象は半透明化し，彩度を低下させることで
 ユーザの注意を必要以上に引かないようにする。
-% 図を並べて表示
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+% 図を並べて表示予定
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Classification of objects based on RM}{fig:tbi_rm}
 
 
-さらに，図5に示すように対象推定によって操作対象が決定された場合には，
+さらに，図\ref{fig:tbi_highlight}に示すように対象推定によって操作対象が決定された場合には，
 推定対象以外を一括して半透明表示に切り替える。
 その際，把持可能対象と把持不可能対象とで
 UI 強調の方法を区別し，
 前者には「操作可能性の高さ」を示す強調色を，
 後者には「ベース移動が必要である」ことを示す異なる色調を割り当てる。
-% 図を並べて表示
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+% 図を並べて表示予定
+\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Visualization of inferred target}{fig:tbi_highlight}
 
 
 この二段階の情報量調整により，
@@ -358,9 +398,9 @@ UI 強調の方法を区別し，
 認知負荷を軽減しながら直感的な意思決定を支援する。
 
 \paragraph{TBIまとめ} 
-以上のように，TBI モジュールはユーザの視線・頭部方向・手先運動など
+以上のように，TBI モジュールはユーザの頭部方向・手先運動など
 多様な身体特徴量を幾何学的に定義し，
-コサイン類似度や近接・接触指標に基づいて統合スコアを算出することで，
+コサイン類似度や位置・接触指標に基づいて統合スコアを算出することで，
 操作対象を高精度かつリアルタイムに推定する仕組みを構築している。
 また，時間平滑化により一時的な誤検出を抑制し，
 安定した対象推定を保証している。
@@ -377,23 +417,28 @@ UI 強調の方法を区別し，
 結果として，HRI-CAS 全体の基盤となる「人間の意図の正確な把握」を実現している。
 
 
-
 \subsection{逆到達可能マップに基づくベース移動 (Base Relocation based on Inverse Reachability Map, BRI)}
 
-対象がロボットの可動範囲外にある場合には，ロボットベースそのものを移動させる必要がある。
-しかし，無秩序に移動候補を探索すると計算コストが膨大となり，
-また人間との協調を考慮した適切な配置を得ることが困難となる。
-本研究では，\ref{fig:RM_IRM}に示すロボットマニピュレータ研究で広く利用される
+TBI によって対象物が特定されたとしても、その対象がロボットの現在の把持可能範囲（Reachability）の外にある場合、
+ロボットはベース位置そのものを移動させて到達可能性を確保する必要がある。
+しかし、単純な距離基準で移動位置を決定すると、
+「届くが姿勢が苦しい（特異点に近い）」位置や「障害物に近すぎる」位置を選んでしまうリスクがある。
+また、無秩序に移動候補を探索することは計算コストの増大を招く。
+
+そこで本研究では、ロボットマニピュレータの到達可能性を事前に計算したマップを用いることで、
+「どこに移動すれば最も把持しやすいか」を高速かつ最適に決定するアプローチをとる。
+具体的には、図\ref{fig:bri_rm_irm}に示す
 \textit{到達可能マップ (Reachability Map, RM)} と
-\textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入し，
-候補ベース位置を生成・評価する\cite{RM}。
+\textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入する\cite{RM}。
+
 % 図を並べて表示
 \twoimgs[H]
 {.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
 {.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
-\figcaption{RM/IRM}\label{fig:RM_IRM}
+\figcaption{Visual representation of RM and IRM}\label{fig:bri_rm_irm}
 
 \medskip
+\noindent
 \textbf{到達可能性と逆到達可能性の基礎}:
 ロボットのベース位置を $\mathbf{b}$ としたとき，
 その位置からエンドエフェクタ (EE) が到達可能な空間は
@@ -412,10 +457,10 @@ RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists \theta \ \text{s.t.
 すなわち IRM は「タスク点に到達できるベース位置の集合」を与える逆写像であり，
 ベース移動を考慮する上で不可欠な概念である\cite{RM}。
 
-さらに RM は単なる到達可能／不可能の判定だけでなく，
+さらに本研究では、単なる到達可能／不可能の判定だけでなく，
 「その位置に対して逆運動学解が何通り存在するか」を用いて
 到達の安定性や冗長性を評価できる。
-本研究では，位置 $\mathbf{p}$ に対して存在する逆運動学解の数を
+位置 $\mathbf{p}$ に対して存在する逆運動学解の数を
 次式によりスコア化する：
 \begin{equation}
 S_{RM}(\mathbf{p}) = N_{\text{IK}}(\mathbf{p}).
@@ -432,20 +477,20 @@ S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
 これにより，候補ベース配置の良否を，単に「到達できるか否か」ではなく，
 「どれだけ冗長で安定した姿勢で到達できるか」に基づいて評価できる。
 
-次に，候補集合 $\mathcal{B}(\mathbf{p}_t)$ の中から最適なベース位置を選択する。
-ここでは，\ref{fig:mapping}のような環境情報の有無に応じて二つの場合に分けて定式化する。
+次に，候補集合 $\mathcal{B}(\mathbf{p}_t)$ の中から最適なベース位置を選択するアルゴリズムについて述べる。
+ここでは，図\ref{fig:bri_mapping}のような環境情報の有無に応じて二つの場合に分けて定式化する。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Figure7}{fig:mapping}
+\fig[H]{width = 0.5\linewidth}{Calib-7.pdf}{Example of mapping and environment}{fig:bri_mapping}
 
 \subsubsection{経路既知の場合}
 目標位置までの移動経路が既知（ナビゲーション可能）である場合，
 IRM スコア $S_{IRM}(\mathbf{b}; \mathbf{p}_t)$ と移動コスト $C(\mathbf{b})$ の両者を考慮し，
+以下の目的関数を最大化する位置 $\mathbf{b}^*$ を選択する：
 \begin{equation}
 \mathbf{b}^* = \arg\max_{\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)}
 \Big[ S_{IRM}(\mathbf{b}; \mathbf{p}_t) - \lambda \, C(\mathbf{b}) \Big].
 \label{eq:bri_known}
 \end{equation}
-
 
 ここで $C(\mathbf{b})$ はナビゲーションで得られた
 $\mathbf{b}_0\!\to\!\mathbf{b}$ の経路長とする：
@@ -459,7 +504,7 @@ C(\mathbf{b})=L(\Gamma(\mathbf{b}))=\int_{0}^{1}\!\bigl\|\dot{\mathbf{x}}(s)\big
 \paragraph{ユーザインタラクション（経路編集の数理反映）}
 MR空間でユーザが編集した参照経路を $\bar{\Gamma}_{u}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$，
 ピン留め集合を $\mathcal{K}_{\mathrm{lock}}$ とする。
-各候補ベース $\mathbf{b}$ に対し，ナビゲーションは
+各候補ベース $\mathbf{b}$ に対し，ナビゲーションコストを
 \[
 C(\mathbf{b}\mid \bar{\Gamma}_{u})
 = C(\mathbf{b})
@@ -467,7 +512,7 @@ C(\mathbf{b}\mid \bar{\Gamma}_{u})
 \quad
 \text{s.t.}\ \ \Gamma(\mathbf{b})\in\mathcal{F}_{\mathrm{nav}},\ \ \mathbf{x}_k=\bar{\mathbf{x}}_k\ (k\in\mathcal{K}_{\mathrm{lock}})
 \]
-を最小化する経路 $\Gamma(\mathbf{b})$ を再計算し，その結果で \eqref{eq:bri_known} を再評価する。
+と定義し、これを最小化する経路 $\Gamma(\mathbf{b})$ を再計算する。その結果で \eqref{eq:bri_known} を再評価する。
 最終的なベースは
 \[
 \mathbf{b}^\star
@@ -476,9 +521,9 @@ C(\mathbf{b}\mid \bar{\Gamma}_{u})
 S_{\mathrm{IRM}}(\mathbf{b};\mathbf{p}_t) - \lambda\,C(\mathbf{b}\mid\bar{\Gamma}_{u}) - \xi\,\Delta\psi(\mathbf{b})^2
 \Big]
 \]
-として選択され，更新後の Waypoint 列 $\Gamma(\mathbf{b}^\star)$ は即時に MR 空間へ再描画される。
+として選択され，更新後の Waypoint 列 $\Gamma(\mathbf{b}^\star)$ は即時に MR 空間へ再描画される（図\ref{fig:bri_interaction}参照）。
 
-\fig[H]{width = 0.75\linewidth}{Calib-6.pdf}{Figure4}{fig:IRM}
+\fig[H]{width = 0.75\linewidth}{Calib-6.pdf}{User interaction for path planning}{fig:bri_interaction}
 
 
 \subsubsection{経路未知の場合}
@@ -486,14 +531,14 @@ S_{\mathrm{IRM}}(\mathbf{b};\mathbf{p}_t) - \lambda\,C(\mathbf{b}\mid\bar{\Gamma
 先行研究 IRT-MRO \cite{Esaki} の方式に基づき，
 ユーザが MR 空間上でベース配置経路を直接提示する。
 本研究ではさらに，提示された経路に対してコストマップを用いた局所的な自律修正を加える。
-これにより，図9に示すように，各 Waypoint は安全かつ実行可能な位置に調整され，
+これにより，図\ref{fig:bri_costmap_suggest}に示すように，各 Waypoint は安全かつ実行可能な位置に調整され，
 障害物回避や環境変化に適応できる。
 修正結果は MR 空間にも反映されるため，
 ユーザはロボットによる自律補正を視覚的に理解できる。
 
 % 図を並べて表示
-\fig[H]{width = 0.75\linewidth}{Base_suggest.pdf}{Figure4}{fig:9}
-% 数理的説明を追加予定
+\fig[H]{width = 0.75\linewidth}{Base_suggest.pdf}{Costmap-based path suggestion}{fig:bri_costmap_suggest}
+
 \paragraph{コストマップ（OccupancyGrid $\rightarrow$ 安全余裕付きグリッド）}:
 占有格子 $G\in\{-1,0,100\}^{H\times W}$（未知$=-1$, 自由$=0$, 障害物$=100$）から
 コストマップ $C\in\mathbb{R}^{H\times W}$ を構成する。
@@ -513,7 +558,7 @@ $C_{ij}\leftarrow P_{\text{pen}}$ とする（形態学的膨張；安全マー�
 ユークリッド距離 $\le r_c$ の円盤近傍でも $C_{ij}\leftarrow P_{\text{pen}}$ として
 ミンコフスキー和に基づく実機幅の拡張を付加する。
 ここで $P_{\text{pen}}\gg 1$ は「通れるが高コスト」を意味し，
-障害物から離れた経路を自然に選好させる（図\ref{fig:9} 参照）。:contentReference[oaicite:0]{index=0}
+障害物から離れた経路を自然に選好させる。
 
 \paragraph{経路提案（MR 参照 $\rightarrow$ 安全 A* 補正）}:
 MR 空間でユーザが提示した参照経路 $\bar{\Gamma}=\{\bar{\mathbf{x}}_k\}_{k=0}^{N}$ を
@@ -534,11 +579,7 @@ h(n)=|x_n-x_g|+|y_n-y_g| \ \ (\text{マンハッタン}),
 $\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$ を構成する。
 さらに実行上は一定間隔 $\delta$ 毎にサンプリングして Waypoint 列に圧縮し，
 機体座標への変換と速度飽和の下で逐次追従する
-（現在姿勢は $\texttt{map}\!\to\!\texttt{base\_link}$ の TF から取得）。:contentReference[oaicite:1]{index=1}
-
-
-
-
+（現在姿勢は $\texttt{map}\!\to\!\texttt{base\_link}$ の TF から取得）。
 
 \subsubsection{BRIまとめ}
 以上により，本研究のベース移動戦略は，
@@ -547,9 +588,6 @@ $\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$ を構成する。
 を適用する二段階構造となっている。
 これにより，ロボットの自律性とユーザ主導のインタラクションの両方を満たすことが可能となり，
 柔軟かつ堅牢なベース移動を実現する。
-
-
-
 
 \subsection{人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}
 
@@ -565,11 +603,20 @@ $\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$ を構成する。
 その手の甲位置を目標として EE を制御すると，
 把持可能性を考慮しない不適切な姿勢が指示される可能性がある。
 
-この問題に対処するため，本研究では図10のように対象位置 $\mathbf{p}_t$ に基づき，
+この問題に対処するため，本研究では図\ref{fig:higm_concept}のように対象位置 $\mathbf{p}_t$ に基づき，
 ロボットにとって安定かつ実行可能な参照姿勢
 （プレグラスプ姿勢 $\mathbf{x}_{pre}$）を生成する。
+
+\textbf{Pregrasp姿勢の導出}:
+まず、対象物の位置 $\mathbf{p}_t$ と姿勢（ボトルであれば直立方向）に対し、
+ロボットハンドがアプローチしやすい手前方向のオフセット位置 $\mathbf{p}_{pre}$ を定義する。
+この $\mathbf{p}_{pre}$ と理想的な把持方向 $R_{pre}$ を目標とする逆運動学（Inverse Kinematics, IK）を解き、
+得られた関節角解の中から、可操作度（Manipulability）が最も高いものを $\theta_{pre}$、
+対応する手先姿勢を $\mathbf{x}_{pre}$ として採用する。
+これにより、$\mathbf{x}_{pre}$ は常に「ロボットにとって最も無理のない把持準備姿勢」となることが保証される。
+
 実際の EE 目標姿勢は，ユーザのパーム姿勢 $EE_{palm}$ と
-プレグラスプ姿勢 $EE_{pre}$ を距離依存で補間することで定義される：
+このプレグラスプ姿勢 $EE_{pre}$ ($\approx \mathbf{x}_{pre}$) を距離依存で補間することで定義される：
 \begin{equation}
 EE_{target}(d) = (1-\beta(d)) \, EE_{palm} + \beta(d) \, EE_{pre},
 \end{equation}
@@ -588,7 +635,7 @@ EE_{target}(d) = (1-\beta(d)) \, EE_{palm} + \beta(d) \, EE_{pre},
 両者を組み合わせることで，ユーザ意図を尊重しながら，
 ロボットの運動学的制約に適応した安定的な把持動作が実現される。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-9.pdf}{Figure10}{fig:label5}
+\fig[H]{width = 0.5\linewidth}{Calib-9.pdf}{Concept of HIGM interpolation}{fig:higm_concept}
 
 
 \medskip
@@ -619,7 +666,7 @@ J^+ = J^\top (JJ^\top + \lambda I)^{-1},
 $P = I - J^+ J$ はヌル空間射影行列である。
 第一項は EE の追従を保証し，ユーザが指示した手先運動を忠実に再現する。
 一方，第二項はヌル空間に射影された最適化成分であり，
-図10に示すようにメリット関数 $H(\theta)$ に基づいて関節姿勢を調整する。
+図\ref{fig:higm_optimization}に示すようにメリット関数 $H(\theta)$ に基づいて関節姿勢を調整する。
 
 メリット関数は次式で定義される：
 \begin{equation}
@@ -628,23 +675,14 @@ H(\theta) = w_{mani}\log\det(JJ^\top) + w_{limit}\sum_i \log m_i(\theta) - \gamm
 
 各項の役割は以下の通りである：
 \begin{itemize}
-  \item $w_{mani}\log\det(JJ^\top)$：
-  吉川可操作度\cite{Yoshikawa}を最大化することで，ヤコビアンの特異点近傍を回避し，
-  アームが「動きにくい方向」に陥らないよう制御する。
-  物理的には，関節の自由度を活かして運動の冗長性を維持することを意味し，
-  ユーザにとっては操作が途切れず滑らかに続く感覚を保証する。
+ \item $w_{mani}\log\det(JJ^\top)$：
+  吉川可操作度\cite{Yoshikawa}を最大化することで，ヤコビアンの特異点近傍を回避し，アームが「動きにくい方向」に陥らないよう制御する。物理的には，関節の自由度を活かして運動の冗長性を維持することを意味し，ユーザにとっては操作が途切れず滑らかに続く感覚を保証する。
 
-  \item $w_{limit}\sum_i \log m_i(\theta)$：
-  各関節のリミット余裕 $m_i(\theta)$ \cite{JointLimit}を増大させることで，
-  関節角が可動範囲の端に近づくことを防ぐ。
-  これはロボットの寿命や安全性を確保する上で重要であり，
-  同時にユーザにとって「無理な姿勢で動作が急に止まる」といった違和感を減少させる。
+ \item $w_{limit}\sum_i \log m_i(\theta)$：
+  各関節のリミット余裕 $m_i(\theta)$ \cite{JointLimit}を増大させることで，関節角が可動範囲の端に近づくことを防ぐ。これはロボットの寿命や安全性を確保する上で重要であり，同時にユーザにとって「無理な姿勢で動作が急に止まる」といった違和感を減少させる。
 
-  \item $-\gamma\|\theta-\theta_{pre}\|^2$：
-  Pregrasp 姿勢との整合性を維持しつつ，ロボットが独自の最適化により
-  ユーザ意図から大きく逸脱するのを防ぐ。
-  この項によって，ユーザの操作感覚とロボットの運動学的安定性の間に
-  バランスが保たれる。
+ \item $-\gamma\|\theta-\theta_{pre}\|^2$：
+  Pregrasp 姿勢との整合性を維持しつつ，ロボットが独自の最適化によりユーザ意図から大きく逸脱するのを防ぐ。この項によって，ユーザの操作感覚とロボットの運動学的安定性の間にバランスが保たれる。
 \end{itemize}
 
 以上により，ヌル空間最適化は
@@ -656,7 +694,7 @@ H(\theta) = w_{mani}\log\det(JJ^\top) + w_{limit}\sum_i \log m_i(\theta) - \gamm
 「ロボットの物理的制約への適応」と「ユーザが感じる直感的で継続的な操作体験」とを結びつける
 基盤技術として機能する。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Figure10}{fig:label6}
+\fig[H]{width = 0.5\linewidth}{Calib-8.pdf}{Null-space optimization}{fig:higm_optimization}
 
 
 \medskip
@@ -683,22 +721,16 @@ FSM によって，ユーザ意図の反映とロボットの運動学的制約�
   DLS-IK により関節角を逐次更新する。
   ユーザ体験的には「手を動かすとロボットも同調して追従する」感覚が得られる。
 
-  \item \textbf{BACKOFF}:
-  可操作度 $M(\theta) < \tau_{mani}$ または関節リミット余裕 $m_i(\theta) < \tau_{limit}$ に達した場合，
-  不安定姿勢に突入するリスクが高まるため一旦後退する。
-  この制御は「ロボットが無理に動こうとして詰まる」感覚を防ぎ，
-  ユーザに安心感を与える。
+ \item \textbf{BACKOFF}:
+   可操作度 $M(\theta) < \tau_{mani}$ または関節リミット余裕 $m_i(\theta) < \tau_{limit}$ に達した場合，不安定姿勢に突入するリスクが高まるため一旦後退する。この制御は「ロボットが無理に動こうとして詰まる」感覚を防ぎ，ユーザに安心感を与える。
 
-  \item \textbf{REALIGN}:
-  BACKOFF の後，ヌル空間最適化を用いて関節姿勢を再整列させる。
-  条件 $M(\theta) \geq \tau_{mani}$ かつ $m_i(\theta) \geq \tau_{limit}$ を満たすまで調整が行われる。
-  この段階では「ロボットが自律的に姿勢を整える」挙動が見え，
-  ユーザはロボットの適応性を直感的に理解できる。
+ \item \textbf{REALIGN}:
+   BACKOFF の後，ヌル空間最適化を用いて関節姿勢を再整列させる。
+   条件 $M(\theta) \geq \tau_{mani}$ かつ $m_i(\theta) \geq \tau_{limit}$ を満たすまで調整が行われる。
+  この段階では「ロボットが自律的に姿勢を整える」挙動が見え，ユーザはロボットの適応性を直感的に理解できる。
 
-  \item \textbf{APPROACH}:
-  EE が安定姿勢を満たし，対象までの距離 $d < \tau_{dist}$ となった場合に接近する。
-  この状態は「ロボットが確実に掴みに行く」段階に相当し，
-  把持成功率の向上に直結する。
+ \item \textbf{APPROACH}:
+  EE が安定姿勢を満たし，対象までの距離 $d < \tau_{dist}$ となった場合に接近する。この状態は「ロボットが確実に掴みに行く」段階に相当し，把持成功率の向上に直結する。
 \end{enumerate}
 
 以上のように，FSM は数理的基準（可操作度，関節余裕，距離閾値）と
@@ -708,8 +740,7 @@ FSM によって，ユーザ意図の反映とロボットの運動学的制約�
 HRC における「協調的な安全性」を実現する。
 
 % 図を一つ
-% 図を一つ
-\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{Figure10}{fig:label7}
+\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{State transition of FSM}{fig:higm_fsm}
 
 
 \subsection{モジュール統合の意義}
@@ -742,7 +773,9 @@ MR 環境における HRC の「意図認識 → 可達性保証 → 安定把�
 \section{BRIの実験}
 \subsection{実験設定}
 BRI の評価は \emph{既知経路} ケースに固定した（占有グリッドと A* に基づくナビゲーションが利用可能な場合）。
-ユーザ編集ルートによる未知経路バリアントは、付録におけるアブレーションとして報告した。
+% ユーザ編集ルートによる未知経路バリアントは、付録におけるアブレーションとして報告した。
+%%%%%この未知経路はどうしようか迷っている（先輩がやったやつで未発表のものなので）
+
 
 本研究では，提案する Inverse Reachability Map (BRI) に基づくベース移動戦略の有効性を
 検証するため，段階的なピック・アンド・プレース実験を設計した。
@@ -791,44 +824,71 @@ OccupancyGrid の値はコストマップに次のように変換した：
 BRIが自律的かつ効率的にロボットベースを再配置し，
 把持成功率と安定性を向上させる能力を明らかにすることを目的とした。
 
-BRIは1人しか参加していないけど、これはパイロット実験である
-
+本実験における単一被験者の設定は、
+BRIパイプラインの実行可能性および再現性を検証するためのパイロット評価として採用されたものである。
 \subsection{実験結果}
 
 
-\section{HGIMの実験}
+\section{HIGMの実験}
 \subsection{実験設定}
 本研究で提案する Human-Intent Adaptive Grasp Manipulation (HIGM) の優位性を明らかにするため，
-既存の MR ベースのマニピュレーションフレームワークである 
+既存のMRベースのマニピュレーションフレームワークである 
 Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO) \cite{Esaki} と比較を行った。
-従来システムは MR 空間におけるユーザ操作をそのままロボット側に転送することに重点を置いており，
+従来システムはMR空間におけるユーザ操作をそのままロボット側に転送することに重点を置いており，
 運動学的な実現可能性や把持の安定性を十分に考慮していない。
 % 写真を二つ
 % 図を二つ
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\twoimgs[H]
+  {.48\linewidth}{HIGMI_ex1.pdf}{Before}{fig:before}
+  {.48\linewidth}{HIGMI_ex2.pdf}{After}{fig:after}
+\figcaption{Sequential pick-and-place before/after}\label{HGIM_ex}
 
 本実験設定では，IRT-MROのベースライン性能とHIGMによる改善効果の両方を評価可能なよう設計した。
-図23は、
-提案システムを用いたピック・アンド・プレース実験の一例を示している。
-KUKA YouBot プラットフォームを用い，ユーザをロボットから1.0m離れた位置に配置し，
-ロボットが把持可能範囲内に,2本のボトルを所定の箱の中に配置するタスクを課した。
-2本すべてのボトルが正しく箱に配置された場合に、タスクは成功と見なされる。
-本研究では、ユーザがタスク環境を認識できることを前提としている
+図\ref{HGIM_ex}は、提案システムを用いたピック・アンド・プレース実験の一例を示している。
+KUKA YouBotプラットフォームを用い，ユーザをロボットから1.0m離れた位置に配置した。
+タスク環境として高さの異なる3段のブロック（階段状の障害物）を設置し、
+ロボットの把持可能範囲内に存在する2本のボトルの配置を複数回入れ替え、
+最終的に元の位置に戻すタスクを課した。
 
-図24a,bに示すように、
+\fig[H]{width = 0.75\linewidth}{Sample.pdf}{Task execution sequence}{fig:how_ex}
+
+具体的な手順は図\ref{fig:how_ex}の1~6に示す通りであり、
+異なる高さにある対象に対しても安定してアプローチできるか、
+および一連の複雑な操作を正確に遂行できるかが問われる。
+すべてのボトルが最終的に初期位置へ正しく戻された場合に、タスクは成功と見なされる。
+
+本研究では、ユーザがタスク環境を認識できることを前提としている。
+
+図\ref{MRpick}に示すように、
 ユーザがMRオブジェクトを把持すると、
 ロボットも実際のオブジェクトを把持する。同様に、ユーザがMRオブジェクトを離すと、
-ロボットも実際のオブジェクトを離す（図24c,d参照）。
-この一連の手順により、
-ピック・アンド・プレースタスクが遂行される。
+ロボットも実際のオブジェクトを離す。
+この一連の手順により、ピック・アンド・プレースタスクが遂行される。
 
 % 写真４つ
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
+\twoimgs[H]
+  {.48\linewidth}{Calib-12.pdf}{before}{fig:before1}
+  {.48\linewidth}{Calib-11.pdf}{after}{fig:after1}
+\figcaption{Sequential pick-and-place }\label{MRpick}
 
+評価指標は以下の通り設定した。
+(i) \textbf{NASA-TLX に基づく作業負荷}: 主観的な操作負担を定量化する。
+(ii) \textbf{把持失敗率}: ユーザが把持動作（グリッパの閉鎖）を実行したものの、対象の把持に失敗した試行の割合。
+(iii) \textbf{再試行数}: システムによる姿勢改善が完了せず、ユーザによる手動の姿勢再調整（リトライ）が発生した回数。
+(iv) \textbf{プレグラスプ姿勢への収束度}: 提案手法において、ユーザ操作がロボットの推奨姿勢にどれだけ滑らかに誘導されたかを評価する（※比較ではなく提案手法の特性評価として記述）。
+% (v) タスク実行時間（必要に応じて復活）
+% (vi) 特異点や関節限界侵害の発生頻度（必要に応じて復活）
 
-評価指標は，タスク開始から完了までの実行時間，NASA-TLX に基づく作業負荷，
-プレグラスプ姿勢への収束度（吸着性），特異点や関節限界侵害の発生頻度，
-および再把持試行数とした。
+実験には計6名の被験者が参加した ($n=6$)。
+全被験者から事前にインフォームド・コンセントを得ており、
+本実験は所属機関のガイドラインに準拠して倫理的に実施された。
+
+各被験者は、ベースラインシステム（IRT-MRO）と
+提案システム（HIGM）の両方の条件下でタスクを実施した。
+順序効果によるバイアスを避けるため、
+条件の実施順序は被験者間でカウンターバランスをとった（相殺した）。
+各条件につきタスクを5回繰り返し、
+被験者1人あたり計10試行を実施した。
 
 本研究では、すべての閾値と重みを以下のように固定した。
 \[
@@ -844,8 +904,28 @@ FSM の閾値は、最小特異値 $\tau_{\text{mani}}=0.03$、
 これらの値は、すべての被験者および試行において固定された。
 
 
+
+
+\paragraph{TBIの組み込み評価}
+本研究では、操作対象推定 (TBI) の評価を独立した実験として行うのではなく、HIGMのユーザースタディの中に組み込んで実施する。
+これは、HIGMはTBIが操作対象を決定した後に初めて動作するためである。
+各ターゲット選択イベントにおいて、正解値（Ground Truth）$g$ はユーザーが最初に接触した物体 ($c_i(t)=1$) と定義する。
+もし接触が発生しなかった場合は、最終的に把持・配置された物体を正解とする。
+TBIは、最大スコア $\max_i \bar S(i,t)$ が到達可能性に応じた閾値を超え、
+かつそれが一定時間 $\tau_{\mathrm{hold}}$ 維持された時点 $t_{\mathrm{dec}}$ で決定を下すものとし、
+その時点での推定対象を $\hat\imath=\arg\max_i \bar S(i,t_{\mathrm{dec}})$ とする。
+
+
+本実験では以下の指標を報告する。
+(i) Top-1精度 ($\mathrm{Acc}$): 到達可能 ($\mathrm{Acc}_{\mathrm{in}}$) および到達不可能 ($\mathrm{Acc}_{\mathrm{out}}$) のケースごとに算出する。
+(ii) 確定率 (Confirmation Rate): 決定が正しく発行されたイベントの割合。
+(iii) 決定後スイッチ率 (Post-decision Switch Rate): TBIの決定 $\hat\imath$ と、最終的に把持された物体が異なる（決定後にユーザーが対象を変更した）試行の割合。
+このプロトコルにより、実際の協調作業下でのTBIの性能を定量化すると同時に、
+HIGMによる把持安定性の評価を明確に分離して分析することが可能となる。
+
+
 以上の条件の下で，両システムの性能を比較実験により検証した。
-被験者の同意を得て、倫理的に実施した
+
 
 \subsection{実験結果}
 
