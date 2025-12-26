@@ -845,7 +845,7 @@ This single-subject setup was adopted as a pilot evaluation to verify feasibilit
 
 
 
-\section{Experiment on HIGM}
+\section{Experiment2}
 \subsection{Experimental Setup}
 To clarify the advantages of the proposed Human-Intent Adaptive Grasp Manipulation 
 (HIGM), we conducted a comparative evaluation against the existing MR-based 
@@ -863,7 +863,7 @@ or grasp stability.
 
 
 The experimental setup was designed to evaluate both the baseline performance of 
-IRT-MRO and the improvements introduced by HIGM. Figure \ref{HIGM_ex} 
+IRT-MRO and the improvements introduced by HIGM. Figure \ref{HGIM_ex} 
 illustrates an example 
 of a pick-and-place experiment using the proposed system. Using the KUKA YouBot 
 platform, the user was positioned 1.0 m away from the robot, 
@@ -915,13 +915,28 @@ the baseline system (IRT-MRO) and the proposed system (HIGM).
 The order of conditions was counterbalanced across participants to avoid ordering bias.
 Each task was repeated 10 times per condition, resulting in 20 trials per participant.
 A total of 6 participants were recruited (n=6).
-All participants provided informed consent prior to the experiment, and the study protocol was approved in accordance with institutional guidelines.
+All participants provided informed consent prior to the experiment, 
+and the study protocol was approved in accordance with institutional guidelines.
+
+
+% \paragraph{Embedded evaluation of TBI.}
+We evaluate the Target Bottle Inference (TBI) \textit{within} the HIGM user study rather than running 
+a separate experiment, because HIGM can only act after TBI has decided the intended target. 
+For each target-selection event, the ground truth $g$ is the object that first receives user contact ($c_i(t)=1$); 
+if no contact occurs, we use the object actually grasped and placed. 
+TBI issues a decision at time $t_{\mathrm{dec}}$ when $\max_i \bar S(i,t)$ exceeds the reachability-dependent 
+threshold and is sustained for $\tau_{\mathrm{hold}}$, and we set $\hat\imath=\arg\max_i \bar S(i,t_{\mathrm{dec}})$. 
+We report (i) top-1 accuracy $\mathrm{Acc}$, 
+also split by reachability ($\mathrm{Acc}_{\mathrm{in}}/\mathrm{Acc}_{\mathrm{out}}$), (ii) the 
+confirmation rate (fraction of events for which a decision is issued), 
+and (iii) the post-decision switch rate (fraction of trials where the finally grasped object 
+differs from $\hat\imath$ due to later user changes). This protocol quantifies 
+TBI under realistic collaboration while keeping the grasp-stability analysis attributable to HIGM.
+
 
 
 Under these conditions, a comparative 
 experiment was carried out to verify the performance of both systems.
-
-
 
 
 
