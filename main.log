@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.sjis) (TeX Live 2024) (preloaded format=platex 2025.2.4)  27 DEC 2025 01:56
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.sjis) (TeX Live 2024) (preloaded format=platex 2025.2.4)  29 DEC 2025 09:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,10 +904,12 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [18]
-File: fig/HIGMI_ex1.pdf Graphic file (type pdf)
-<fig/HIGMI_ex1.pdf>
-File: fig/HIGMI_ex2.pdf Graphic file (type pdf)
-<fig/HIGMI_ex2.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
 
 
 
@@ -918,8 +920,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [19]
-File: fig/Sample.pdf Graphic file (type pdf)
-<fig/Sample.pdf>
 File: fig/Calib-12.pdf Graphic file (type pdf)
 <fig/Calib-12.pdf>
 File: fig/Calib-11.pdf Graphic file (type pdf)
@@ -996,12 +996,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29227 strings out of 475318
- 704485 string characters out of 5768461
- 1324640 words of memory out of 5000000
- 51823 multiletter control sequences out of 15000+600000
+ 29211 strings out of 475318
+ 704137 string characters out of 5768461
+ 1325641 words of memory out of 5000000
+ 51809 multiletter control sequences out of 15000+600000
  592047 words of font info for 143 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  99i,12n,105p,761b,769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (27 pages, 117820 bytes).
+Output written on main.dvi (27 pages, 118856 bytes).
