@@ -13,115 +13,9 @@
 
 \chapter{和訳}\label{chap:introduction}
 
-% タイトル：Interactive Robot Operation System in Mixed Reality with Correction and Suggestion(IRO-MRCS)
+% タイトル：Bridging the Human-Robot Embodiment Gap in Mixed Reality Teleoperation: Proficiency-Independent Manipulation via Kinematic Correction and Reachability Guidance
 
 
-% \section{序論 (Introduction)}
-
-% 近年、Human-Robot Collaboration (HRC) は製造、物流、医療、災害対応といった多様な現場で
-% 実用化が進みつつあり、人間とロボットが協調してタスクを遂行するための重要な研究領域として注目されている\cite{HRC1}\cite{HRC2}\cite{HRC3}\cite{HRC4}。
-% 特に、従来の完全自律型ロボットでは対処が困難であった非定型作業や予測不能な環境変化に対して、
-% 人間の柔軟な判断力とロボットの物理的実行能力を組み合わせることで、
-% 作業効率、安全性、適応性を同時に向上させることが可能となる\cite{HRC5}\cite{HRC6}\cite{HRC7}。
-
-% HRCにおける主要な課題の一つは、
-% 人間の意図とロボットの認識のずれであり、この齟齬は作業効率の低下や操作の困難さを引き起こす\cite{Predict1}\cite{Predict2}\cite{Predict3}。
-% 特に、人間とロボットの身体性の差異に起因する操作ずれは、協調作業における根本的なボトルネックとなっている。
-% この課題に対し、Mixed Reality (MR) を用いて人間の操作をロボットに直感的にマッピングし、
-% ユーザがロボットの動作を自らの身体拡張として認知できるようにするアプローチが注目されている \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
-
-% また、HRCにおける直感的操作支援の枠組みは、MRに限らずARやVRに基づいた研究としても多く報告されている。
-% 例えば、VRを用いた模倣学習や動作データ収集により、
-% ロボット操作スキルを効率的に獲得させる手法が提案されている一方 \cite{VR1} \cite{VR2}\cite{VR3}、 
-% ARを用いてロボットの状態や作業手順を提示し、作業者の理解を支援する試みもなされている \cite{AR1} \cite{AR2}\cite{AR3}。
-% これらの研究は、人間とロボットの認識のギャップを埋める有効性を示しているが、
-% 現実環境とのインタラクションや操作の没入感の点で依然として制約がある。
-% VRは高い没入感と精密な動作記録が可能である一方、現実環境との整合性に欠ける。
-% ARは現実空間に重畳した情報提示によって理解支援を提供するが、操作の直感性は限定的である。
-% この文脈において、現実世界と仮想情報を統合可能なMRは、
-% これらの利点を統合し、現実環境と仮想オブジェクトを同時に扱えるため、
-% HRCの直感的かつ柔軟な操作支援を実現する技術として特に注目されている。
-
-
-% 代表的な先行研究として、Esakiらによる
-% Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO)
-% が挙げられる \cite{Esaki}。
-% IRT-MROは、人間が MR 空間内で仮想オブジェクトを操作し、
-% その操作をロボットが認識するHRIシステムである。
-% これはMRを用いたHRCの有効性を示したが、
-% IRT-MROは「ベース移動に自律性がなく、適切な位置決めをユーザの手動操作に頼っている」、
-% 「ロボットの運動学的制約（特異点や関節限界）の回避がユーザの操作スキルに委ねられている」、
-% といった課題を残している。
-% その結果、タスクの成功率や作業効率が\textbf{操作者の熟練度に大きく依存してしまう}という問題がある。
-
-% 本研究では、これらの課題を克服するために、
-% \textbf{Mixed reality Adaptive Reachability and Kinematic correction (MARK)} システムを提案する。
-% 本システムは、ユーザの身体動作特徴量に基づくロバストな操作対象推定モジュール（Target Object Inference, TOI）、
-% Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュール（Base Relocation based on Inverse Reachability Map, BRI）、
-% および人間とロボットの身体性の違いを運動学的に補正する把持制御モジュール（Kinematic Correction Module, KCM）
-% を有機的に統合したものである。
-% これらのモジュールを統合することで、
-% 人間の直感的な操作意図と
-% ロボットの物理的な動作制約をシステム内部で調和させ、
-% MR空間を介した双方向的かつインタラクティブなHRCシステムを実現する。
-
-% \section{関連研究 (Related Work)}
-% ロボットは、医療、製造、宇宙探査、農業などの幅広い分野において人間の生活や活動を支援する存在として期待されている\cite{HRC1}\cite{HRC2}\cite{HRC3}\cite{HRC4}。
-% しかし、人間とロボットが同一空間で協調的に作業するためには多くの課題が残されている。
-% その一つは、意図や行動に関する相互理解の不足である。
-% 人間はロボットの能力や行動を正確に予測しにくく、ロボットも人間の高次目標を十分に解釈できないため、
-% 「実行の溝」と「評価の溝」が生じ、円滑な協調を阻害している\cite{Predict1}\cite{Predict2}\cite{Predict3}。
-% 従来のインターフェースはジョイスティックやキーボードを介した操作が主流であったが、
-% 2Dディスプレイ上での視覚化は奥行き情報に乏しく、操作者の空間認識や臨場感を制限していた\cite{teleop1}\cite{teleop2}。
-
-% こうした課題に対して、Mixed Reality (MR) を活用した Human-Robot Collaboration (HRC) の研究は近年大きく進展している。
-% MRを利用してロボットの稼働状況や環境情報を重畳表示することで、ユーザーは直感的な操作を行うことが可能となり、
-% 遠隔操作や協調作業における効率向上が期待されている \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
-% 加えて、ARやVRを応用した研究も広く展開されており、
-% VRでは模倣学習や動作データ収集を通じてロボットのスキル獲得を支援し \cite{VR1} \cite{VR2}、
-% ARでは作業手順やロボット状態の提示によって作業者の理解を補助する取り組みが行われている \cite{AR1} \cite{AR2}。
-% しかし、現実環境とのインタラクションや操作没入感の点で依然として制約があり、
-% 現実世界と仮想情報を統合可能なMRは、HRCのための有力な基盤技術として特に注目されている。
-
-% これまでのMRベースのHRC研究は大きく二つの方向に分類できる。
-
-% 第一に、\textbf{ロボット状態の可視化} を目的とする研究群である。
-% センサデータやロボットの内部状態をMR空間に投影し、
-% ユーザーの状況認識や意思決定を支援するアプローチが提案されている \cite{Awareness}。
-% この方向性は、環境理解の強化や操作者の認知負荷軽減に寄与する一方で、
-% ロボットの動作計画や操作への直接的な介入は限定的である。
-
-% 第二に、\textbf{ユーザー操作の直感的マッピング} に焦点を当てる研究群である。
-% ハンドトラッキングやジェスチャ入力をロボット動作に変換することで、操作性や没入感を高める試みがなされている \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
-% このアプローチは操作者の意図をより自然に反映できるが、操作の安定性やロボット側の可操作性保証が十分でない場合が多い。
-
-% この分野の代表的研究として、Esakiらによる
-%  Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO) がある \cite{Esaki}。
-% IRT-MROは、(i) ロボット視点の情報提示を行う可視化システム、
-% (ii) マーカーおよび点群に基づくキャリブレーション機構、(iii) ハンドトラッキングに基づくマニピュレーションシステム、(iv) 
-% ユーザー例示動作を利用したベース移動システムを統合した枠組みである。
-% ボトルを対象としたピック＆プレース課題において、70〜80％という一定の成功率を達成していることが示された。
-% これにより、MRを用いた直感的操作支援と経路編集の有効性が実証された。
-
-
-% しかし、IRT-MROを含む既存研究には依然として課題が残されている。
-% 第一に、関節軌道における衝突回避機構が未導入であり、把持動作の失敗を引き起こす可能性がある。
-% 第二に、MRデバイスの演算性能や視覚的制約に強く依存するため、システム全体の操作性や適用範囲が制約される。
-% 第三に、実験結果からも示されるように、タスク成功率や作業速度が操作者の熟練度に大きく依存している。
-% さらに、多数対象を扱う場合には、MR空間上に過剰なオブジェクトが表示され、環境の視認性が低下する問題も報告されている。
-
-
-% 総じて、既存研究はMRを用いたHRCの有効性を明確に示してきた一方で、
-% 本質的な課題として\textbf{「人間とロボットの身体的・空間的制約の不一致」}を解決できていない。
-% 既存の手法は、人間の操作をロボットに直結させることに主眼を置いており、
-% 「ロボットがその姿勢で把持できるか（運動学的制約）」や
-% 「その位置から対象に届くか（到達可能性）」といった判断を、すべて操作者の技量に委ねている。
-% その結果、操作者はロボット特有の動きや限界を熟知している必要があり、
-% タスクの成功率や品質が\textbf{操作者の熟練度に著しく依存する}という問題がある。
-
-% このような背景の下で、本研究では
-% 人間の操作意図とロボットの物理的都合を自然に調和させるシステム、
-% \textbf{Mixed reality Adaptive Reachability and Kinematic correction (MARK)} を提案する。
 
 
 \section{序論 (Introduction)}
@@ -139,7 +33,7 @@
 
 
 この課題に対し、Mixed Reality (MR) を用いて人間の操作をロボットにマッピングし、
-直感的な操作を行えるようにする研究が注目されている  \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
+直感的な操作を行えるようにする研究が注目されている\cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
 これらの先行研究は、ユーザインタフェースの改善には成功しているものの、
 「ユーザの操作をそのままロボットに転送する」というアプローチに留まっている場合が多い。
 すなわち、ユーザが指示した動作がロボットにとって実行不可能（または不安定）であっても、
@@ -149,19 +43,19 @@
 そこで本研究では、単なる直感的なインタフェースの提供にとどまらず、
 システム側が人間の操作意図とロボットの身体的制約を能動的に調和させるシステム、
 \textbf{Mixed reality Adaptive Reachability and Kinematic correction (MARK)} を提案する。
-本システムは、ユーザの身体動作特徴量に基づくロバストな操作対象推定モジュール（Target Object Inference, TOI）、
-Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュール（Base Relocation based on Inverse Reachability Map, BRI）、
-および人間とロボットの身体性の違いを運動学的に補正する把持制御モジュール（Kinematic Correction Module, KCM）
+本システムは、ユーザの身体動作特徴量に基づくロバストな操作対象推定モジュール（Target Object Inference,TOI）、
+Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュール（Base Relocation based on Inverse Reachability Map,BRI）、
+および人間とロボットの身体性の違いを運動学的に補正する把持制御モジュール（Kinematic Correction Module,KCM）
 を有機的に統合したものである。
 
 本手法の最大の狙いは、MR空間における「意図の推定」と「運動学的補正」を融合させることで、
 「人間がロボットに合わせる」従来の操作体系から脱却し、
-システム側が人間とロボットの間の「身体性の不一致 (Embodiment Gap)」を能動的に解消することで、
+システム側が人間とロボットの間の「身体性の不一致(Embodiment Gap)」を能動的に解消することで、
 操作者の熟練度に依存しない安定した協調パラダイムを実現することにある。
 
 システム側が運動学的・空間的な難所（特異点や可動範囲外）を自律的に吸収するため、操作者は高次な意図（何を掴むか）の指示に集中できる。結果として、熟練度に依存しない操作が可能となる
 
-\subsection*{本研究の貢献 (Contributions)}
+\subsection*{本研究の貢献(Contributions)}
 
 主な貢献は以下の3点にまとめられる。
 
@@ -171,58 +65,56 @@ Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュ�
   これにより、システムが介入すべき対象とタイミングを正確に特定し、
   過剰な介入を防ぎつつ適切な支援を行うための基盤を構築した。
 
-  \item \textbf{人間とロボットの身体性の違いを運動学的に補正する把持制御 (Kinematic Correction Manipulation Module, KCM)}:
+  \item \textbf{人間とロボットの身体性の違いを運動学的に補正する把持制御 (Kinematic Correction Manipulation Module,KCM)}:
   ユーザのハンドトラッキング情報から得られる手先姿勢と、ロボットにとって最適なプレグラスプ姿勢を動的に補間（ブレンド）し、
   さらにヌル空間最適化を用いて関節姿勢を調整する Kinematic Correction Module を実現した。
   この二段階の補正により、ユーザーはロボットの運動学的都合を意識することなく、
   自身の身体感覚の延長として安全かつ高精度な把持操作が可能となる。
 
-  \item \textbf{逆到達可能マップに基づく可到達性ガイダンス (Base Relocation based on Inverse Reachability Map, BRI)}:
+  \item \textbf{逆到達可能マップに基づく可到達性ガイダンス (Base Relocation based on Inverse Reachability Map,BRI)}:
   ロボットの可動範囲構造（Inverse Reachability Map）に基づき、把持に最適なベース位置を自律的に提案するだけでなく、
   提示された経路をユーザーがMR空間上で直感的に修正できる双方向（インタラクティブ）なナビゲーション機構を導入した。
   これにより、ロボットによる数理的な到達可能性の保証と、ユーザーの状況判断による柔軟な経路変更を統合し、
   空間的制約に関する認知負荷を排除しつつ、確実なタスク遂行を実現する。
 \end{itemize}
 
-これらの統合により、本システム (MARK) は「人間がロボットの制約に合わせて妥協する」従来のHRCから脱却し、
+これらの統合により、本システム(MARK)は「人間がロボットの制約に合わせて妥協する」従来のHRCから脱却し、
 「ロボットが人間の意図に合わせて身体性を適応させる」という、
 熟練度非依存型の新しい協調操作のパラダイムを提示する。
 
 
 \section{関連研究 (Related Work)}
-
 本節では、ロボット遠隔操作におけるインタフェースの技術的変遷と、
-特に MR (Mixed Reality) を用いたマニピュレーション研究の現状について概説する。
-さらに、既存の MR 操作システムが抱える構造的な課題を指摘し、本研究の立ち位置を明確にする。
+特にMR(Mixed Reality) を用いたマニピュレーション研究の現状について概説する。
+さらに、既存のMR操作システムが抱える構造的な課題を指摘し、本研究の立ち位置を明確にする。
 
-\subsection{遠隔操作インタフェースの進化}
+
 ロボットの遠隔操作において、操作者とロボットの間の「空間認識の乖離」を埋めることは長年の課題である。
 初期のジョイスティックや 2D モニタを用いた操作系では、
 奥行き情報の欠如により、対象物との距離感や把持位置の把握が困難であり、
 円滑な操作には長時間の訓練を要した\cite{teleop1}\cite{teleop2}。
 
-これに対し、三次元空間情報を活用する VR (Virtual Reality) や AR (Augmented Reality) が導入されてきた。
-VR を用いた手法 \cite{VR1}\cite{VR2} は、高い没入感を提供し、精密な動作教示やシミュレーションに適している。
+これに対し、三次元空間情報を活用するVR(Virtual Reality) やAR(Augmented Reality) が導入されてきた。
+VRを用いた手法 \cite{VR1}\cite{VR2}は、高い没入感を提供し、精密な動作教示やシミュレーションに適している。
 しかし、現実環境の視覚情報が遮断されるため、実機を用いたリアルタイムな協調作業においては、
 予期せぬ障害物や人間との接触リスクに対する安全確認に課題が残る。
-一方、AR を用いた手法 \cite{AR1}\cite{AR2} は、現実空間に作業情報を重畳できる利点があるが、
+一方、ARを用いた手法 \cite{AR1}\cite{AR2} は、現実空間に作業情報を重畳できる利点があるが、
 三次元的な操作入力（ハンドトラッキング等）との統合においては、
 環境とのオクルージョン処理や深度知覚の面で制約がある。
 
 Mixed Reality (MR) は、これらの利点を統合し、
 現実空間と仮想オブジェクトの相互作用を可能にする技術として、
-直感的な HRC を実現する最も有力なプラットフォームとして位置づけられている \cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
+直感的なHRCを実現する最も有力なプラットフォームとして位置づけられている\cite{MR1}\cite{MR2}\cite{MR3}\cite{MR4}\cite{MR5}。
 
-\subsection{MRベースのHRCとその課題}
-MR を用いた HRC 研究は、大きく「情報提示型」と「直接操作型」の二つに分類できる。
 
-第一の\textbf{情報提示型}のアプローチ\cite{Awareness} は、
-ロボットの経路計画、センサ情報、内部状態を MR 空間に可視化することで、
+MRを用いたHRC研究は、大きく「情報提示型」と「直接操作型」の二つに分類できる。
+\textbf{情報提示型}のアプローチ\cite{Awareness} は、
+ロボットの経路計画、センサ情報、内部状態をMR空間に可視化することで、
 ユーザの状況理解 (Situation Awareness) を支援することに主眼を置いている。
 この方向性は、環境理解の強化や操作者の認知負荷軽減に寄与する一方で、
 ロボットの動作そのものへの介入や修正は限定的である。
 
-第二の\textbf{直接操作型}のアプローチでは、
+\textbf{直接操作型}のアプローチでは、
 EsakiらによるImmersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT-MRO) がある \cite{Esaki}。
 IRT-MROは、(i) ロボット視点の情報提示を行う可視化システム、
 (ii) マーカーおよび点群に基づくキャリブレーション機構、(iii) ハンドトラッキングに基づくマニピュレーションシステム、(iv) 
@@ -238,7 +130,7 @@ IRT-MROは、(i) ロボット視点の情報提示を行う可視化システム
 人間にとっては自然な動きであっても、ロボットにとっては特異点に近づいたり、
 関節リミットを超過したりする動作となる場合が多い。
 
-実際、Esaki らの実験結果においても、タスク成功率は操作者の熟練度に大きく依存しており、
+実際、Esakiらの実験結果においても、タスク成功率は操作者の熟練度に大きく依存しており、
 初心者が操作する場合には把持失敗や意図しない衝突のリスクが高いことが示唆されている。
 つまり、既存研究は「情報の提示」や「入力の簡便化」には成功しているものの、
 \textbf{「人間とロボットの身体的・空間的制約の不一致」}をシステムレベルで解決できておらず、
@@ -248,7 +140,7 @@ IRT-MROは、(i) ロボット視点の情報提示を行う可視化システム
 MRインタフェースの直感性に加え、ロボット工学的な裏付け（運動学的補正、可到達性解析）をシステム内部に統合した点に新規性がある。
 既存研究が「いかに人間に情報を伝えるか」や「いかに直感的に動かすか」に注力していたのに対し、
 本研究は\textbf{「いかにロボットが人間の意図に合わせて身体性を適応させるか」}という
-能動的な制御介入を実現する点で、従来の MR 遠隔操作研究とは一線を画すものである。
+能動的な制御介入を実現する点で、従来のMR遠隔操作研究とは一線を画すものである。
 
 
 \section{Mixed reality Adaptive Reachability and Kinematic correction (MARK)}
@@ -266,20 +158,21 @@ MRインタフェースの直感性に加え、ロボット工学的な裏付け
 
 本システムは先行研究である Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space（IRT-MRO）
 を基盤として構成されており、IRT-MRO に存在していた課題を解決するために拡張・改良されたものである。
-IRT-MRO では HoloLens 2 を用いた Unity ベースのホログラフィックアプリケーションを実装していたのに対し、
-本システムでは、Meta Quest 3 を用いた Unity ベースのパススルーアプリケーションを採用する。
-両者はいずれも現実世界のオブジェクトを MR 空間に反映できるデバイスであるが、
+IRT-MROではHoloLens2を用いたUnityベースのホログラフィックアプリケーションを実装していたのに対し、
+本システムでは、Meta Quest 3を用いたUnityベースのパススルーアプリケーションを採用する。
+両者はいずれも現実世界のオブジェクトをMR空間に反映できるデバイスであるが、
 表示方式に大きな違いがある。
-HoloLens 2 は光学シースルー方式を採用しており、ユーザは透過ディスプレイ越しに
+HoloLens 2は光学シースルー方式を採用しており、ユーザは透過ディスプレイ越しに
 現実環境と仮想オブジェクトを同時に視認できる。一方で、視野角の狭さや表示輝度の制約が指摘されている。
-これに対して図\ref{fig:device_comparison}に示すように、Meta Quest 3 はパススルー方式を採用し、
+% これに対して図\ref{fig:device_comparison}に示すように、
+これに対してMeta Quest 3 はパススルー方式を採用し、
 外部カメラで取得した映像をディスプレイに投影することで、
 広い視野角と高解像度の表示を実現する。
 視野角が広がることで、ロボットのベース移動時の周囲確認が容易になり、安全性が向上する。
 これにより、ユーザはより自然で没入感のある MR 体験を得られ、
 環境理解や操作の直感性が向上する。
 % 図を一つ
-\fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:device_comparison}
+% \fig[H]{width = 0.5\linewidth}{Calib-1.pdf}{Figure1}{fig:device_comparison}
 
 
 \subsection{実装プラットフォームとシステム構成}
@@ -301,7 +194,9 @@ MR システムの実装には Unity および MRTK3（Mixed Reality Toolkit）�
 
 システム構成図は図\ref{fig:system_architecture}に示され、以下の3つのモジュールで構成されている。
 % 図を表示
-\fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:system_architecture}
+\fig[H]{width = 1\linewidth}{Sample.pdf}{sysetem architecture}{fig:system_architecture}
+% \fig[H]{width = 1\linewidth}{Calib-5.pdf}{Figure2}{fig:system_architecture}
+
 
 \noindent
 \textbf{Target Object Inference Module，TOI}: 
@@ -337,6 +232,43 @@ MR システムの実装には Unity および MRTK3（Mixed Reality Toolkit）�
 さらに，ユーザがロボット固有の身体的制約を意識することなく操作できるようになった結果，
 適応的な把持動作が可能となり，操作熟練度への依存度が大幅に低減された。
 これにより，経験の浅いユーザにおいても円滑かつ安定した操作が実現される。
+
+\subsubsection*{共通数理モデル: 到達可能性と逆到達可能性}
+本システムの各モジュール（特にTOIの情報提示およびBRIの移動計画）では，
+共通の指標として
+\textit{到達可能マップ (Reachability Map, RM)} と
+\textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を利用する\cite{RM}。
+図\ref{fig:bri_rm_irm}にそれぞれの概念図を示す。
+% 図を並べて表示
+\twoimgs[H]
+{.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
+{.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
+\figcaption{Visual representation of RM and IRM}\label{fig:bri_rm_irm}
+
+ロボットのベース位置を $\mathbf{b}$ としたとき，
+その位置からエンドエフェクタ (EE) が到達可能な空間は
+\begin{equation}
+RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
+\end{equation}
+で定義される。ここで $FK(\theta,\mathbf{b})$ は順運動学を表し，RM は「ある固定ベース位置からアームが到達可能な範囲」を示す。
+
+逆に，ある対象点 $\mathbf{p}_t$ に対してそれを到達可能とするベース位置集合は
+\begin{equation}
+\mathcal{B}(\mathbf{p}_t) = \{ \mathbf{b} \in \mathbb{R}^3 \mid \mathbf{p}_t \in RM(\mathbf{b}) \},
+\end{equation}
+と定義され，この集合を \textit{逆到達可能マップ (IRM)} と呼ぶ。
+IRM は「タスク点に到達可能なベース位置の集合」を与える逆写像である。
+
+さらに本研究では，到達の安定性や冗長性を評価するために，
+位置 $\mathbf{p}$ に対して存在する逆運動学解の数 $N_{\text{IK}}(\mathbf{p})$ を用いてスコア化を行う。
+IRM は RM の逆写像であるため，
+対象位置 $\mathbf{p}_t$ に対する候補ベース位置 $\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)$ のスコアは以下のように割り当てられる：
+\begin{equation}
+S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
+\end{equation}
+これにより，単に「到達できるか」だけでなく，「どれだけ柔軟な姿勢で到達できるか」を定量的指標として扱うことが可能となる。
+本システムでは、このスコア $S_{IRM}$ を TOI における可視化および BRI における最適化の共通指標として用いる。
+
 
 \subsection{操作対象推定モジュール (Target Object Inference, TOI)}
 
@@ -476,7 +408,8 @@ UI 強調の方法を区別し，
 前者には「操作可能性の高さ」を示す強調色を，
 後者には「ベース移動が必要である」ことを示す異なる色調を割り当てる。
 % 図を並べて表示予定
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Visualization of inferred target}{fig:tbi_highlight}
+\fig[H]{width = 0.5\linewidth}{TBI_inside.pdf}{Visualization of inferred target}{fig:tbi_highlight}
+% \fig[H]{width = 0.5\linewidth}{TBI_inside.pdf}{Visualization of inferred target}{fig:tbi_highlight}
 
 
 この二段階の情報量調整により，
@@ -514,57 +447,60 @@ TOIによって対象物が特定されたとしても、その対象がロボ�
 「届くが姿勢が苦しい（特異点に近い）」位置や「障害物に近すぎる」位置を選んでしまうリスクがある。
 また、無秩序に移動候補を探索することは計算コストの増大を招く。
 
-そこで本研究では、ロボットマニピュレータの到達可能性を事前に計算したマップを用いることで、
+そこで本モジュールでは，3.1節で定義した IRM スコア $S_{IRM}$ を用いることで，
 「どこに移動すれば最も把持しやすいか」を高速かつ最適に決定するアプローチをとる。
-具体的には、図\ref{fig:bri_rm_irm}に示す
-\textit{到達可能マップ (Reachability Map, RM)} と
-\textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入する\cite{RM}。
 
-% 図を並べて表示
-\twoimgs[H]
-{.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
-{.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
-\figcaption{Visual representation of RM and IRM}\label{fig:bri_rm_irm}
+% そこで本研究では、ロボットマニピュレータの到達可能性を事前に計算したマップを用いることで、
+% 「どこに移動すれば最も把持しやすいか」を高速かつ最適に決定するアプローチをとる。
+% 具体的には、図\ref{fig:bri_rm_irm}に示す
+% \textit{到達可能マップ (Reachability Map, RM)} と
+% \textit{逆到達可能マップ (Inverse Reachability Map, IRM)} の概念を導入する\cite{RM}。
 
-\medskip
-\noindent
-\textbf{到達可能性と逆到達可能性の基礎}:
-ロボットのベース位置を $\mathbf{b}$ としたとき，
-その位置からエンドエフェクタ (EE) が到達可能な空間は
-\begin{equation}
-RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
-\end{equation}
-で定義される。ここで $FK(\theta,\mathbf{b})$ は順運動学を表し，
-関節角 $\theta$ が存在すれば点 $\mathbf{p}$ に到達できることを意味する。
-すなわち RM は「ある固定ベース位置から，アームがどこまで手を伸ばせるか」を定義するマップである。
+% % 図を並べて表示
+% \twoimgs[H]
+% {.48\linewidth}{Sample.pdf}{ReachabilityMap}{fig:RM_S}
+% {.48\linewidth}{Sample.pdf}{InverseReachabilityMap}{fig:IRM_s}
+% \figcaption{Visual representation of RM and IRM}\label{fig:bri_rm_irm}
 
-逆に，ある対象点 $\mathbf{p}_t$ に対してそれを到達可能とするベース位置集合は
-\begin{equation}
-\mathcal{B}(\mathbf{p}_t) = \{ \mathbf{b} \in \mathbb{R}^3 \mid \mathbf{p}_t \in RM(\mathbf{b}) \},
-\end{equation}
-と定義され，この集合を \textit{逆到達可能マップ (IRM)} と呼ぶ。
-すなわち IRM は「タスク点に到達できるベース位置の集合」を与える逆写像であり，
-ベース移動を考慮する上で不可欠な概念である\cite{RM}。
+% \medskip
+% \noindent
+% \textbf{到達可能性と逆到達可能性の基礎}:
+% ロボットのベース位置を $\mathbf{b}$ としたとき，
+% その位置からエンドエフェクタ (EE) が到達可能な空間は
+% \begin{equation}
+% RM(\mathbf{b}) = \{ \mathbf{p} \in \mathbb{R}^3 \mid \exists \theta \ \text{s.t.} \ FK(\theta, \mathbf{b}) = \mathbf{p} \},
+% \end{equation}
+% で定義される。ここで $FK(\theta,\mathbf{b})$ は順運動学を表し，
+% 関節角 $\theta$ が存在すれば点 $\mathbf{p}$ に到達できることを意味する。
+% すなわち RM は「ある固定ベース位置から，アームがどこまで手を伸ばせるか」を定義するマップである。
 
-さらに本研究では、単なる到達可能／不可能の判定だけでなく，
-「その位置に対して逆運動学解が何通り存在するか」を用いて
-到達の安定性や冗長性を評価できる。
-位置 $\mathbf{p}$ に対して存在する逆運動学解の数を
-次式によりスコア化する：
-\begin{equation}
-S_{RM}(\mathbf{p}) = N_{\text{IK}}(\mathbf{p}).
-\end{equation}
-解が多いほど，関節の自由度を活かした柔軟な動作が可能となるため，
-把持成功率が高まる。
+% 逆に，ある対象点 $\mathbf{p}_t$ に対してそれを到達可能とするベース位置集合は
+% \begin{equation}
+% \mathcal{B}(\mathbf{p}_t) = \{ \mathbf{b} \in \mathbb{R}^3 \mid \mathbf{p}_t \in RM(\mathbf{b}) \},
+% \end{equation}
+% と定義され，この集合を \textit{逆到達可能マップ (IRM)} と呼ぶ。
+% すなわち IRM は「タスク点に到達できるベース位置の集合」を与える逆写像であり，
+% ベース移動を考慮する上で不可欠な概念である\cite{RM}。
 
-IRM は RM の逆写像であるため，
-対象位置 $\mathbf{p}_t$ に対して得られる候補ベース位置 $\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)$ には，
-対応する RM スコアがそのまま割り当てられる：
-\begin{equation}
-S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
-\end{equation}
-これにより，候補ベース配置の良否を，単に「到達できるか否か」ではなく，
-「どれだけ冗長で安定した姿勢で到達できるか」に基づいて評価できる。
+% さらに本研究では、単なる到達可能／不可能の判定だけでなく，
+% 「その位置に対して逆運動学解が何通り存在するか」を用いて
+% 到達の安定性や冗長性を評価できる。
+% 位置 $\mathbf{p}$ に対して存在する逆運動学解の数を
+% 次式によりスコア化する：
+% \begin{equation}
+% S_{RM}(\mathbf{p}) = N_{\text{IK}}(\mathbf{p}).
+% \end{equation}
+% 解が多いほど，関節の自由度を活かした柔軟な動作が可能となるため，
+% 把持成功率が高まる。
+
+% IRM は RM の逆写像であるため，
+% 対象位置 $\mathbf{p}_t$ に対して得られる候補ベース位置 $\mathbf{b} \in \mathcal{B}(\mathbf{p}_t)$ には，
+% 対応する RM スコアがそのまま割り当てられる：
+% \begin{equation}
+% S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
+% \end{equation}
+% これにより，候補ベース配置の良否を，単に「到達できるか否か」ではなく，
+% 「どれだけ冗長で安定した姿勢で到達できるか」に基づいて評価できる。
 
 次に，候補集合 $\mathcal{B}(\mathbf{p}_t)$ の中から最適なベース位置を選択するアルゴリズムについて述べる。
 ここでは，図\ref{fig:bri_mapping}のような環境情報の有無に応じて二つの場合に分けて定式化する。
@@ -826,7 +762,7 @@ FSM によって，ユーザ意図の反映とロボットの運動学的制約�
 HRC における「協調的な安全性」を実現する。
 
 % 図を一つ
-\fig[H]{width = 0.75\linewidth}{Calib-4.pdf}{State transition of FSM}{fig:higm_fsm}
+\fig[H]{width = 0.75\linewidth}{FMS.pdf}{State transition of FSM}{fig:higm_fsm}
 
 
 \subsection{モジュール統合の意義}
@@ -866,27 +802,25 @@ Immersive Robot Teleoperation Based on User Gestures in Mixed Reality Space (IRT
 運動学的な実現可能性や把持の安定性を十分に考慮していない。
 % 写真を二つ
 % 図を二つ
+
+
 % \twoimgs[H]
-%   {.48\linewidth}{HIGMI_ex1.pdf}{Before}{fig:before}
-%   {.48\linewidth}{HIGMI_ex2.pdf}{After}{fig:after}
-% \figcaption{Sequential pick-and-place before/after}\label{HGIM_ex}
+%   {.48\linewidth}{KCM_ex_real.pdf}{}{fig:real}
+%   {.48\linewidth}{KCM_ex_image.pdf}{}{fig:image}
+% \figcaption{task environment of pick-and-place experiments}\label{KCM_ex}
 
-\twoimgs[H]
-  {.48\linewidth}{Sample.pdf}{Before}{fig:before}
-  {.48\linewidth}{Sample.pdf}{After}{fig:after}
-\figcaption{Sequential pick-and-place before/after}\label{HGIM_ex}
-
+\fig[H]{width = 0.5\linewidth}{KCM_ex_real.pdf}{Task environment layout of pick-and-place experiments}{KCM_ex}
 
 本実験設定では，IRT-MROのベースライン性能とKCMによる改善効果の両方を評価可能なよう設計した。
-図\ref{HGIM_ex}は、提案システムを用いたピック・アンド・プレース実験の一例を示している。
+図\ref{KCM_ex}は、提案システムを用いたピック・アンド・プレース実験のタスク環境を示している。
 KUKA YouBotプラットフォームを用い，ユーザをロボットから1.0m離れた位置に配置した。
 タスク環境として高さの異なる3段のブロック（階段状の障害物）を設置し、
 ロボットの把持可能範囲内に存在する2本のボトルの配置を複数回入れ替え、
 最終的に元の位置に戻すタスクを課した。
 
-\fig[H]{width = 0.75\linewidth}{Sample.pdf}{Task execution sequence}{fig:how_ex}
+\fig[H]{width = 0.75\linewidth}{KCM_ex.pdf}{Task execution sequence of KCM experiments}{fig:how_ex}
 
-具体的な手順は図\ref{fig:how_ex}に示す通りであり、
+具体的な手順は図\ref{fig:how_ex}に示す1から6の順の通りであり、
 異なる高さにある対象に対しても安定してアプローチできるか、
 および一連の複雑な操作を正確に遂行できるかが問われる。
 すべてのボトルが最終的に初期位置へ正しく戻された場合に、タスクは成功と見なされる。
@@ -898,11 +832,10 @@ KUKA YouBotプラットフォームを用い，ユーザをロボットから1.0
 ロボットも実際のオブジェクトを離す。
 この一連の手順により、ピック・アンド・プレースタスクが遂行される。
 
-% 写真４つ
 \twoimgs[H]
-  {.48\linewidth}{Calib-12.pdf}{before}{fig:before1}
-  {.48\linewidth}{Calib-11.pdf}{after}{fig:after1}
-\figcaption{Sequential pick-and-place }\label{MRpick}
+  {.48\linewidth}{third.pdf}{third person perspective}{fig:before1}
+  {.48\linewidth}{user.pdf}{User perspective}{fig:after1}
+\figcaption{pick-and-place task shown from third-person and user perspectives}\label{MRpick}
 
 評価指標は以下の通り設定した。
 (i) \textbf{NASA-TLX に基づく作業負荷}: 主観的な操作負担を定量化する。
@@ -995,9 +928,7 @@ BRI の評価は \emph{既知経路} ケースに固定した（占有グリッ�
 このフェーズでは，BRIが複数回の再配置を通じてタスクを継続的に安定化できるかを検証する。
 このタスクを10回実施する。
 
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
-\fig[H]{width = 0.5\linewidth}{Sample.pdf}{Figure4}{fig:1}
-
+\fig[H]{width = 0.85\linewidth}{BRI_ex.pdf}{Task execution sequence of BRI experiments}{fig:BRI_ex}
 
 評価指標としては，(i) 把持成功率（対象を正しく持ち上げ，指定位置に配置できた割合），
 (ii) BRI によって計算されたベース位置が「実際に把持可能な位置」に
