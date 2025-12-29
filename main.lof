@@ -8,11 +8,11 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Example of mapping and environment}}{11}{}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces User interaction for path planning}}{12}{}%
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Costmap-based path suggestion}}{12}{}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Concept of HIGM interpolation}}{14}{}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Concept of KCM interpolation}}{14}{}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Null-space optimization}}{16}{}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces State transition of FSM}}{17}{}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Figure4}}{18}{}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Figure4}}{18}{}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Sequential pick-and-place before/after}}{19}{}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Task execution sequence}}{20}{}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Sequential pick-and-place }}{20}{}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Sequential pick-and-place before/after}}{18}{}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Task execution sequence}}{18}{}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Sequential pick-and-place }}{19}{}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Figure4}}{21}{}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Figure4}}{21}{}%

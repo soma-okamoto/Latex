@@ -1,41 +1,42 @@
 \relax 
 \citation{HRC1}
 \citation{HRC2}
+\citation{HRC3}
+\citation{HRC4}
+\citation{HRC5}
+\citation{HRC6}
+\citation{HRC7}
+\citation{Predict1}
+\citation{Predict2}
+\citation{Predict3}
 \citation{MR1}
 \citation{MR2}
 \citation{MR3}
 \citation{MR4}
 \citation{MR5}
-\citation{VR1}
-\citation{VR2}
-\citation{VR3}
-\citation{AR1}
-\citation{AR2}
-\citation{AR3}
-\citation{Esaki}
 \@writefile{toc}{\contentsline {chapter}{\numberline {第1章}和訳}{1}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:introduction}{{1}{1}{}{chapter.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}序論 (Introduction)}{1}{}\protected@file@percent }
-\citation{MR1}
-\citation{MR2}
-\citation{MR3}
-\citation{MR4}
-\citation{MR5}
+\citation{teleop1}
+\citation{teleop2}
 \citation{VR1}
 \citation{VR2}
 \citation{AR1}
 \citation{AR2}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}関連研究 (Related Work)}{2}{}\protected@file@percent }
-\citation{Awareness}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}遠隔操作インタフェースの進化}{2}{}\protected@file@percent }
 \citation{MR1}
 \citation{MR2}
 \citation{MR3}
 \citation{MR4}
 \citation{MR5}
+\citation{Awareness}
 \citation{Esaki}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{4}{}\protected@file@percent }
+\citation{directmapping}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}MRベースのHRCとその課題}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Mixed reality Adaptive Reachability and Kinematic correction (MARK)}{4}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Figure1}}{4}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:device_comparison}{{1.1}{4}{}{figure.1.1}{}}
@@ -43,19 +44,21 @@
 \citation{RM}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Figure2}}{5}{}\protected@file@percent }
 \newlabel{fig:system_architecture}{{1.2}{5}{}{figure.1.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Module of Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}操作対象推定モジュール (Target Bottle Inference, TBI)}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}操作対象推定モジュール (Target Object Inference, TOI)}{6}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Geometric relationship of operational features}}{6}{}\protected@file@percent }
 \newlabel{fig:tbi_features}{{1.3}{6}{}{figure.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{特徴量の定義とスコア算出}{6}{}\protected@file@percent }
 \citation{EMA}
+\@writefile{toc}{\contentsline {subsubsection}{スコア統合と意思決定プロセス}{7}{}\protected@file@percent }
 \citation{RM}
+\@writefile{toc}{\contentsline {subsubsection}{情報提示の調整}{8}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Classification of objects based on RM}}{8}{}\protected@file@percent }
 \newlabel{fig:tbi_rm}{{1.4}{8}{}{figure.1.4}{}}
 \citation{RM}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Visualization of inferred target}}{9}{}\protected@file@percent }
 \newlabel{fig:tbi_highlight}{{1.5}{9}{}{figure.1.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{TBIまとめ}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}逆到達可能マップに基づくベース移動 (Base Relocation based on Inverse Reachability Map, BRI)}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{TOIまとめ}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}逆到達可能マップに基づくベース移動 (Base Relocation Module based on Inverse Reachability Map, BRI)}{9}{}\protected@file@percent }
 \citation{RM}
 \newlabel{fig:RM_S}{{1.6a}{10}{}{subfigure.1.6.1}{}}
 \newlabel{sub@fig:RM_S}{{a}{10}{}{subfigure.1.6.1}{}}
@@ -77,49 +80,52 @@
 \@writefile{toc}{\contentsline {paragraph}{コストマップ（OccupancyGrid $\rightarrow $ 安全余裕付きグリッド）}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{経路提案（MR 参照 $\rightarrow $ 安全 A* 補正）}{13}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{BRIまとめ}{13}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}人間とロボットの身体性の違いを運動学的に補正する把持制御 (Kinematic Correction Manipulation Module, KCM)}{13}{}\protected@file@percent }
 \citation{Null1}
 \citation{Null2}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Concept of HIGM interpolation}}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Pregrasp と EE 補間}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Concept of KCM interpolation}}{14}{}\protected@file@percent }
 \newlabel{fig:higm_concept}{{1.10}{14}{}{figure.1.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{ヌル空間最適化による関節洗練}{14}{}\protected@file@percent }
 \citation{Yoshikawa}
 \citation{JointLimit}
 \citation{FSM1}
 \citation{FSM2}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Null-space optimization}}{16}{}\protected@file@percent }
 \newlabel{fig:higm_optimization}{{1.11}{16}{}{figure.1.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{把持準備のための有限状態機械}{16}{}\protected@file@percent }
+\citation{Esaki}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces State transition of FSM}}{17}{}\protected@file@percent }
 \newlabel{fig:higm_fsm}{{1.12}{17}{}{figure.1.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}モジュール統合の意義}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.5}BRIの実験}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}実験設定}{17}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces Figure4}}{18}{}\protected@file@percent }
-\newlabel{fig:1}{{1.13}{18}{}{figure.1.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces Figure4}}{18}{}\protected@file@percent }
-\newlabel{fig:1}{{1.14}{18}{}{figure.1.14}{}}
-\citation{Esaki}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}実験結果}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.6}HIGMの実験}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.1}実験設定}{19}{}\protected@file@percent }
-\newlabel{fig:before}{{1.15a}{19}{}{subfigure.1.15.1}{}}
-\newlabel{sub@fig:before}{{a}{19}{}{subfigure.1.15.1}{}}
-\newlabel{fig:after}{{1.15b}{19}{}{subfigure.1.15.2}{}}
-\newlabel{sub@fig:after}{{b}{19}{}{subfigure.1.15.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces Sequential pick-and-place before/after}}{19}{}\protected@file@percent }
-\newlabel{HGIM_ex}{{1.15}{19}{}{figure.1.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Task execution sequence}}{20}{}\protected@file@percent }
-\newlabel{fig:how_ex}{{1.16}{20}{}{figure.1.16}{}}
-\newlabel{fig:before1}{{1.17a}{20}{}{subfigure.1.17.1}{}}
-\newlabel{sub@fig:before1}{{a}{20}{}{subfigure.1.17.1}{}}
-\newlabel{fig:after1}{{1.17b}{20}{}{subfigure.1.17.2}{}}
-\newlabel{sub@fig:after1}{{b}{20}{}{subfigure.1.17.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces Sequential pick-and-place }}{20}{}\protected@file@percent }
-\newlabel{MRpick}{{1.17}{20}{}{figure.1.17}{}}
-\@writefile{toc}{\contentsline {paragraph}{TBIの組み込み評価（主観的整合性と熟練度非依存性の検証）}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.2}実験結果}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.7}結論}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.5}モジュール統合の意義}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}KCMの実験}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}実験設定}{17}{}\protected@file@percent }
+\newlabel{fig:before}{{1.13a}{18}{}{subfigure.1.13.1}{}}
+\newlabel{sub@fig:before}{{a}{18}{}{subfigure.1.13.1}{}}
+\newlabel{fig:after}{{1.13b}{18}{}{subfigure.1.13.2}{}}
+\newlabel{sub@fig:after}{{b}{18}{}{subfigure.1.13.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces Sequential pick-and-place before/after}}{18}{}\protected@file@percent }
+\newlabel{HGIM_ex}{{1.13}{18}{}{figure.1.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces Task execution sequence}}{18}{}\protected@file@percent }
+\newlabel{fig:how_ex}{{1.14}{18}{}{figure.1.14}{}}
+\newlabel{fig:before1}{{1.15a}{19}{}{subfigure.1.15.1}{}}
+\newlabel{sub@fig:before1}{{a}{19}{}{subfigure.1.15.1}{}}
+\newlabel{fig:after1}{{1.15b}{19}{}{subfigure.1.15.2}{}}
+\newlabel{sub@fig:after1}{{b}{19}{}{subfigure.1.15.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces Sequential pick-and-place }}{19}{}\protected@file@percent }
+\newlabel{MRpick}{{1.15}{19}{}{figure.1.15}{}}
+\@writefile{toc}{\contentsline {paragraph}{TOIの組み込み評価（主観的整合性と熟練度非依存性の検証）}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}実験結果}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}BRIの実験}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}実験設定}{20}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Figure4}}{21}{}\protected@file@percent }
+\newlabel{fig:1}{{1.16}{21}{}{figure.1.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces Figure4}}{21}{}\protected@file@percent }
+\newlabel{fig:1}{{1.17}{21}{}{figure.1.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}実験結果}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}結論}{22}{}\protected@file@percent }
 \@setckpt{chapter/chapter2/chapter2}{
-\setcounter{page}{22}
+\setcounter{page}{23}
 \setcounter{equation}{23}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
@@ -130,7 +136,7 @@
 \setcounter{@paper}{1}
 \setcounter{part}{0}
 \setcounter{chapter}{1}
-\setcounter{section}{7}
+\setcounter{section}{6}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
@@ -149,9 +155,9 @@
 \setcounter{parentequation}{0}
 \setcounter{cp@cntr}{0}
 \setcounter{lstnumber}{1}
-\setcounter{caption@flags}{6}
+\setcounter{caption@flags}{2}
 \setcounter{continuedfloat}{0}
-\setcounter{subfigure}{2}
+\setcounter{subfigure}{0}
 \setcounter{subtable}{0}
 \setcounter{enum2}{0}
 \setcounter{enum3}{0}

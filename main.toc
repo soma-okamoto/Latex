@@ -1,26 +1,33 @@
 \contentsline {chapter}{\numberline {第1章}和訳}{1}{}%
 \contentsline {section}{\numberline {1.1}序論 (Introduction)}{1}{}%
 \contentsline {section}{\numberline {1.2}関連研究 (Related Work)}{2}{}%
-\contentsline {section}{\numberline {1.3}Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{4}{}%
+\contentsline {subsection}{\numberline {1.2.1}遠隔操作インタフェースの進化}{2}{}%
+\contentsline {subsection}{\numberline {1.2.2}MRベースのHRCとその課題}{3}{}%
+\contentsline {section}{\numberline {1.3}Mixed reality Adaptive Reachability and Kinematic correction (MARK)}{4}{}%
 \contentsline {subsection}{\numberline {1.3.1}実装プラットフォームとシステム構成}{4}{}%
-\contentsline {section}{\numberline {1.4}Module of Human^^e2^^80^^93Robot Interaction with Correction and Suggestion (HRI-CAS)}{6}{}%
-\contentsline {subsection}{\numberline {1.4.1}操作対象推定モジュール (Target Bottle Inference, TBI)}{6}{}%
-\contentsline {paragraph}{TBIまとめ}{9}{}%
-\contentsline {subsection}{\numberline {1.4.2}逆到達可能マップに基づくベース移動 (Base Relocation based on Inverse Reachability Map, BRI)}{9}{}%
+\contentsline {subsection}{\numberline {1.3.2}操作対象推定モジュール (Target Object Inference, TOI)}{6}{}%
+\contentsline {subsubsection}{特徴量の定義とスコア算出}{6}{}%
+\contentsline {subsubsection}{スコア統合と意思決定プロセス}{7}{}%
+\contentsline {subsubsection}{情報提示の調整}{8}{}%
+\contentsline {subsubsection}{TOIまとめ}{9}{}%
+\contentsline {subsection}{\numberline {1.3.3}逆到達可能マップに基づくベース移動 (Base Relocation Module based on Inverse Reachability Map, BRI)}{9}{}%
 \contentsline {subsubsection}{経路既知の場合}{11}{}%
 \contentsline {paragraph}{ユーザインタラクション（経路編集の数理反映）}{11}{}%
 \contentsline {subsubsection}{経路未知の場合}{12}{}%
 \contentsline {paragraph}{コストマップ（OccupancyGrid $\rightarrow $ 安全余裕付きグリッド）}{12}{}%
 \contentsline {paragraph}{経路提案（MR 参照 $\rightarrow $ 安全 A* 補正）}{13}{}%
 \contentsline {subsubsection}{BRIまとめ}{13}{}%
-\contentsline {subsection}{\numberline {1.4.3}人間意図適応型把持操作補正 (Human-Intent Adaptive Grasp Manipulation, HIGM)}{13}{}%
-\contentsline {subsection}{\numberline {1.4.4}モジュール統合の意義}{17}{}%
-\contentsline {section}{\numberline {1.5}BRIの実験}{17}{}%
-\contentsline {subsection}{\numberline {1.5.1}実験設定}{17}{}%
-\contentsline {subsection}{\numberline {1.5.2}実験結果}{19}{}%
-\contentsline {section}{\numberline {1.6}HIGMの実験}{19}{}%
-\contentsline {subsection}{\numberline {1.6.1}実験設定}{19}{}%
-\contentsline {paragraph}{TBIの組み込み評価（主観的整合性と熟練度非依存性の検証）}{21}{}%
-\contentsline {subsection}{\numberline {1.6.2}実験結果}{21}{}%
-\contentsline {section}{\numberline {1.7}結論}{21}{}%
-\contentsline {chapter}{参考文献}{22}{}%
+\contentsline {subsection}{\numberline {1.3.4}人間とロボットの身体性の違いを運動学的に補正する把持制御 (Kinematic Correction Manipulation Module, KCM)}{13}{}%
+\contentsline {subsubsection}{Pregrasp と EE 補間}{14}{}%
+\contentsline {subsubsection}{ヌル空間最適化による関節洗練}{14}{}%
+\contentsline {subsubsection}{把持準備のための有限状態機械}{16}{}%
+\contentsline {subsection}{\numberline {1.3.5}モジュール統合の意義}{17}{}%
+\contentsline {section}{\numberline {1.4}KCMの実験}{17}{}%
+\contentsline {subsection}{\numberline {1.4.1}実験設定}{17}{}%
+\contentsline {paragraph}{TOIの組み込み評価（主観的整合性と熟練度非依存性の検証）}{19}{}%
+\contentsline {subsection}{\numberline {1.4.2}実験結果}{20}{}%
+\contentsline {section}{\numberline {1.5}BRIの実験}{20}{}%
+\contentsline {subsection}{\numberline {1.5.1}実験設定}{20}{}%
+\contentsline {subsection}{\numberline {1.5.2}実験結果}{22}{}%
+\contentsline {section}{\numberline {1.6}結論}{22}{}%
+\contentsline {chapter}{参考文献}{23}{}%
