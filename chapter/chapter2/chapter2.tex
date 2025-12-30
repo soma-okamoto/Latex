@@ -43,8 +43,8 @@
 そこで本研究では、単なる直感的なインタフェースの提供にとどまらず、
 システム側が人間の操作意図とロボットの身体的制約を能動的に調和させるシステム、
 \textbf{Mixed reality Adaptive Reachability and Kinematic correction (MARK)} を提案する。
-本システムは、ユーザの身体動作特徴量に基づくロバストな操作対象推定モジュール（Target Object Inference,TOI）、
-Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュール（Base Relocation based on Inverse Reachability Map,BRI）、
+本システムは、ユーザの身体動作特徴量に基づくロバストな操作対象推定モジュール（Target Object Inference Module,TOI）、
+Inverse Reachability Map (IRM) に基づくロボットベース移動モジュール（Base Relocation Module based on Inverse Reachability Map，BRI）、
 および人間とロボットの身体性の違いを運動学的に補正する把持制御モジュール（Kinematic Correction Module,KCM）
 を有機的に統合したものである。
 
@@ -60,7 +60,7 @@ Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュ�
 主な貢献は以下の3点にまとめられる。
 
 \begin{itemize}
-  \item \textbf{身体動作特徴量に基づく操作対象推定 (Target Object Inference, TOI)}:
+  \item \textbf{身体動作特徴量に基づく操作対象推定 (Target Object Inference Module, TOI)}:
   ユーザーの頭部方向や手先軌道などの身体的特徴量に対し、到達可能性 (Reachability) を考慮したベクトル演算を適用することで操作意図を推定する手法を確立した。
   これにより、システムが介入すべき対象とタイミングを幾何学的根拠に基づいて正確に特定し、過剰な介入を防ぎつつ適切な支援を行うための基盤を構築した。
 
@@ -70,8 +70,8 @@ Inverse Reachability Map (IRM) に基づく可到達性ガイダンスモジュ�
   この二段階の補正により、ユーザーはロボットの運動学的都合を意識することなく、
   自身の身体感覚の延長として安全かつ高精度な把持操作が可能となる。
 
-  \item \textbf{逆到達可能マップに基づく可到達性ガイダンス (Base Relocation based on Inverse Reachability Map,BRI)}:
-  ロボットの可動範囲構造（Inverse Reachability Map）に基づき、把持に最適なベース位置を自律的に提案するだけでなく、
+  \item \textbf{Inverse Reachability Map (IRM) に基づくロボットベース移動モジュール (Base Relocation Module based on Inverse Reachability Map,BRI)}:
+  ロボットのInverse Reachability Mapに基づき、把持に最適なベース位置を自律的に提案するだけでなく、
   提示された経路をユーザーがMR空間上で直感的に修正できる双方向（インタラクティブ）なナビゲーション機構を導入した。
   これにより、ロボットによる数理的な到達可能性の保証と、ユーザーの状況判断による柔軟な経路変更を統合し、
   空間的制約に関する認知負荷を排除しつつ、確実なタスク遂行を実現する。
@@ -269,12 +269,12 @@ S_{IRM}(\mathbf{b}; \mathbf{p}_t) = N_{\text{IK}}(\mathbf{p}_t \mid \mathbf{b}).
 本システムでは、このスコア $S_{IRM}$ を TOI における可視化および BRI における最適化の共通指標として用いる。
 
 
-\subsection{操作対象推定モジュール (Target Object Inference, TOI)}
+\subsection{Target Object Inference Module, TOI}
 
 TOI モジュールは，ユーザの身体運動に基づいて操作対象を推定することを目的とする。
 本手法では，推定のために以下の\textbf{4つの特徴量}を利用する。
 \begin{itemize}
-  \item \textbf{位置 (Position)}: 手先と対象との距離に基づく近接度
+  \item \textbf{位置 (Position)}: 手先と各対象との距離に基づく近接度
   \item \textbf{頭部方向 (Head Orientation)}: ユーザの顔が向いている方向
   \item \textbf{手先加速度 (Hand Acceleration)}: 手先が動いている方向と勢い
   \item \textbf{接触 (Contact)}: 物理的な接触の有無（即時決定要因）
@@ -438,7 +438,7 @@ UI 強調の方法を区別し，
 結果として，MARK全体の基盤となる「人間の意図の正確な把握」を実現している。
 
 
-\subsection{逆到達可能マップに基づくベース移動 (Base Relocation Module based on Inverse Reachability Map, BRI)}
+\subsection{Base Relocation Module based on Inverse Reachability Map, BRI}
 
 TOIによって対象物が特定されたとしても、その対象がロボットの現在の把持可能範囲（Reachability）の外にある場合、
 ロボットはベース位置そのものを移動させて到達可能性を確保する必要がある。
@@ -613,7 +613,7 @@ $\Gamma=\Pi_1\oplus\cdots\oplus\Pi_N$ を構成する。
 これにより，ロボットの自律性とユーザ主導のインタラクションの両方を満たすことが可能となり，
 柔軟かつ堅牢なベース移動を実現する。
 
-\subsection{人間とロボットの身体性の違いを運動学的に補正する把持制御 (Kinematic Correction Manipulation Module, KCM)}
+\subsection{Kinematic Correction Manipulation Module, KCM}
 
 ベース位置が適切であっても，人間の操作意図とロボットの運動学的制約が一致しない場合，
 エンドエフェクタ (EE) が不安定な姿勢で対象に接近し，結果として把持失敗や関節への過負荷が発生する可能性がある。

@@ -1,343 +1,353 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.22)  30 DEC 2025 13:43
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.sjis) (TeX Live 2024) (preloaded format=platex 2025.2.4)  30 DEC 2025 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/soma0/OneDrive/デスクトップ/sotu/main
-(c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
-(c:/texlive/2025/texmf-dist/tex/platex/base/jreport.cls
-
-c:/texlive/2025/texmf-dist/tex/platex/base/jreport.cls:16: LaTeX Error: This file needs format `pLaTeX2e'
-               but this is `LaTeX2e'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \NeedsTeXFormat{pLaTeX2e}
-                              
-The current input file will not be processed further,
-because it was written for some other flavor of TeX.
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+**c:/Users/okamo/Tex/Latex/main
+(c:/Users/okamo/Tex/Latex/main.tex
+pLaTeX2e <2023-02-14>+1, based on
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(c:/texlive/2024/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2020/09/30 v1.8f Standard pLaTeX class
+\c@@paper=\count195
+(c:/texlive/2024/texmf-dist/tex/platex/base/jsize11.clo
+File: jsize11.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 704.
+\toclineskip=\dimen157
+\@lnumwidth=\dimen158
+\bibindent=\dimen159
+\heisei=\count271
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+\KV@toks@=\toks18
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
- (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+Package graphics Info: Driver file: dvips.def on input line 106.
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2022/09/22 v3.1e Graphics/color driver for dvips
 ))
-\Gin@req@height=\dimen148
-\Gin@req@width=\dimen149
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: dvipdfmx.def on input line 149.
- (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2024/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count275
-\float@exts=\toks18
-\float@box=\box53
-\@float@everytoks=\toks19
-\@floatcapt=\box54
-) (c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+\c@float@type=\count272
+\float@exts=\toks19
+\float@box=\box69
+\@float@everytoks=\toks20
+\@floatcapt=\box70
+) (c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks20
-\c@algorithm=\count276
-) (c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+\@float@every@algorithm=\toks21
+\c@algorithm=\count273
+) (c:/texlive/2024/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
- (c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count277
-\c@ALG@rem=\count278
-\c@ALG@nested=\count279
-\ALG@tlm=\skip49
-\ALG@thistlm=\skip50
-\c@ALG@Lnr=\count280
-\c@ALG@blocknr=\count281
-\c@ALG@storecount=\count282
-\c@ALG@tmpcounter=\count283
-\ALG@tmplength=\skip51
+\c@ALG@line=\count274
+\c@ALG@rem=\count275
+\c@ALG@nested=\count276
+\ALG@tlm=\skip51
+\ALG@thistlm=\skip52
+\c@ALG@Lnr=\count277
+\c@ALG@blocknr=\count278
+\c@ALG@storecount=\count279
+\c@ALG@tmpcounter=\count280
+\ALG@tmplength=\skip53
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
-\@mathmargin=\skip52
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip54
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
- (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen150
-)) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks22
+\ex@=\dimen162
+)) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen151
-) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen163
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count284
+\inf@bad=\count281
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count285
-\leftroot@=\count286
+\uproot@=\count282
+\leftroot@=\count283
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count287
-\DOTSCASE@=\count288
+\classnum@=\count284
+\DOTSCASE@=\count285
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box55
-\strutbox@=\box56
+\Mathstrutbox@=\box71
+\strutbox@=\box72
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen152
+\big@size=\dimen164
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count289
+\macc@depth=\count286
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count290
+\c@MaxMatrixCols=\count287
 \dotsspace@=\muskip17
-\c@parentequation=\count291
-\dspbrk@lvl=\count292
-\tag@help=\toks22
-\row@=\count293
-\column@=\count294
-\maxfields@=\count295
-\andhelp@=\toks23
-\eqnshift@=\dimen153
-\alignsep@=\dimen154
-\tagshift@=\dimen155
-\tagwidth@=\dimen156
-\totwidth@=\dimen157
-\lineht@=\dimen158
-\@envbody=\toks24
-\multlinegap=\skip53
-\multlinetaggap=\skip54
-\mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
-) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks23
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks24
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks25
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/texlive/2025/texmf-dist/tex/latex/type1cm/type1cm.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/type1cm/type1cm.sty
 Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, patched RF)
-) (c:/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
 Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+\symboldmincho=\mathgroup10
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (c:/texlive/2025/texmf-dist/tex/latex/changepage/changepage.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count296
-\cp@tempcnt=\count297
-) (c:/texlive/2025/texmf-dist/tex/latex/comment/comment.sty
+\c@cp@cntr=\count293
+\cp@tempcnt=\count294
+) (c:/texlive/2024/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
- Excluding comment 'comment') (c:/texlive/2025/texmf-dist/tex/latex/mathtools/empheq.sty
+ Excluding comment 'comment') (c:/texlive/2024/texmf-dist/tex/latex/mathtools/empheq.sty
 Package: empheq 2024/08/09 v2.17 Emphasizing equations
- (c:/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-) (c:/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
- (c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count298
-\calc@Bcount=\count299
-\calc@Adimen=\dimen159
-\calc@Bdimen=\dimen160
-\calc@Askip=\skip55
-\calc@Bskip=\skip56
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count300
-\calc@Cskip=\skip57
+ (c:/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count295
+\calc@Bcount=\count296
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count297
+\calc@Cskip=\skip59
 )
-\g_MT_multlinerow_int=\count301
-\l_MT_multwidth_dim=\dimen161
-\origjot=\skip58
-\l_MT_shortvdotswithinadjustabove_dim=\dimen162
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
-\l_MT_above_intertext_sep=\dimen164
-\l_MT_below_intertext_sep=\dimen165
-\l_MT_above_shortintertext_sep=\dimen166
-\l_MT_below_shortintertext_sep=\dimen167
-\xmathstrut@box=\box57
-\xmathstrut@dim=\dimen168
+\g_MT_multlinerow_int=\count298
+\l_MT_multwidth_dim=\dimen173
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen174
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen175
+\l_MT_above_intertext_sep=\dimen176
+\l_MT_below_intertext_sep=\dimen177
+\l_MT_above_shortintertext_sep=\dimen178
+\l_MT_below_shortintertext_sep=\dimen179
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen180
 )
-\l_EQ_equationtype_int=\count302
-\l_EQ_alignmentmode_int=\count303
-\l_EQ_totalwidth_dim=\dimen169
-\l_EQ_displaywidth_dim=\dimen170
-\l_EQ_temp_linewidth_dim=\dimen171
-\l_EQ_linewidth_dim=\dimen172
-\EmphEqdelimitershortfall=\dimen173
-\EmphEqdelimiterfactor=\count304
-\g_EQ_toptag_height_dim=\dimen174
-\g_EQ_bottomtag_depth_dim=\dimen175
-\g_EQ_toprow_height_dim=\dimen176
-\g_EQ_bottomrow_depth_dim=\dimen177
-\g_EQ_widesttag_dim=\dimen178
-\EQ_mathdisplay_box=\box58
-\EQ_tag_box=\box59
-\g_EQ_temprow_int=\count305
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/epsfig.sty
+\l_EQ_equationtype_int=\count299
+\l_EQ_alignmentmode_int=\count300
+\l_EQ_totalwidth_dim=\dimen181
+\l_EQ_displaywidth_dim=\dimen182
+\l_EQ_temp_linewidth_dim=\dimen183
+\l_EQ_linewidth_dim=\dimen184
+\EmphEqdelimitershortfall=\dimen185
+\EmphEqdelimiterfactor=\count301
+\g_EQ_toptag_height_dim=\dimen186
+\g_EQ_bottomtag_depth_dim=\dimen187
+\g_EQ_toprow_height_dim=\dimen188
+\g_EQ_bottomrow_depth_dim=\dimen189
+\g_EQ_widesttag_dim=\dimen190
+\EQ_mathdisplay_box=\box74
+\EQ_tag_box=\box75
+\g_EQ_temprow_int=\count302
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2024/01/14 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen179
-\epsfysize=\dimen180
-) (c:/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip59
-\f@nch@offset@elh=\skip60
-\f@nch@offset@erh=\skip61
-\f@nch@offset@olh=\skip62
-\f@nch@offset@orh=\skip63
-\f@nch@offset@elf=\skip64
-\f@nch@offset@erf=\skip65
-\f@nch@offset@olf=\skip66
-\f@nch@offset@orf=\skip67
-\f@nch@height=\skip68
-\f@nch@footalignment=\skip69
-\f@nch@widthL=\skip70
-\f@nch@widthC=\skip71
-\f@nch@widthR=\skip72
-\@temptokenb=\toks26
-) (c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-) (c:/texlive/2025/texmf-dist/tex/latex/here/here.sty) (c:/texlive/2025/texmf-dist/tex/latex/base/latexsym.sty
+\epsfxsize=\dimen191
+\epsfysize=\dimen192
+) (c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/01/07 v5.1.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks27
+) (c:/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/texlive/2024/texmf-dist/tex/latex/here/here.sty) (c:/texlive/2024/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup9
+\symlasy=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count306
-\lst@gtempboxa=\box60
-\lst@token=\toks27
-\lst@length=\count307
-\lst@currlwidth=\dimen181
-\lst@column=\count308
-\lst@pos=\count309
-\lst@lostspace=\dimen182
-\lst@width=\dimen183
-\lst@newlines=\count310
-\lst@lineno=\count311
-\abovecaptionskip=\skip73
-\belowcaptionskip=\skip74
-\lst@maxwidth=\dimen184
- (c:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count303
+\lst@gtempboxa=\box76
+\lst@token=\toks28
+\lst@length=\count304
+\lst@currlwidth=\dimen193
+\lst@column=\count305
+\lst@pos=\count306
+\lst@lostspace=\dimen194
+\lst@width=\dimen195
+\lst@newlines=\count307
+\lst@lineno=\count308
+\lst@maxwidth=\dimen196
+ (c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count312
-\lst@skipnumbers=\count313
-\lst@framebox=\box61
-) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+\c@lstnumber=\count309
+\lst@skipnumbers=\count310
+\lst@framebox=\box77
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
- (c:/texlive/2025/texmf-dist/tex/latex/mfnfss/oldgerm.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/mfnfss/oldgerm.sty
 Package: oldgerm 2000/08/02 v2.1k LaTeX2e package for Old German fonts
-) (c:/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
- (c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks28
-\pgfutil@tempdima=\dimen185
-\pgfutil@tempdimb=\dimen186
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box62
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+) (c:/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (c:/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen197
+\pgfutil@tempdimb=\dimen198
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box78
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks31
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
 ))
-\pgf@x=\dimen187
-\pgf@y=\dimen188
-\pgf@xa=\dimen189
-\pgf@ya=\dimen190
-\pgf@xb=\dimen191
-\pgf@yb=\dimen192
-\pgf@xc=\dimen193
-\pgf@yc=\dimen194
-\pgf@xd=\dimen195
-\pgf@yd=\dimen196
+\pgf@x=\dimen199
+\pgf@y=\dimen256
+\pgf@xa=\dimen257
+\pgf@ya=\dimen258
+\pgf@xb=\dimen259
+\pgf@yb=\dimen260
+\pgf@xc=\dimen261
+\pgf@yc=\dimen262
+\pgf@xd=\dimen263
+\pgf@yd=\dimen264
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count314
-\c@pgf@countb=\count315
-\c@pgf@countc=\count316
-\c@pgf@countd=\count317
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count318
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count315
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-dvipdfmx.def
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count319
-)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count320
-\pgfsyssoftpath@bigbuffer@items=\count321
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+\pgfsys@objnum=\count316
+)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count317
+\pgfsyssoftpath@bigbuffer@items=\count318
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 274.
+Package xcolor Info: Driver file: dvips.def on input line 274.
 LaTeX Info: Redefining \color on input line 762.
- (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
@@ -346,233 +356,241 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen197
-\pgfmath@count=\count322
-\pgfmath@box=\box63
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count323
-)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen198
-\pgf@picmaxx=\dimen199
-\pgf@picminy=\dimen256
-\pgf@picmaxy=\dimen257
-\pgf@pathminx=\dimen258
-\pgf@pathmaxx=\dimen259
-\pgf@pathminy=\dimen260
-\pgf@pathmaxy=\dimen261
-\pgf@xx=\dimen262
-\pgf@xy=\dimen263
-\pgf@yx=\dimen264
-\pgf@yy=\dimen265
-\pgf@zx=\dimen266
-\pgf@zy=\dimen267
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen268
-\pgf@path@lasty=\dimen269
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen270
-\pgf@shorten@start@additional=\dimen271
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box64
-\pgf@hbox=\box65
-\pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count324
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen272
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen273
-\pgf@pt@y=\dimen274
-\pgf@pt@temp=\dimen275
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen276
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen277
-\pgf@sys@shading@range@num=\count325
-\pgf@shadingcount=\count326
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box67
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box68
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen278
-\pgf@nodesepend=\dimen279
-) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen280
-\pgffor@skip=\dimen281
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
-)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count327
-\pgfplotmarksize=\dimen282
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen265
+\pgfmath@count=\count319
+\pgfmath@box=\box79
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count320
+)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen266
+\pgf@picmaxx=\dimen267
+\pgf@picminy=\dimen268
+\pgf@picmaxy=\dimen269
+\pgf@pathminx=\dimen270
+\pgf@pathmaxx=\dimen271
+\pgf@pathminy=\dimen272
+\pgf@pathmaxy=\dimen273
+\pgf@xx=\dimen274
+\pgf@xy=\dimen275
+\pgf@yx=\dimen276
+\pgf@yy=\dimen277
+\pgf@zx=\dimen278
+\pgf@zy=\dimen279
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen280
+\pgf@path@lasty=\dimen281
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen282
+\pgf@shorten@start@additional=\dimen283
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box80
+\pgf@hbox=\box81
+\pgf@layerbox@main=\box82
+\pgf@picture@serial@count=\count321
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen284
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen285
+\pgf@pt@y=\dimen286
+\pgf@pt@temp=\dimen287
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen288
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen289
+\pgf@sys@shading@range@num=\count322
+\pgf@shadingcount=\count323
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box83
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box84
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen290
+\pgf@nodesepend=\dimen291
+) (c:/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen292
+\pgffor@skip=\dimen293
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count324
+\pgfplotmarksize=\dimen294
 )
-\tikz@lastx=\dimen283
-\tikz@lasty=\dimen284
-\tikz@lastxsaved=\dimen285
-\tikz@lastysaved=\dimen286
-\tikz@lastmovetox=\dimen287
-\tikz@lastmovetoy=\dimen288
-\tikzleveldistance=\dimen289
-\tikzsiblingdistance=\dimen290
-\tikz@figbox=\box69
-\tikz@figbox@bg=\box70
-\tikz@tempbox=\box71
-\tikz@tempbox@bg=\box72
-\tikztreelevel=\count328
-\tikznumberofchildren=\count329
-\tikznumberofcurrentchild=\count330
-\tikz@fig@count=\count331
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count332
-\pgfmatrixcurrentcolumn=\count333
-\pgf@matrix@numberofcolumns=\count334
+\tikz@lastx=\dimen295
+\tikz@lasty=\dimen296
+\tikz@lastxsaved=\dimen297
+\tikz@lastysaved=\dimen298
+\tikz@lastmovetox=\dimen299
+\tikz@lastmovetoy=\dimen300
+\tikzleveldistance=\dimen301
+\tikzsiblingdistance=\dimen302
+\tikz@figbox=\box85
+\tikz@figbox@bg=\box86
+\tikz@tempbox=\box87
+\tikz@tempbox@bg=\box88
+\tikztreelevel=\count325
+\tikznumberofchildren=\count326
+\tikznumberofcurrentchild=\count327
+\tikz@fig@count=\count328
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count329
+\pgfmatrixcurrentcolumn=\count330
+\pgf@matrix@numberofcolumns=\count331
 )
-\tikz@expandcount=\count335
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks40
-\t@pgfplots@tokb=\toks41
-\t@pgfplots@tokc=\toks42
-\pgfplots@tmpa=\dimen291
-\c@pgfplots@coordindex=\count336
-\c@pgfplots@scanlineindex=\count337
- (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count338
-) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count339
-\t@pgfplotstable@a=\toks43
-) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count340
- (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count341
-))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen292
-\pgfdecoratedremainingdistance=\dimen293
-\pgfdecoratedinputsegmentcompleteddistance=\dimen294
-\pgfdecoratedinputsegmentremainingdistance=\dimen295
-\pgf@decorate@distancetomove=\dimen296
-\pgf@decorate@repeatstate=\count342
-\pgfdecorationsegmentamplitude=\dimen297
-\pgfdecorationsegmentlength=\dimen298
+\tikz@expandcount=\count332
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks41
+\t@pgfplots@tokb=\toks42
+\t@pgfplots@tokc=\toks43
+\pgfplots@tmpa=\dimen303
+\c@pgfplots@coordindex=\count333
+\c@pgfplots@scanlineindex=\count334
+ (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+(c:/texlive/2024/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count335
+) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count336
+\t@pgfplotstable@a=\toks47
+) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count337
+ (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count338
+))) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen304
+\pgfdecoratedremainingdistance=\dimen305
+\pgfdecoratedinputsegmentcompleteddistance=\dimen306
+\pgfdecoratedinputsegmentremainingdistance=\dimen307
+\pgf@decorate@distancetomove=\dimen308
+\pgf@decorate@repeatstate=\count339
+\pgfdecorationsegmentamplitude=\dimen309
+\pgfdecorationsegmentlength=\dimen310
 )
-\tikz@lib@dec@box=\box73
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count343
-\pgfplots@xmin@reg=\dimen299
-\pgfplots@xmax@reg=\dimen300
-\pgfplots@ymin@reg=\dimen301
-\pgfplots@ymax@reg=\dimen302
-\pgfplots@zmin@reg=\dimen303
-\pgfplots@zmax@reg=\dimen304
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
-File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
+\tikz@lib@dec@box=\box89
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count340
+\pgfplots@xmin@reg=\dimen311
+\pgfplots@xmax@reg=\dimen312
+\pgfplots@ymin@reg=\dimen313
+\pgfplots@ymax@reg=\dimen314
+\pgfplots@zmin@reg=\dimen315
+\pgfplots@zmax@reg=\dimen316
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
- (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-09-02 L3 programming layer (loader) 
- (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count344
+ (c:/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
+\l__pdf_internal_box=\box90
+\l__pdf_backend_content_box=\box91
+\l__pdf_backend_model_box=\box92
+\g__pdf_backend_annotation_int=\count341
+\g__pdf_backend_link_int=\count342
+\g__pdf_backend_link_sf_int=\count343
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
-)) (c:/texlive/2025/texmf-dist/tex/latex/subfiles/subfiles.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
- (c:/texlive/2025/texmf-dist/tex/latex/import/import.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
-)) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-) (c:/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks44
-\verbatim@line=\toks45
+\every@verbatim=\toks48
+\verbatim@line=\toks49
 \verbatim@in@stream=\read3
-) (./supplement/preamble.tex (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+) (./supplement/preamble.tex (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
-) (c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen305
-\captionmargin=\dimen306
-\caption@leftmargin=\dimen307
-\caption@rightmargin=\dimen308
-\caption@width=\dimen309
-\caption@indent=\dimen310
-\caption@parindent=\dimen311
-\caption@hangindent=\dimen312
-Package caption Info: Standard document class detected.
+\caption@tempdima=\dimen317
+\captionmargin=\dimen318
+\caption@leftmargin=\dimen319
+\caption@rightmargin=\dimen320
+\caption@width=\dimen321
+\caption@indent=\dimen322
+\caption@parindent=\dimen323
+\caption@hangindent=\dimen324
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip \iftdir \sbox \@tempboxa {#1\hskip 1zw#2}\else \sbox \@tempboxa {#1: #2}\fi \ifdim \wd \@tempboxa >\hsize \iftdir #1\hskip 1zw#2\relax \par \else #1: #2\relax \par \fi \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1175.
 )
-\c@caption@flags=\count345
-\c@continuedfloat=\count346
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count344
+\c@continuedfloat=\count345
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen313
-\caption@adjustwidth@linewidth=\dimen314
+\caption@adjustwidth@hsize=\dimen325
+\caption@adjustwidth@linewidth=\dimen326
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
-))
-
-./supplement/preamble.tex:54: LaTeX Error: Command \bibname undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 \renewcommand{\bibname}
-                            {参考文献} %参考文献のタイトル変更
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-\c@enum2=\count347
-\c@enum3=\count348
 )
-No file main.aux.
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count346
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count347
+)
+\c@enum2=\count348
+\c@enum3=\count349
+) (./main.aux (./chapter/chapter2/chapter2.aux) (./supplement/reference.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -589,41 +607,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:83: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 \begin{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
-\scratchdimen=\dimen315
-\scratchbox=\box74
-\nofMPsegments=\count350
-\nofMParguments=\count351
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count352
-\MPscratchDim=\dimen316
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
-\everyMPtoPDFconversion=\toks47
-) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-\Hy@linkcounter=\count355
-\c@lstlisting=\count356
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+\Hy@linkcounter=\count350
+\c@lstlisting=\count351
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
@@ -633,2435 +622,378 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./supplement/title.tex
 
-./supplement/title.tex:9: LaTeX Error: Environment titlepage undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \begin{titlepage}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:11: Undefined control sequence.
-l.11 {\Large
-             修士論文} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 修 (U+4FEE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修
-                士論文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 士 (U+58EB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士
-                   論文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 論 (U+8AD6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論
-                      文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 文 (U+6587)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論文
-                         } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論文} \\
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:14: Undefined control sequence.
-l.14 {\Large
-             令和X年度 （20YY年度）} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 令 (U+4EE4)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令
-                和X年度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 和 (U+548C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和
-                   X年度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 年 (U+5E74)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年
-                       度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 度 (U+5EA6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度
-                           （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character （ (U+FF08)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （
-                              20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 年 (U+5E74)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年
-                                     度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 度 (U+5EA6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年度
-                                        ）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character ） (U+FF09)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年度）
-                                           } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-./supplement/title.tex:18: Undefined control sequence.
-l.18 {\LARGE
-             %\hspace*{1.0zw}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 日 (U+65E5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日
-        本語タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 本 (U+672C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本
-           語タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 語 (U+8A9E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語
-              タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character タ (U+30BF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タ
-                 イトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character イ (U+30A4)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイ
-                    トル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイト
-                       ル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character ル (U+30EB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイトル
-                          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:20: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \\
-       [10mm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:26: Undefined control sequence.
-l.26 {\Large
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学
-          籍番号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 籍 (U+7C4D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍
-             番号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 番 (U+756A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍番
-                号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 号 (U+53F7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍番号
-                   } &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 氏 (U+6C0F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏
-          名} &  & {山田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 名 (U+540D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名
-             } &  & {山田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 山 (U+5C71)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山
-                        田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 田 (U+7530)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田
-                           　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 　 (U+3000)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　
-                              太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 太 (U+592A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　太
-                                 郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 郎 (U+90CE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　太郎
-                                    } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 指 (U+6307)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指
-         導教員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 導 (U+5C0E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導
-            教員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 教 (U+6559)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教
-               員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 員 (U+54E1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員
-                   \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 教 (U+6559)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教
-                            授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 授 (U+6388)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授
-                                & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 関 (U+95A2)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関
-                                     山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 山 (U+5C71)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山
-                                         浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 浩 (U+6D69)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山 浩
-                                            介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 介 (U+4ECB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山 浩介
-                                                \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-./supplement/title.tex:37: Undefined control sequence.
-l.37 {\Large
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 名 (U+540D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名
-        城大学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 城 (U+57CE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城
-           大学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 大 (U+5927)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大
-              学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学
-                  理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 理 (U+7406)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理
-                     工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 工 (U+5DE5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工
-                        学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学
-                           研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 研 (U+7814)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研
-                              究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 究 (U+7A76)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究
-                                 科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 科 (U+79D1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科
-                                     メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character メ (U+30E1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メ
-                                        カトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character カ (U+30AB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカ
-                                           トロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカト
-                                              ロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ロ (U+30ED)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカトロ
-                                                 ニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ニ (U+30CB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...�大学 理工学研究科 メカトロニ
-                                                  クス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ク (U+30AF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...�学 理工学研究科 メカトロニク
-                                                  ス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ス (U+30B9)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...� 理工学研究科 メカトロニクス
-                                                  工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 工 (U+5DE5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��工学研究科 メカトロニクス工
-                                                  学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��学研究科 メカトロニクス工学
-                                                  専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 専 (U+5C02)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��研究科 メカトロニクス工学専
-                                                  攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 攻 (U+653B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��究科 メカトロニクス工学専攻
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:41: LaTeX Error: \begin{document} ended by \end{titlepage}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 \end{titlepage}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+[1
+
+])
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 116.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 116.
+ (./main.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
 )
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:116: Undefined control sequence.
-l.116 \tableofcontents
-                       %目次の作成
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:117: Undefined control sequence.
-l.117 \listoffigures
-                     %図目次
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
 
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: Arithmetic overflow.
-<to be read again> 
-                   >
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-I can't evaluate this expression,
-since the result is out of range.
-
-
-Overfull \hbox (16383.99997pt too wide) has occurred while \output is active
-[] [] []
- []
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: Arithmetic overflow.
-<to be read again> 
-                   >
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-I can't evaluate this expression,
-since the result is out of range.
-
-
-Overfull \hbox (16383.99997pt too wide) has occurred while \output is active
-[] [] []
- []
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 11.00005pt, for example:
-(fancyhdr)                \setlength{\footskip}{11.00005pt}.
 
 [1
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
+
+] (./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+[2
+
 ]
 \openout2 = `chapter/chapter2/chapter2.aux'.
 
  (./chapter/chapter2/chapter2.tex
-./chapter/chapter2/chapter2.tex:14: Undefined control sequence.
-l.14 \chapter
-             {和訳}\label{chap:introduction}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 和 (U+548C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \chapter{和
-                 訳}\label{chap:introduction}
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 訳 (U+8A33)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \chapter{和訳
-                    }\label{chap:introduction}
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-./chapter/chapter2/chapter2.tex:21: Undefined control sequence.
-l.21 \section
-             {序論 (Introduction)}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 序 (U+5E8F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \section{序
-                 論 (Introduction)}
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 論 (U+8AD6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \section{序論
-                     (Introduction)}
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 近 (U+8FD1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 近
-        年、Human-Robot Collaboration (HRC) は製造、物流、医療、...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 年 (U+5E74)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 近年
-           、Human-Robot Collaboration (HRC) は製造、物流、医療、...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 近年、
-              Human-Robot Collaboration (HRC) は製造、物流、医療、...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character は (U+306F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 近年、Human-Robot Collaboration (HRC) は
-                                                 製造、物流、医療、...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 製 (U+88FD)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...�、Human-Robot Collaboration (HRC) は製
-                                                  造、物流、医療、�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 造 (U+9020)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...�Human-Robot Collaboration (HRC) は製造
-                                                  、物流、医療、災�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...man-Robot Collaboration (HRC) は製造、
-                                                  物流、医療、災害�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 物 (U+7269)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...-Robot Collaboration (HRC) は製造、物
-                                                  流、医療、災害対�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 流 (U+6D41)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...bot Collaboration (HRC) は製造、物流
-                                                  、医療、災害対応�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ... Collaboration (HRC) は製造、物流、
-                                                  医療、災害対応と�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 医 (U+533B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...llaboration (HRC) は製造、物流、医
-                                                  療、災害対応とい�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 療 (U+7642)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...boration (HRC) は製造、物流、医療
-                                                  、災害対応といっ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...ation (HRC) は製造、物流、医療、
-                                                  災害対応といった�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 災 (U+707D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...on (HRC) は製造、物流、医療、災
-                                                  害対応といった多�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 害 (U+5BB3)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...(HRC) は製造、物流、医療、災害
-                                                  対応といった多様�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 対 (U+5BFE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...C) は製造、物流、医療、災害対
-                                                  応といった多様な�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 応 (U+5FDC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...は製造、物流、医療、災害対応
-                                                  といった多様な現�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character と (U+3068)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...製造、物流、医療、災害対応と
-                                                  いった多様な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character い (U+3044)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...造、物流、医療、災害対応とい
-                                                  った多様な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character っ (U+3063)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...、物流、医療、災害対応といっ
-                                                  た多様な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character た (U+305F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...物流、医療、災害対応といった
-                                                  多様な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 多 (U+591A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...流、医療、災害対応といった多
-                                                  様な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 様 (U+69D8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...、医療、災害対応といった多様
-                                                  な現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character な (U+306A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...医療、災害対応といった多様な
-                                                  現場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 現 (U+73FE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...療、災害対応といった多様な現
-                                                  場で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 場 (U+5834)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...、災害対応といった多様な現場
-                                                  で
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character で (U+3067)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...災害対応といった多様な現場で
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 実 (U+5B9F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実
-        用化が進みつつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 用 (U+7528)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用
-           化が進みつつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 化 (U+5316)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化
-              が進みつつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が
-                 進みつつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 進 (U+9032)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進
-                    みつつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character み (U+307F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進み
-                       つつあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつ
-                          つあり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつ
-                             あり、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character あ (U+3042)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあ
-                                り、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character り (U+308A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり
-                                   、人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり、
-                                      人間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 人 (U+4EBA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり、人
-                                         間とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 間 (U+9593)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり、人間
-                                            とロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり、人間と
-                                               ロボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ロ (U+30ED)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 実用化が進みつつあり、人間とロ
-                                                  ボットが協調して�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ボ (U+30DC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...化が進みつつあり、人間とロボ
-                                                  ットが協調してタ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ッ (U+30C3)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...が進みつつあり、人間とロボッ
-                                                  トが協調してタス�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...進みつつあり、人間とロボット
-                                                  が協調してタスク�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...みつつあり、人間とロボットが
-                                                  協調してタスクを�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 協 (U+5354)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...つつあり、人間とロボットが協
-                                                  調してタスクを遂�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 調 (U+8ABF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...つあり、人間とロボットが協調
-                                                  してタスクを遂行�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...あり、人間とロボットが協調し
-                                                  てタスクを遂行す�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...り、人間とロボットが協調して
-                                                  タスクを遂行する�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character タ (U+30BF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...、人間とロボットが協調してタ
-                                                  スクを遂行するた�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ス (U+30B9)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...人間とロボットが協調してタス
-                                                  クを遂行するため�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ク (U+30AF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...間とロボットが協調してタスク
-                                                  を遂行するための�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character を (U+3092)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...とロボットが協調してタスクを
-                                                  遂行するための重�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 遂 (U+9042)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ロボットが協調してタスクを遂
-                                                  行するための重要�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 行 (U+884C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ボットが協調してタスクを遂行
-                                                  するための重要な�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character す (U+3059)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ットが協調してタスクを遂行す
-                                                  るための重要な研�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...トが協調してタスクを遂行する
-                                                  ための重要な研究�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character た (U+305F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...が協調してタスクを遂行するた
-                                                  めの重要な研究領�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character め (U+3081)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...協調してタスクを遂行するため
-                                                  の重要な研究領域�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character の (U+306E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...調してタスクを遂行するための
-                                                  重要な研究領域と�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 重 (U+91CD)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...してタスクを遂行するための重
-                                                  要な研究領域とし�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 要 (U+8981)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...てタスクを遂行するための重要
-                                                  な研究領域として�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character な (U+306A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...タスクを遂行するための重要な
-                                                  研究領域として注�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 研 (U+7814)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...スクを遂行するための重要な研
-                                                  究領域として注目�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 究 (U+7A76)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...クを遂行するための重要な研究
-                                                  領域として注目さ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 領 (U+9818)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...を遂行するための重要な研究領
-                                                  域として注目され�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 域 (U+57DF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...遂行するための重要な研究領域
-                                                  として注目されて�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...行するための重要な研究領域と
-                                                  して注目されてい�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...するための重要な研究領域とし
-                                                  て注目されている\c...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...るための重要な研究領域として
-                                                  注目されている\cite...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 注 (U+6CE8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ための重要な研究領域として注
-                                                  目されている\cite{HR...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 目 (U+76EE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...めの重要な研究領域として注目
-                                                  されている\cite{HRC1}...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character さ (U+3055)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...の重要な研究領域として注目さ
-                                                  れている\cite{HRC1}\ci...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character れ (U+308C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...重要な研究領域として注目され
-                                                  ている\cite{HRC1}\cite{...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...要な研究領域として注目されて
-                                                  いる\cite{HRC1}\cite{HRC...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character い (U+3044)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...な研究領域として注目されてい
-                                                  る\cite{HRC1}\cite{HRC2}\...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...研究領域として注目されている
-                                                  \cite{HRC1}\cite{HRC2}\cit...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Citation `HRC1' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `HRC2' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `HRC3' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `HRC4' on page 1 undefined on input line 24.
-
-
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 。 (U+3002)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...{HRC1}\cite{HRC2}\cite{HRC3}\cite{HRC4}。
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 特 (U+7279)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特
-        に、従来の完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character に (U+306B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に
-           、従来の完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 、 (U+3001)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、
-              従来の完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 従 (U+5F93)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従
-                 来の完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 来 (U+6765)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来
-                    の完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character の (U+306E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の
-                       完全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 完 (U+5B8C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完
-                          全自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 全 (U+5168)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全
-                             自律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 自 (U+81EA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自
-                                律型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 律 (U+5F8B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律
-                                   型ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 型 (U+578B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律型
-                                      ロボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ロ (U+30ED)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律型ロ
-                                         ボットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ボ (U+30DC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律型ロボ
-                                            ットでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ッ (U+30C3)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律型ロボッ
-                                               トでは対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 特に、従来の完全自律型ロボット
-                                                  では対処が困難で�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...、従来の完全自律型ロボットで
-                                                  は対処が困難であ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character は (U+306F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...従来の完全自律型ロボットでは
-                                                  対処が困難であっ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 対 (U+5BFE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...来の完全自律型ロボットでは対
-                                                  処が困難であった�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 処 (U+51E6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...の完全自律型ロボットでは対処
-                                                  が困難であった非�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character が (U+304C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...完全自律型ロボットでは対処が
-                                                  困難であった非定�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 困 (U+56F0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...全自律型ロボットでは対処が困
-                                                  難であった非定型�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 難 (U+96E3)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...自律型ロボットでは対処が困難
-                                                  であった非定型作�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...律型ロボットでは対処が困難で
-                                                  あった非定型作業�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character あ (U+3042)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...型ロボットでは対処が困難であ
-                                                  った非定型作業や�...
-(That makes 100 errors; please try again.) 
+第 1 章
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
+
+
+[1
+
+
+]
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[2]
+Overfull \hbox (10.44035pt too wide) in paragraph at lines 138--143
+[]\JY1/mc/m/n/10.95 本研究で提案する \T1/cmr/m/n/10.95 Mixed re-al-ity Adap-tive Reach-a-bil-ity and Kine-matic cor-rec-tion (MARK)
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[3]
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[4]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 238.
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 239.
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[5]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 258.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[6]
+File: fig/Calib-2.pdf Graphic file (type pdf)
+<fig/Calib-2.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[7]
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[8]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 394.
+File: fig/Sample.pdf Graphic file (type pdf)
+<fig/Sample.pdf>
+File: fig/TBI_inside.pdf Graphic file (type pdf)
+<fig/TBI_inside.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[9]
+File: fig/Calib-7.pdf Graphic file (type pdf)
+<fig/Calib-7.pdf>
+
+Overfull \hbox (11.58421pt too wide) in paragraph at lines 510--513
+[]\JY1/mc/m/n/10.95 目標位置までの移動経路が既知 （ ナビゲ ーシ ョ ン可能 ） である場合 ， \T1/cmr/m/n/10.95 IRM \JY1/mc/m/n/10.95 スコア $\OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 b\OT1/cmr/m/n/10.95 ; \OT1/cmr/bx/n/10.95 p[]\OT1/cmr/m/n/10.95 )$
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[10]
+File: fig/Calib-6.pdf Graphic file (type pdf)
+<fig/Calib-6.pdf>
+File: fig/Base_suggest.pdf Graphic file (type pdf)
+<fig/Base_suggest.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[11]
+Overfull \hbox (21.62387pt too wide) in paragraph at lines 566--570
+ \JY1/gt/m/n/10.95 コストマ ッ プ （\T1/cmr/bx/n/10.95 Oc-cu-pan-cy-Grid $\OMS/cmsy/m/n/10.95 !$ \JY1/gt/m/n/10.95 安全余裕付きグリ ッ ド ） [] \T1/cmr/m/n/10.95 : \JY1/mc/m/n/10.95 占有格子 $\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/10.95 2 f^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OMS/cmsy/m/n/10.95 g[]$
+ []
+
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 589.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[12]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 621.
+File: fig/Calib-9.pdf Graphic file (type pdf)
+<fig/Calib-9.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[13]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 666.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[14]
+File: fig/Calib-8.pdf Graphic file (type pdf)
+<fig/Calib-8.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[15]
+File: fig/FMS.pdf Graphic file (type pdf)
+<fig/FMS.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[16]
+File: fig/KCM_ex_real.pdf Graphic file (type pdf)
+<fig/KCM_ex_real.pdf>
+File: fig/KCM_ex.pdf Graphic file (type pdf)
+<fig/KCM_ex.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[17]
+File: fig/third.pdf Graphic file (type pdf)
+<fig/third.pdf>
+File: fig/user.pdf Graphic file (type pdf)
+<fig/user.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[18]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 906.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[19]
+File: fig/BRI_ex.pdf Graphic file (type pdf)
+<fig/BRI_ex.pdf>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[20])
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[21]
+\openout2 = `supplement/reference.aux'.
+
+ (./supplement/reference.tex
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 5.
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 5.
+
+
+[22
+
+
+
+
+]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 26.
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 26.
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 40.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[23]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 58.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[24])
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
+
+[25] (./main.aux (./chapter/chapter2/chapter2.aux) (./supplement/reference.aux))
+ ***********
+pLaTeX2e <2023-02-14>+1, based on
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 29100 strings out of 469735
- 701573 string characters out of 5481518
- 1324140 words of memory out of 5000000
- 57021 multiletter control sequences out of 15000+600000
- 633132 words of font info for 62 fonts, out of 8000000 for 9000
+ 29233 strings out of 475318
+ 704425 string characters out of 5768461
+ 1324641 words of memory out of 5000000
+ 51829 multiletter control sequences out of 15000+600000
+ 592047 words of font info for 143 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 99i,10n,105p,793b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,105p,761b,769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-./chapter/chapter2/chapter2.tex:25:  ==> Fatal error occurred, no output PDF file produced!
+Output written on main.dvi (28 pages, 118420 bytes).
