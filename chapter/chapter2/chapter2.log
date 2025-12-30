@@ -1,13 +1,18 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.22)  30 DEC 2025 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.22)  30 DEC 2025 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/soma0/OneDrive/デスクトップ/sotu/main
-(c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex
+**c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2
+(c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
-(c:/texlive/2025/texmf-dist/tex/platex/base/jreport.cls
+(c:/texlive/2025/texmf-dist/tex/latex/subfiles/subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `../../main.tex'
+(c:/texlive/2025/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (../../main.tex (c:/texlive/2025/texmf-dist/tex/platex/base/jreport.cls
 
 c:/texlive/2025/texmf-dist/tex/platex/base/jreport.cls:16: LaTeX Error: This file needs format `pLaTeX2e'
                but this is `LaTeX2e'.
@@ -522,16 +527,14 @@ File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )) (c:/texlive/2025/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
- (c:/texlive/2025/texmf-dist/tex/latex/import/import.sty
-Package: import 2020/04/01  v 6.2
-)) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ) (c:/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks44
 \verbatim@line=\toks45
 \verbatim@in@stream=\read3
-) (./supplement/preamble.tex (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+) (../../supplement/preamble.tex (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
@@ -558,7 +561,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 ))
 
-./supplement/preamble.tex:54: LaTeX Error: Command \bibname undefined.
+../../supplement/preamble.tex:54: LaTeX Error: Command \bibname undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -571,34 +574,47 @@ If that doesn't work, type  X <return>  to quit.
 
 \c@enum2=\count347
 \c@enum3=\count348
-)
-No file main.aux.
-\openout1 = `main.aux'.
+)))
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:6: LaTeX Error: No counter 'chapter' defined.
 
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:83: LaTeX Error: The font size command \normalsize is not defined:
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \setcounter{chapter}{0}
+                            %チャプター番号の調整
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+No file chapter2.aux.
+\openout1 = `chapter2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:9: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 \begin{document}
-                     
+l.9 \begin{document}
+                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -627,1016 +643,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 83.
+ on input line 9.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./supplement/title.tex
-
-./supplement/title.tex:9: LaTeX Error: Environment titlepage undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \begin{titlepage}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:11: Undefined control sequence.
-l.11 {\Large
-             修士論文} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 修 (U+4FEE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修
-                士論文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 士 (U+58EB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士
-                   論文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 論 (U+8AD6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論
-                      文} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: Unicode character 文 (U+6587)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論文
-                         } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:11: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 {\Large 修士論文} \\
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:14: Undefined control sequence.
-l.14 {\Large
-             令和X年度 （20YY年度）} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 令 (U+4EE4)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令
-                和X年度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 和 (U+548C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和
-                   X年度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 年 (U+5E74)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年
-                       度 （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 度 (U+5EA6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度
-                           （20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character （ (U+FF08)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （
-                              20YY年度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 年 (U+5E74)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年
-                                     度）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character 度 (U+5EA6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年度
-                                        ）} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:14: LaTeX Error: Unicode character ） (U+FF09)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 {\Large 令和X年度 （20YY年度）
-                                           } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-./supplement/title.tex:18: Undefined control sequence.
-l.18 {\LARGE
-             %\hspace*{1.0zw}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 日 (U+65E5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日
-        本語タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 本 (U+672C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本
-           語タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character 語 (U+8A9E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語
-              タイトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character タ (U+30BF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タ
-                 イトル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character イ (U+30A4)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイ
-                    トル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイト
-                       ル
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:19: LaTeX Error: Unicode character ル (U+30EB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 日本語タイトル
-                          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:20: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \\
-       [10mm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./supplement/title.tex:26: Undefined control sequence.
-l.26 {\Large
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学
-          籍番号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 籍 (U+7C4D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍
-             番号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 番 (U+756A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍番
-                号} &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:28: LaTeX Error: Unicode character 号 (U+53F7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	{学籍番号
-                   } &  & {} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 氏 (U+6C0F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏
-          名} &  & {山田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 名 (U+540D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名
-             } &  & {山田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 山 (U+5C71)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山
-                        田　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 田 (U+7530)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田
-                           　太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 　 (U+3000)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　
-                              太郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 太 (U+592A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　太
-                                 郎} \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:29: LaTeX Error: Unicode character 郎 (U+90CE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 	{氏名} &  & {山田　太郎
-                                    } \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 指 (U+6307)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指
-         導教員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 導 (U+5C0E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導
-            教員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 教 (U+6559)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教
-               員 \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 員 (U+54E1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員
-                   \ \ & 教授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 教 (U+6559)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教
-                            授 & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 授 (U+6388)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授
-                                & 関山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 関 (U+95A2)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関
-                                     山 浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 山 (U+5C71)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山
-                                         浩介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 浩 (U+6D69)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山 浩
-                                            介 \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:31: LaTeX Error: Unicode character 介 (U+4ECB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 	指導教員 \ \ & 教授 & 関山 浩介
-                                                \\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-./supplement/title.tex:37: Undefined control sequence.
-l.37 {\Large
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 名 (U+540D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名
-        城大学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 城 (U+57CE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城
-           大学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 大 (U+5927)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大
-              学 理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学
-                  理工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 理 (U+7406)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理
-                     工学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 工 (U+5DE5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工
-                        学研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学
-                           研究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 研 (U+7814)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研
-                              究科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 究 (U+7A76)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究
-                                 科 メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 科 (U+79D1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科
-                                     メカトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character メ (U+30E1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メ
-                                        カトロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character カ (U+30AB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカ
-                                           トロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ト (U+30C8)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカト
-                                              ロニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ロ (U+30ED)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 名城大学 理工学研究科 メカトロ
-                                                 ニクス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ニ (U+30CB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...�大学 理工学研究科 メカトロニ
-                                                  クス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ク (U+30AF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...�学 理工学研究科 メカトロニク
-                                                  ス工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character ス (U+30B9)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...� 理工学研究科 メカトロニクス
-                                                  工学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 工 (U+5DE5)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��工学研究科 メカトロニクス工
-                                                  学専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 学 (U+5B66)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��学研究科 メカトロニクス工学
-                                                  専攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 専 (U+5C02)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��研究科 メカトロニクス工学専
-                                                  攻
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:38: LaTeX Error: Unicode character 攻 (U+653B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...��究科 メカトロニクス工学専攻
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./supplement/title.tex:41: LaTeX Error: \begin{document} ended by \end{titlepage}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 \end{titlepage}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:116: Undefined control sequence.
-l.116 \tableofcontents
-                       %目次の作成
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:117: Undefined control sequence.
-l.117 \listoffigures
-                     %図目次
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: Arithmetic overflow.
-<to be read again> 
-                   >
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-I can't evaluate this expression,
-since the result is out of range.
-
-
-Overfull \hbox (16383.99997pt too wide) has occurred while \output is active
-[] [] []
- []
-
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/soma0/OneDrive/デスクトップ/sotu/main.tex:130: Arithmetic overflow.
-<to be read again> 
-                   >
-l.130 \subinclude{chapter2/chapter2.tex}
-                                        
-I can't evaluate this expression,
-since the result is out of range.
-
-
-Overfull \hbox (16383.99997pt too wide) has occurred while \output is active
-[] [] []
- []
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 11.00005pt, for example:
-(fancyhdr)                \setlength{\footskip}{11.00005pt}.
-
-[1
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-Non-PDF special ignored!
-<special> color push gray 0
-Non-PDF special ignored!
-<special> color pop
-]
-\openout2 = `chapter/chapter2/chapter2.aux'.
-
- (./chapter/chapter2/chapter2.tex
-./chapter/chapter2/chapter2.tex:14: Undefined control sequence.
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:14: Undefined control sequence.
 l.14 \chapter
              {和訳}\label{chap:introduction}
 The control sequence at the end of the top line
@@ -1646,7 +657,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 和 (U+548C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 和 (U+548C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1659,7 +670,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 訳 (U+8A33)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:14: LaTeX Error: Unicode character 訳 (U+8A33)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1671,7 +682,7 @@ l.14 \chapter{和訳
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-./chapter/chapter2/chapter2.tex:21: Undefined control sequence.
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:21: Undefined control sequence.
 l.21 \section
              {序論 (Introduction)}
 The control sequence at the end of the top line
@@ -1681,7 +692,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 序 (U+5E8F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 序 (U+5E8F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1694,7 +705,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 論 (U+8AD6)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:21: LaTeX Error: Unicode character 論 (U+8AD6)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1707,7 +718,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 近 (U+8FD1)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 近 (U+8FD1)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1720,7 +731,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 年 (U+5E74)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 年 (U+5E74)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1733,7 +744,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1746,7 +757,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character は (U+306F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character は (U+306F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1759,7 +770,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 製 (U+88FD)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 製 (U+88FD)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1772,7 +783,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 造 (U+9020)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 造 (U+9020)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1785,7 +796,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1798,7 +809,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 物 (U+7269)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 物 (U+7269)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1811,7 +822,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 流 (U+6D41)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 流 (U+6D41)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1824,7 +835,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1837,7 +848,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 医 (U+533B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 医 (U+533B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1850,7 +861,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 療 (U+7642)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 療 (U+7642)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1863,7 +874,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1876,7 +887,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 災 (U+707D)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 災 (U+707D)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1889,7 +900,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 害 (U+5BB3)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 害 (U+5BB3)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1902,7 +913,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 対 (U+5BFE)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 対 (U+5BFE)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1915,7 +926,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 応 (U+5FDC)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 応 (U+5FDC)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1928,7 +939,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character と (U+3068)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character と (U+3068)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1941,7 +952,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character い (U+3044)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character い (U+3044)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1954,7 +965,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character っ (U+3063)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character っ (U+3063)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1967,7 +978,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character た (U+305F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character た (U+305F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1980,7 +991,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 多 (U+591A)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 多 (U+591A)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1993,7 +1004,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 様 (U+69D8)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 様 (U+69D8)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2006,7 +1017,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character な (U+306A)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character な (U+306A)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2019,7 +1030,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 現 (U+73FE)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 現 (U+73FE)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2032,7 +1043,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 場 (U+5834)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character 場 (U+5834)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2045,7 +1056,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character で (U+3067)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:23: LaTeX Error: Unicode character で (U+3067)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2058,7 +1069,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 実 (U+5B9F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 実 (U+5B9F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2071,7 +1082,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 用 (U+7528)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 用 (U+7528)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2084,7 +1095,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 化 (U+5316)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 化 (U+5316)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2097,7 +1108,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2110,7 +1121,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 進 (U+9032)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 進 (U+9032)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2123,7 +1134,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character み (U+307F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character み (U+307F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2136,7 +1147,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2149,7 +1160,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character つ (U+3064)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2162,7 +1173,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character あ (U+3042)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character あ (U+3042)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2175,7 +1186,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character り (U+308A)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character り (U+308A)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2188,7 +1199,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2201,7 +1212,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 人 (U+4EBA)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 人 (U+4EBA)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2214,7 +1225,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 間 (U+9593)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 間 (U+9593)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2227,7 +1238,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2240,7 +1251,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ロ (U+30ED)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ロ (U+30ED)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2253,7 +1264,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ボ (U+30DC)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ボ (U+30DC)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2266,7 +1277,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ッ (U+30C3)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ッ (U+30C3)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2279,7 +1290,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ト (U+30C8)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ト (U+30C8)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2292,7 +1303,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character が (U+304C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2305,7 +1316,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 協 (U+5354)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 協 (U+5354)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2318,7 +1329,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 調 (U+8ABF)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 調 (U+8ABF)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2331,7 +1342,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2344,7 +1355,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2357,7 +1368,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character タ (U+30BF)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character タ (U+30BF)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2370,7 +1381,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ス (U+30B9)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ス (U+30B9)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2383,7 +1394,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ク (U+30AF)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character ク (U+30AF)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2396,7 +1407,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character を (U+3092)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character を (U+3092)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2409,7 +1420,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 遂 (U+9042)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 遂 (U+9042)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2422,7 +1433,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 行 (U+884C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 行 (U+884C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2435,7 +1446,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character す (U+3059)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character す (U+3059)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2448,7 +1459,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2461,7 +1472,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character た (U+305F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character た (U+305F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2474,7 +1485,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character め (U+3081)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character め (U+3081)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2487,7 +1498,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character の (U+306E)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character の (U+306E)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2500,7 +1511,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 重 (U+91CD)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 重 (U+91CD)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2513,7 +1524,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 要 (U+8981)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 要 (U+8981)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2526,7 +1537,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character な (U+306A)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character な (U+306A)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2539,7 +1550,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 研 (U+7814)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 研 (U+7814)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2552,7 +1563,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 究 (U+7A76)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 究 (U+7A76)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2565,7 +1576,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 領 (U+9818)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 領 (U+9818)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2578,7 +1589,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 域 (U+57DF)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 域 (U+57DF)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2591,7 +1602,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character と (U+3068)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2604,7 +1615,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character し (U+3057)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2617,7 +1628,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2630,7 +1641,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 注 (U+6CE8)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 注 (U+6CE8)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2643,7 +1654,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 目 (U+76EE)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 目 (U+76EE)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2656,7 +1667,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character さ (U+3055)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character さ (U+3055)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2669,7 +1680,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character れ (U+308C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character れ (U+308C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2682,7 +1693,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character て (U+3066)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2695,7 +1706,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character い (U+3044)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character い (U+3044)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2708,7 +1719,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character る (U+308B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2733,7 +1744,7 @@ LaTeX Warning: Citation `HRC3' on page 1 undefined on input line 24.
 LaTeX Warning: Citation `HRC4' on page 1 undefined on input line 24.
 
 
-./chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 。 (U+3002)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:24: LaTeX Error: Unicode character 。 (U+3002)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2746,7 +1757,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 特 (U+7279)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 特 (U+7279)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2759,7 +1770,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character に (U+306B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character に (U+306B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2772,7 +1783,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 、 (U+3001)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 、 (U+3001)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2785,7 +1796,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 従 (U+5F93)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 従 (U+5F93)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2798,7 +1809,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 来 (U+6765)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 来 (U+6765)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2811,7 +1822,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character の (U+306E)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character の (U+306E)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2824,7 +1835,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 完 (U+5B8C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 完 (U+5B8C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2837,7 +1848,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 全 (U+5168)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 全 (U+5168)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2850,7 +1861,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 自 (U+81EA)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 自 (U+81EA)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2863,7 +1874,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 律 (U+5F8B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 律 (U+5F8B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2876,7 +1887,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 型 (U+578B)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 型 (U+578B)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2889,7 +1900,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ロ (U+30ED)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ロ (U+30ED)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2902,7 +1913,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ボ (U+30DC)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ボ (U+30DC)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2915,7 +1926,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ッ (U+30C3)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ッ (U+30C3)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2928,7 +1939,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ト (U+30C8)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character ト (U+30C8)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2941,7 +1952,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2954,7 +1965,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character は (U+306F)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character は (U+306F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2967,7 +1978,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 対 (U+5BFE)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 対 (U+5BFE)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2980,7 +1991,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 処 (U+51E6)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 処 (U+51E6)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2993,7 +2004,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character が (U+304C)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character が (U+304C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3006,7 +2017,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 困 (U+56F0)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 困 (U+56F0)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3019,7 +2030,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 難 (U+96E3)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character 難 (U+96E3)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3032,7 +2043,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character で (U+3067)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3045,7 +2056,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character あ (U+3042)
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25: LaTeX Error: Unicode character あ (U+3042)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3056,12 +2067,12 @@ l.25 ...型ロボットでは対処が困難であ
                                                   った非定型作業や�...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 29100 strings out of 469735
- 701573 string characters out of 5481518
- 1324140 words of memory out of 5000000
- 57021 multiletter control sequences out of 15000+600000
- 633132 words of font info for 62 fonts, out of 8000000 for 9000
+ 28996 strings out of 469735
+ 700328 string characters out of 5481518
+ 1321931 words of memory out of 5000000
+ 56939 multiletter control sequences out of 15000+600000
+ 628364 words of font info for 42 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 99i,10n,105p,793b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,1n,122p,838b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-./chapter/chapter2/chapter2.tex:25:  ==> Fatal error occurred, no output PDF file produced!
+c:/Users/soma0/OneDrive/デスクトップ/sotu/chapter/chapter2/chapter2.tex:25:  ==> Fatal error occurred, no output PDF file produced!
