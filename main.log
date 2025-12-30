@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.sjis) (TeX Live 2024) (preloaded format=platex 2025.2.4)  30 DEC 2025 14:06
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.sjis) (TeX Live 2024) (preloaded format=platex 2025.2.4)  30 DEC 2025 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -660,9 +660,9 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 59.
 
 
 [1
@@ -678,7 +678,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [2]
-Overfull \hbox (10.44035pt too wide) in paragraph at lines 138--143
+Overfull \hbox (10.44035pt too wide) in paragraph at lines 139--144
 []\JY1/mc/m/n/10.95 本研究で提案する \T1/cmr/m/n/10.95 Mixed re-al-ity Adap-tive Reach-a-bil-ity and Kine-matic cor-rec-tion (MARK)
  []
 
@@ -705,9 +705,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [4]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 238.
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 239.
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 240.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 File: fig/Sample.pdf Graphic file (type pdf)
@@ -723,7 +723,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [5]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 258.
+(Font)              No change on input line 259.
 
 
 
@@ -756,7 +756,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [8]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 394.
+(Font)              No change on input line 395.
 File: fig/Sample.pdf Graphic file (type pdf)
 <fig/Sample.pdf>
 File: fig/TBI_inside.pdf Graphic file (type pdf)
@@ -774,7 +774,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 File: fig/Calib-7.pdf Graphic file (type pdf)
 <fig/Calib-7.pdf>
 
-Overfull \hbox (11.58421pt too wide) in paragraph at lines 510--513
+Overfull \hbox (11.58421pt too wide) in paragraph at lines 511--514
 []\JY1/mc/m/n/10.95 目標位置までの移動経路が既知 （ ナビゲ ーシ ョ ン可能 ） である場合 ， \T1/cmr/m/n/10.95 IRM \JY1/mc/m/n/10.95 スコア $\OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 b\OT1/cmr/m/n/10.95 ; \OT1/cmr/bx/n/10.95 p[]\OT1/cmr/m/n/10.95 )$
  []
 
@@ -802,12 +802,12 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [11]
-Overfull \hbox (21.62387pt too wide) in paragraph at lines 566--570
+Overfull \hbox (21.62387pt too wide) in paragraph at lines 567--571
  \JY1/gt/m/n/10.95 コストマ ッ プ （\T1/cmr/bx/n/10.95 Oc-cu-pan-cy-Grid $\OMS/cmsy/m/n/10.95 !$ \JY1/gt/m/n/10.95 安全余裕付きグリ ッ ド ） [] \T1/cmr/m/n/10.95 : \JY1/mc/m/n/10.95 占有格子 $\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/10.95 2 f^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OMS/cmsy/m/n/10.95 g[]$
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 589.
+(Font)              No change on input line 590.
 
 
 
@@ -819,7 +819,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 621.
+(Font)              No change on input line 622.
 File: fig/Calib-9.pdf Graphic file (type pdf)
 <fig/Calib-9.pdf>
 
@@ -833,7 +833,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [13]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 666.
+(Font)              No change on input line 667.
 
 
 
@@ -896,9 +896,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.27362pt}.
 
 [18]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 906.
-
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -996,4 +993,4 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  99i,12n,105p,761b,769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (28 pages, 118420 bytes).
+Output written on main.dvi (28 pages, 118688 bytes).
